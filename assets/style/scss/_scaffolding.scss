@@ -1,0 +1,33 @@
+body,html{
+  font-family: $font-family;
+  font-size: 16px;
+  color: $text-color;
+  line-height: 20px;
+  overflow: hidden;
+  position: relative;
+  width:100vw;
+  height: 100vh;
+}
+
+.col-centered{
+  float: none;
+  margin: 120px auto;
+}
+
+body.home{
+  background: #2b2b2b;
+  &:not(.skipIntro){
+    section{
+      opacity: 0;
+    }
+  }
+  &.skipIntro{
+    #logo{
+      display: none;
+    }
+  }
+}
+.row > div{
+  padding:0;
+}
+

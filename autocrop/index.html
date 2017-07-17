@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8>
+        <meta content="IE=edge" http-equiv=X-UA-Compatible>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <script src="assets/javascript/vendor/jquery.min.js"></script>
+        <script src="assets/javascript/vendor/smartcrop.js"></script>
+        <script src="assets/javascript/vendor/tracking-min.js"></script>
+        <script src="assets/javascript/vendor/FileSaver.min.js"></script>
+
+        <script src="assets/javascript/dimensions.js"></script>
+        <script src="assets/javascript/images.js"></script>
+        <script src="assets/javascript/autocrop.js"></script>
+        <script src="assets/javascript/autocrop-func.js"></script>
+    </head>
+
+    <body class="paragon">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-centered">
+                    <h1 class="heading"> Auto crop Paragon assets</h1><br/><br/>
+                    <div class="row">
+                        <form class="form box">
+                            <div class="col-md-8">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <h2>Hero name</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="ruHero">Hero Name</label>
+                                        <input type="text" class="form-control" id="hero" name="hero" value="SHINBI">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="ruHero">Russian Hero Name</label>
+                                        <input type="text" class="form-control" id="ruHero" name="ruHero" value="Синби">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <h2>Localisation</h2>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="EN">English</label>
+                                        <input type="text" class="form-control" id="EN" name="EN" value="SHINBI Announce">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="DE">German</label>
+                                        <input type="text" class="form-control" id="DE" name="DE" value="SHINBI Ankündigung">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="FR">French</label>
+                                        <input type="text" class="form-control" id="FR" name="FR" value="Annonce de SHINBI">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div style="height:32px">&nbsp;</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ES">Spanish</label>
+                                        <input type="text" class="form-control" id="ES" name="ES" value="Anuncio de SHINBI">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="RU">Russian</label>
+                                        <input type="text" class="form-control" id="RU" name="RU" value="АНОНС Синби">
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <h2>Text & Logo</h2>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="color">Choose text color</label>
+                                        <input type="text" class="form-control" id="color" name="color" value="#f6d880">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <h2>Additional options</h2>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="invert" name="invert"> Invert logo
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="gradient" name="gradient"> Add Gradient
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <h2>Dimensions</h2>
+                                </div>
+                                <div id="dimensionPicker"></div>
+                                <div class="form-group">
+                                    <label for="custom">Custom skin name</label>
+                                    <input type="text" class="form-control" id="custom" name="custom" value="Moon Crystal">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <h2>First choose options, then pick Image</h2>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fileInput">Upload or drop in master file:</label>
+                                    <input type="file" class="form-control" id="fileInput" name="fileInput" style="width:100%;">
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-centered ">
+                    <div class="row">
+                        <div class="loading hidden"></div>
+                        <div class="resultWrapper"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
