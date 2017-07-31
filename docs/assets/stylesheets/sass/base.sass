@@ -1,0 +1,97 @@
+body
+  font-family: 'Open Sans', sans-serif
+  margin: 0
+  border-bottom: 250px solid #222
+  ul
+    list-style-type: none
+  h2
+    font-weight: 300
+    margin-bottom: 20px
+  #nav
+    position: fixed
+    top: 205px
+    width: 313px
+    h6
+      padding: 10px 40px
+      color: #afafaf
+    a
+      color: #707070
+      font-size: 13px
+      font-weight: normal
+      text-decoration: none
+      text-align: left
+      display: block
+      padding: 25px 20px
+  a:hover,
+  .active
+    background-color: #f6f6f6
+    border-radius: 4px
+
+.top-header
+  background: #fafafa
+  height: 165px
+  position: fixed
+  top: 0
+  border-top: 50px solid #222
+  left: 0
+  width: 100%
+  z-index: 4
+  .search-wrapper
+    position: absolute
+    right: 40px
+    top: 30px
+    input
+      padding: 15px
+      border: 1px solid #ccc
+      width: 350px
+      background: transparent
+      &:focus,
+      &:hover
+        background: #fff
+
+  .breadcrumbs
+    position: absolute
+    left: 20px
+    top: 50px
+    li
+      position: relative
+      float: left
+      padding: 0 15px 0 10px
+      &:first-child
+        padding-left: 0
+      &:last-child
+        &:after
+          display: none
+      &:after
+        content: ""
+        border: solid #ccc
+        border-width: 0 2px 2px 0
+        position: absolute
+        right: 0
+        top: 6px
+        padding: 2px
+        transform: rotate(-45deg)
+      a
+        text-transform: uppercase
+        font-size: 12px
+        color: #444
+        font-weight: 700
+        &:hover
+          text-decoration: none
+          color: lighten(#444, 20%)
+
+#wrapper
+  padding: 150px 0 300px
+  .content
+    min-height: 400px
+    margin: 0 0 0
+    padding: 50px 25px
+    h6
+      color: #333
+      margin-bottom: 20px
+    .image-box
+      background: #ebebeb
+      height: 400px
+      width: 100%
+      display: block
+      margin-bottom: 20px

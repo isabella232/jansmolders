@@ -1,0 +1,138 @@
+/* line 1, ../sass/base.sass */
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  border-bottom: 250px solid #222;
+}
+/* line 5, ../sass/base.sass */
+body ul {
+  list-style-type: none;
+}
+/* line 7, ../sass/base.sass */
+body h2 {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+/* line 10, ../sass/base.sass */
+body #nav {
+  position: fixed;
+  top: 205px;
+  width: 313px;
+}
+/* line 14, ../sass/base.sass */
+body #nav h6 {
+  padding: 10px 40px;
+  color: #afafaf;
+}
+/* line 17, ../sass/base.sass */
+body #nav a {
+  color: #707070;
+  font-size: 13px;
+  font-weight: normal;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  padding: 25px 20px;
+}
+/* line 25, ../sass/base.sass */
+body a:hover,
+body .active {
+  background-color: #f6f6f6;
+  border-radius: 4px;
+}
+
+/* line 30, ../sass/base.sass */
+.top-header {
+  background: #fafafa;
+  height: 165px;
+  position: fixed;
+  top: 0;
+  border-top: 50px solid #222;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
+/* line 39, ../sass/base.sass */
+.top-header .search-wrapper {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+}
+/* line 43, ../sass/base.sass */
+.top-header .search-wrapper input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 350px;
+  background: transparent;
+}
+/* line 48, ../sass/base.sass */
+.top-header .search-wrapper input:focus, .top-header .search-wrapper input:hover {
+  background: #fff;
+}
+/* line 52, ../sass/base.sass */
+.top-header .breadcrumbs {
+  position: absolute;
+  left: 20px;
+  top: 50px;
+}
+/* line 56, ../sass/base.sass */
+.top-header .breadcrumbs li {
+  position: relative;
+  float: left;
+  padding: 0 15px 0 10px;
+}
+/* line 60, ../sass/base.sass */
+.top-header .breadcrumbs li:first-child {
+  padding-left: 0;
+}
+/* line 63, ../sass/base.sass */
+.top-header .breadcrumbs li:last-child:after {
+  display: none;
+}
+/* line 65, ../sass/base.sass */
+.top-header .breadcrumbs li:after {
+  content: "";
+  border: solid #ccc;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  padding: 2px;
+  transform: rotate(-45deg);
+}
+/* line 74, ../sass/base.sass */
+.top-header .breadcrumbs li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #444;
+  font-weight: 700;
+}
+/* line 79, ../sass/base.sass */
+.top-header .breadcrumbs li a:hover {
+  text-decoration: none;
+  color: #777777;
+}
+
+/* line 83, ../sass/base.sass */
+#wrapper {
+  padding: 150px 0 300px;
+}
+/* line 85, ../sass/base.sass */
+#wrapper .content {
+  min-height: 400px;
+  margin: 0 0 0;
+  padding: 50px 25px;
+}
+/* line 89, ../sass/base.sass */
+#wrapper .content h6 {
+  color: #333;
+  margin-bottom: 20px;
+}
+/* line 92, ../sass/base.sass */
+#wrapper .content .image-box {
+  background: #ebebeb;
+  height: 400px;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
