@@ -8,9 +8,13 @@ body
     font-weight: 300
     margin-bottom: 20px
   #nav
-    position: fixed
-    top: 205px
+    position: relative
+    top: 50px
     width: 313px
+    transition: all .2s ease
+    &.fixed
+      position: fixed
+      top: 30px
     h6
       padding: 10px 40px
       color: #afafaf
@@ -30,7 +34,7 @@ body
 .top-header
   background: #fafafa
   height: 165px
-  position: fixed
+  position: relative
   top: 0
   border-top: 50px solid #222
   left: 0
@@ -81,7 +85,7 @@ body
           color: lighten(#444, 20%)
 
 #wrapper
-  padding: 150px 0 300px
+  padding: 0px 0 300px
   .content
     min-height: 400px
     margin: 0 0 0

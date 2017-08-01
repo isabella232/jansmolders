@@ -1,11 +1,18 @@
 
 $(function(){
     var $sections = $('.content');
+    var $navElem = $('#nav');
     var $itemLinks = $('a');
 
     $(window).scroll(function(){
         var currentScroll = $(this).scrollTop();
         var $currentSection;
+
+        if(currentScroll > 230) {
+            $navElem.addClass('fixed');
+        } else if (currentScroll < 230) {
+            $navElem.removeClass('fixed');
+        }
 
         $sections.each(function(){
             var divPosition = $(this).offset().top;
