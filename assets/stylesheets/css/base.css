@@ -1,0 +1,364 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?x4znnt");
+  src: url("../fonts/icomoon.eot?#iefixx4znnt") format("embedded-opentype"), url("../fonts/icomoon.woff?x4znnt") format("woff"), url("../fonts/icomoon.ttf?x4znnt") format("truetype"), url("../fonts/icomoon.svg?x4znnt#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 9, ../sass/_logo.sass */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 21, ../sass/_logo.sass */
+.icon-logo:before {
+  content: "";
+}
+
+/* line 25, ../sass/_logo.sass */
+.home.skipIntro #logo {
+  display: none;
+}
+
+/* line 28, ../sass/_logo.sass */
+.logo-small {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  padding: 20px;
+  color: #f5f5f5;
+  display: block;
+  font-size: 48px;
+  border: 2px solid #f5f5f5;
+}
+@media only screen and (max-width: 991px) {
+  /* line 28, ../sass/_logo.sass */
+  .logo-small {
+    left: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 28, ../sass/_logo.sass */
+  .logo-small {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+  }
+}
+/* line 47, ../sass/_logo.sass */
+.logo-small:hover {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+/* line 51, ../sass/_logo.sass */
+section#logo {
+  padding: 40px 15px 20px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 999;
+  background: #2f2f31;
+  background: linear-gradient(135deg, #2f2f31 0%, #151517 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f31', endColorstr='#151517',GradientType=1);
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+}
+/* line 67, ../sass/_logo.sass */
+section#logo .logo-wrapper {
+  width: 320px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+/* line 74, ../sass/_logo.sass */
+section#logo .logo-wrapper i {
+  margin-top: 12px;
+  margin-left: 15px;
+  color: #fff;
+  display: block;
+  font-size: 48px;
+}
+/* line 81, ../sass/_logo.sass */
+section#logo .logo-wrapper .left,
+section#logo .logo-wrapper .right,
+section#logo .logo-wrapper .top,
+section#logo .logo-wrapper .bottom,
+section#logo .logo-wrapper .middle,
+section#logo .logo-wrapper .text {
+  position: absolute;
+  display: block;
+  background: #fff;
+}
+/* line 91, ../sass/_logo.sass */
+section#logo .logo-wrapper .text {
+  left: 95px;
+  top: 15px;
+  background: none;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 34px;
+}
+@media only screen and (max-width: 400px) {
+  /* line 91, ../sass/_logo.sass */
+  section#logo .logo-wrapper .text {
+    font-size: 30px;
+  }
+}
+/* line 103, ../sass/_logo.sass */
+section#logo .logo-wrapper .left,
+section#logo .logo-wrapper .right,
+section#logo .logo-wrapper .middle {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+}
+/* line 111, ../sass/_logo.sass */
+section#logo .logo-wrapper .right {
+  left: auto;
+  right: 0;
+}
+/* line 115, ../sass/_logo.sass */
+section#logo .logo-wrapper .bottom,
+section#logo .logo-wrapper .top {
+  width: 100%;
+  top: 0;
+  height: 2px;
+}
+/* line 121, ../sass/_logo.sass */
+section#logo .logo-wrapper .bottom {
+  top: auto;
+  bottom: 0;
+  left: auto;
+  right: 0;
+}
+/* line 127, ../sass/_logo.sass */
+section#logo .logo-wrapper .top {
+  left: 0;
+  right: auto;
+}
+/* line 131, ../sass/_logo.sass */
+section#logo .logo-wrapper .middle {
+  left: 85px;
+}
+
+/* line 135, ../sass/_logo.sass */
+.skipIntro section#logo {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+}
+/* line 141, ../sass/_logo.sass */
+.skipIntro section#logo .logo-wrapper .left,
+.skipIntro section#logo .logo-wrapper .right,
+.skipIntro section#logo .logo-wrapper .top,
+.skipIntro section#logo .logo-wrapper .bottom,
+.skipIntro section#logo .logo-wrapper .middle,
+.skipIntro section#logo .logo-wrapper .text {
+  background: #fff;
+}
+/* line 150, ../sass/_logo.sass */
+.skipIntro section#logo .logo-wrapper .text {
+  display: none;
+}
+/* line 153, ../sass/_logo.sass */
+.skipIntro section#logo .logo-wrapper .bottom,
+.skipIntro section#logo .logo-wrapper .top {
+  width: 85px;
+  left: 0;
+  right: auto;
+}
+/* line 159, ../sass/_logo.sass */
+.skipIntro section#logo .logo-wrapper .right {
+  display: none;
+}
+
+/* line 3, ../sass/_scaffolding.sass */
+body, html {
+  overflow: hidden;
+  background: #2f2f31;
+  background: linear-gradient(135deg, #2f2f31 0%, #151517 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f2f31', endColorstr='#151517',GradientType=1);
+  font-family: "Source Sans", sans-serif, arial;
+}
+
+/* line 10, ../sass/_scaffolding.sass */
+.header {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+/* line 14, ../sass/_scaffolding.sass */
+.header i {
+  color: #fff;
+  display: block;
+  font-size: 36px;
+}
+
+/* line 19, ../sass/_scaffolding.sass */
+.contact {
+  position: absolute;
+  left: -160px;
+  z-index: 9;
+  top: 45%;
+  transform: rotate(-90deg);
+}
+@media only screen and (max-width: 991px) {
+  /* line 19, ../sass/_scaffolding.sass */
+  .contact {
+    top: auto;
+    bottom: 200px;
+  }
+}
+/* line 28, ../sass/_scaffolding.sass */
+.contact ul {
+  list-style: none;
+}
+/* line 30, ../sass/_scaffolding.sass */
+.contact ul li {
+  float: left;
+}
+/* line 32, ../sass/_scaffolding.sass */
+.contact ul li a {
+  color: #f5f5f5;
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+/* line 36, ../sass/_scaffolding.sass */
+.contact ul li a:hover {
+  text-decoration: none;
+  color: #c2c2c2;
+}
+
+/* line 40, ../sass/_scaffolding.sass */
+#epic {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+/* line 45, ../sass/_scaffolding.sass */
+#epic #hero {
+  background: linear-gradient(135deg, #2f2f31 0%, #151517 100%);
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  height: 90vh;
+  width: 901px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+@media only screen and (max-width: 991px) {
+  /* line 45, ../sass/_scaffolding.sass */
+  #epic #hero {
+    display: none;
+  }
+}
+/* line 58, ../sass/_scaffolding.sass */
+#epic .content {
+  position: absolute;
+  bottom: 20%;
+  left: 45%;
+  width: 550px;
+}
+@media only screen and (max-width: 991px) {
+  /* line 58, ../sass/_scaffolding.sass */
+  #epic .content {
+    position: absolute;
+    bottom: auto;
+    right: 20px;
+    width: 60vw;
+    left: auto;
+    height: 100vh;
+  }
+}
+/* line 70, ../sass/_scaffolding.sass */
+#epic .content .ribbon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 185px;
+  height: 60vh;
+  border: 15px solid #efd48d;
+  padding: 10px;
+  vertical-align: bottom;
+}
+@media only screen and (max-width: 991px) {
+  /* line 70, ../sass/_scaffolding.sass */
+  #epic .content .ribbon {
+    width: 100%;
+    height: 150px;
+    bottom: auto;
+    top: 100px;
+  }
+}
+/* line 84, ../sass/_scaffolding.sass */
+#epic .content .ribbon span {
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+  color: #f5f5f5;
+  font-size: 12px;
+  text-transform: uppercase;
+  opacity: 0;
+}
+/* line 92, ../sass/_scaffolding.sass */
+#epic .content .ribbon h2 {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  color: #efd48d;
+  font-size: 34px;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0;
+}
+/* line 101, ../sass/_scaffolding.sass */
+#epic .content .work {
+  color: #f5f5f5;
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  width: 300px;
+  opacity: 0;
+}
+@media only screen and (max-width: 991px) {
+  /* line 101, ../sass/_scaffolding.sass */
+  #epic .content .work {
+    width: auto;
+    bottom: 30px;
+    right: 0;
+  }
+}
+/* line 112, ../sass/_scaffolding.sass */
+#epic .content .work h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+/* line 116, ../sass/_scaffolding.sass */
+#epic .content .work p {
+  color: #d8d8d8;
+  line-height: 26px;
+  font-size: 13px;
+}

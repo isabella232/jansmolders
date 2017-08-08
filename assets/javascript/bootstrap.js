@@ -1,85 +1,30 @@
 $(function () {
-
-    //const
-    var aside = $('aside');
-    var body = $('body');
-
     // Show intro
     $(document).scrollTop(0, 0);
     setTimeout(function () {
         introAnimation();
     }, 100);
 
+    var heroTop = document.getElementById ( 'hero' ).offsetTop;
+    var heroLeft = document.getElementById ( 'hero' ).offsetLeft;
+    var parallaxBox = document.getElementById ( 'epic' );
 
-    // Open page on the hashed one if provided
-    if(window.location.hash) {
-        $('.item-wrapper').removeClass('active');
-        $(window.location.hash).addClass('active');
-    }
-
-    // hide aside on load
-    $('aside').addClass('hide');
-
-    $('.hamburger').on('click',function(){
-        showAside();
-    });
-
-    $('.aside-close').on('click',function(){
-        closeAside();
-    });
-
-    $('.header-logo').on('click',function(e){
-        var next = $(this);
-        showNext(next);
-    });
-
-    $('.next-box').on('click',function(){
-        var next = $(this);
-        showNext(next);
-    });
-
-    $('aside .tile').on('click',function(){
-        var next = $(this);
-        showNext(next);
-        closeAside();
-    });
-
-    $('.item-wrapper').on('click', function(){
-        closeAside();
-    });
+    parallaxBox.onmousemove = function ( event ) {
+        event = event || window.event;
+        var x = event.clientX - parallaxBox.offsetLeft,
+            y = event.clientY - parallaxBox.offsetTop;
+        mouseParallax ('hero', heroLeft, heroTop, x, y, 10);
+    };
 
 });
 
-function showNext(next){
-    var nextClass = next.attr('class').split(' ')[1];
-    if(nextClass === 'paragon'){
-        $('.item-wrapper').removeClass('active');
-    }
-    $('#'+nextClass).addClass('active');
-}
-
-function showAside(){
-    //const
-    var aside = $('aside');
-    var body = $('body');
-
-    aside.addClass('show').removeClass('hide');
-    body.removeClass('asideInactive').addClass('asideActive');
-}
-
-function closeAside(){
-    //const
-    var aside = $('aside');
-    var body = $('body');
-
-    if (aside.hasClass("show")) {
-        aside.addClass('hide');
-        body.addClass('asideInactive');
-        setTimeout(function(){
-            aside.removeClass('active');
-            body.removeClass('asideActive')
-        },2000);
-    }
+function mouseParallax ( id, left, top, mouseX, mouseY, speed ) {
+    var obj = document.getElementById (id);
+    var parentObj = obj.parentNode,
+        containerWidth = parseInt( parentObj.offsetWidth ),
+        containerHeight = parseInt( parentObj.offsetHeight );
+    obj.style.left = left - ( ( ( mouseX - ( parseInt( obj.offsetWidth ) / 2 + left ) ) / containerWidth ) * speed ) + 'px';
+    obj.style.top = top - ( ( ( mouseY - ( parseInt( obj.offsetHeight ) / 2 + top ) ) / containerHeight ) * speed ) + 'px';
 }
 
 function introAnimation(){
@@ -94,6 +39,8 @@ function introAnimation(){
         paused: true,
         onComplete: function () {
             $('body').addClass('skipIntro');
+
+            animateSection();
         }
     });
 
@@ -133,3 +80,21 @@ function introAnimation(){
 }
 
 
+function animateSection(){
+    var tl2 = new TimelineMax({
+        paused: true,
+        onComplete: function () {
+
+        }
+    });
+    tl2.set('#hero', {autoAlpha: 0, x: -50});
+    tl2.set('.ribbon span', {autoAlpha: 0, x: 50});
+    tl2.set('.ribbon h2', {autoAlpha: 0, x: 50});
+    tl2.set('.work', {autoAlpha: 0, x: 10});
+    tl2.to('#hero', .5, {autoAlpha: .8, x: 0, delay: .5});
+    tl2.to('.ribbon span', .3, {autoAlpha: 1, x: 0, delay: .1},0);
+    tl2.to('.ribbon h2', .3, {autoAlpha: 1, x: 0, delay: .2},0);
+    tl2.to('.work', .3, {autoAlpha: 1, x: 0, delay: .2},0);
+    tl2.play();
+
+}
