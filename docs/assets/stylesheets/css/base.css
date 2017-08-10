@@ -341,7 +341,7 @@ nav {
 @media only screen and (max-width: 991px) {
   /* line 1, ../sass/_tile.sass */
   .tile {
-    height: autp;
+    height: auto;
   }
 }
 /* line 11, ../sass/_tile.sass */
@@ -513,42 +513,56 @@ body a:hover, body a:focus, body a:active {
   padding: 20px 25px 40px;
 }
 /* line 26, ../sass/_scaffolding.sass */
+#wrapper .content-heading h1, #wrapper .content-heading h2, #wrapper .content-heading h3,
+#wrapper .content h1,
+#wrapper .content h2,
+#wrapper .content h3 {
+  font-family: "Brutal_Light", sans-serif, arial;
+}
+/* line 28, ../sass/_scaffolding.sass */
+#wrapper .content-heading h4, #wrapper .content-heading h5, #wrapper .content-heading h6,
+#wrapper .content h4,
+#wrapper .content h5,
+#wrapper .content h6 {
+  font-family: "Brutal_Bold", sans-serif, arial;
+}
+/* line 30, ../sass/_scaffolding.sass */
 #wrapper .content-heading h2,
 #wrapper .content h2 {
   margin-top: 0;
 }
-/* line 28, ../sass/_scaffolding.sass */
+/* line 33, ../sass/_scaffolding.sass */
 #wrapper .content-heading img,
 #wrapper .content img {
   margin-bottom: 40px;
 }
-/* line 30, ../sass/_scaffolding.sass */
+/* line 35, ../sass/_scaffolding.sass */
 #wrapper .content-heading img.inline,
 #wrapper .content img.inline {
   margin: 0 5px;
 }
-/* line 32, ../sass/_scaffolding.sass */
+/* line 37, ../sass/_scaffolding.sass */
 #wrapper .content-heading h6,
 #wrapper .content h6 {
   color: #333;
   margin-bottom: 20px;
 }
-/* line 35, ../sass/_scaffolding.sass */
+/* line 40, ../sass/_scaffolding.sass */
 #wrapper .content-heading p,
 #wrapper .content p {
   line-height: 26px;
 }
-/* line 37, ../sass/_scaffolding.sass */
+/* line 42, ../sass/_scaffolding.sass */
 #wrapper .content-heading ul,
 #wrapper .content ul {
   list-style: disc;
 }
-/* line 39, ../sass/_scaffolding.sass */
+/* line 44, ../sass/_scaffolding.sass */
 #wrapper .content-heading li,
 #wrapper .content li {
   padding: 10px 0;
 }
-/* line 41, ../sass/_scaffolding.sass */
+/* line 46, ../sass/_scaffolding.sass */
 #wrapper .content-heading .image-box,
 #wrapper .content .image-box {
   background: #ebebeb;
@@ -557,7 +571,7 @@ body a:hover, body a:focus, body a:active {
   display: block;
   margin-bottom: 20px;
 }
-/* line 47, ../sass/_scaffolding.sass */
+/* line 52, ../sass/_scaffolding.sass */
 #wrapper .content-heading {
   position: relative;
   overflow: hidden;
@@ -565,18 +579,18 @@ body a:hover, body a:focus, body a:active {
   min-height: 20px;
 }
 
-/* line 53, ../sass/_scaffolding.sass */
+/* line 58, ../sass/_scaffolding.sass */
 .overview {
   background: #edeff3;
 }
 
-/* line 56, ../sass/_scaffolding.sass */
+/* line 61, ../sass/_scaffolding.sass */
 .sublinks {
   background: #edeff3;
   padding: 20px;
   list-style: none;
 }
-/* line 60, ../sass/_scaffolding.sass */
+/* line 65, ../sass/_scaffolding.sass */
 .sublinks li {
   padding: 10px 0;
 }
