@@ -4,6 +4,7 @@ $(function(){
     var $navElem = $('#sideNav');
     var $itemLinks = $('#sideNav a');
     var didClick = false;
+    $('.searchInput').val('');
 
     $(window).scroll(function(){
         var currentScroll = $(this).scrollTop();
@@ -52,6 +53,13 @@ $(function(){
 
     $('.searchInput').on('input', function(e) {
         var InputVal = $(this).val();
+
+        if(InputVal.length > 0){
+            $(this).addClass('typing');
+        } else {
+            $(this).removeClass('typing');
+        }
+
         if(InputVal === 'blueprint'){
             $('.search-results').addClass('open');
         } else if (InputVal === '') {

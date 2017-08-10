@@ -227,24 +227,28 @@ nav {
 }
 /* line 96, ../sass/_header.sass */
 .big-header .search-wrapper input:focus, .big-header .search-wrapper input:hover {
+  background-color: #fff;
+}
+/* line 99, ../sass/_header.sass */
+.big-header .search-wrapper input.typing {
   background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 42vw 22px #fff;
 }
 
-/* line 101, ../sass/_header.sass */
+/* line 103, ../sass/_header.sass */
 .top-header {
   height: 165px;
   position: relative;
   width: 100%;
   z-index: 4;
 }
-/* line 106, ../sass/_header.sass */
+/* line 108, ../sass/_header.sass */
 .top-header .top, .top-header .bottom {
   padding: 20px 65px;
   float: left;
   position: relative;
   width: 100vw;
 }
-/* line 112, ../sass/_header.sass */
+/* line 114, ../sass/_header.sass */
 .top-header .top h1 {
   float: left;
   text-align: left;
@@ -252,21 +256,21 @@ nav {
   text-transform: uppercase;
   font-size: 30px;
 }
-/* line 118, ../sass/_header.sass */
+/* line 120, ../sass/_header.sass */
 .top-header .top .search-wrapper {
   position: absolute;
   right: 55px;
   top: 5px;
 }
 @media only screen and (max-width: 991px) {
-  /* line 118, ../sass/_header.sass */
+  /* line 120, ../sass/_header.sass */
   .top-header .top .search-wrapper {
     position: relative;
     top: auto;
     right: auto;
   }
 }
-/* line 126, ../sass/_header.sass */
+/* line 128, ../sass/_header.sass */
 .top-header .top .search-wrapper input {
   padding: 15px;
   border: 1px solid #ccc;
@@ -274,16 +278,16 @@ nav {
   background: transparent;
 }
 @media only screen and (max-width: 991px) {
-  /* line 126, ../sass/_header.sass */
+  /* line 128, ../sass/_header.sass */
   .top-header .top .search-wrapper input {
     width: 100%;
   }
 }
-/* line 133, ../sass/_header.sass */
+/* line 135, ../sass/_header.sass */
 .top-header .top .search-wrapper input:focus, .top-header .top .search-wrapper input:hover {
   background: #fff;
 }
-/* line 136, ../sass/_header.sass */
+/* line 138, ../sass/_header.sass */
 .top-header .bottom {
   border-bottom: 1px solid #dedede;
   border-top: 1px solid #dedede;
