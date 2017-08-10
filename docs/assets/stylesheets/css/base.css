@@ -520,10 +520,9 @@ body a:hover, body a:focus, body a:active {
   font-family: "Brutal_Light", sans-serif, arial;
 }
 /* line 28, ../sass/_scaffolding.sass */
-#wrapper .content-heading h4, #wrapper .content-heading h5, #wrapper .content-heading h6,
+#wrapper .content-heading h4, #wrapper .content-heading h5,
 #wrapper .content h4,
-#wrapper .content h5,
-#wrapper .content h6 {
+#wrapper .content h5 {
   font-family: "Brutal_Bold", sans-serif, arial;
 }
 /* line 30, ../sass/_scaffolding.sass */
