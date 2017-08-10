@@ -1,0 +1,35 @@
+.content-bar
+  position: absolute
+  right: 25px
+  top: 25px
+  width: 200px
+  .os-toggle,
+  .version-tag
+    padding: 5px
+    border-radius: 10px
+    border: 1px solid #d4d4d4
+    color: #272727
+    width: auto
+    display: inline-block
+    float: right
+  .os-toggle
+    width: 60px
+    position: relative
+    margin-right: 5px
+    .windows
+      width: 15px
+      height: 15px
+      display: inline-block
+      background: url(../../images/content/windows-logo.png)
+      margin: 3px 0 0 5px
+    &:after
+      content: ''
+      width: 0
+      height: 0
+      position: absolute
+      right: 8px
+      top: 14px
+      border-left: 6px solid transparent
+      border-right: 6px solid transparent
+      border-top: 6px solid #272727
+

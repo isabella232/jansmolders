@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Docs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assets/stylesheets/css/base.css">
+</head>
+
+<body>
+    <nav id="global-nav"></nav>
+    <div class="top-header">
+        <div class="top">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h1>Unreal Engine Documentation</h1>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="search-wrapper">
+                        <input placeholder="Search User Manual" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li>Blueprints Visual Scripting</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-2">
+                <aside id="sideNav">
+                    <h6>On this Page:</h6>
+                    <ul id="menu">
+                        <li><a data-item="one" class="links" href="#">Getting Started</a></li>
+                        <li><a data-item="two" class="links" href="#">General Scripting</a></li>
+                        <li><a data-item="three" class="links" href="#">Building Blueprints</a></li>
+                        <li><a data-item="four" class="links" href="#">Blueprint Communication</a></li>
+                        <li><a data-item="five" class="links" href="#">Doing more with Blueprints</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-xs-12 col-md-9">
+                <section id="wrapper">
+                    <div class="content-heading">
+                        <div class="content-bar">
+                            <div class="version-tag"> 4.16x</div>
+                            <div class="os-toggle"><span class="windows"></span></div>
+                        </div>
+                        <h2>Blueprints Visual Scripting</h2>
+                        <h6>Last edited: 8/9/2017</h6>
+                        <img src="assets/images/content/banner.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                        <p>The Blueprints Visual Scripting system in Unreal Engine is a complete gameplay scripting system based on the concept of using a node-based interface to create gameplay elements from within Unreal Editor. As with many common scripting languages, it is used to define object-oriented (OO) classes or objects in the engine. As you use UE4, you'll often find that objects defined using Blueprint are colloquially referred to as just "Blueprints."</p>
+                        <p>This system is extremely flexible and powerful as it provides the ability for designers to use virtually the full range of concepts and tools generally only available to programmers. In addition, Blueprint-specific markup available in Unreal Engine's C++ implementation enables programmers to create baseline systems that can be extended by designers.</p>
+                    </div>
+
+                    <div id="one" class="content">
+                        <h2>Getting Started</h2>
+                        <h6>Last edited: 7/28/2017</h6>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/QuickStart.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Quick Start Guide</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/intro_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Introduction</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BPVid.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Video Introductions</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="two" class="content">
+                        <h2>General scripting</h2>
+                        <h6>Last edited: 7/28/2017</h6>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BasicScripting.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Basic Scripting</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BlueprintEssentials.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Essentials</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="three" class="content">
+                        <h2>Building Blueprints</h2>
+                        <h6>Last edited: 7/28/2017</h6>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/Anatomy.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Anatomy of Blueprints</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/bp_workflow_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Workflow Tools</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BP_HowTo_Topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">How To's</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/blueprintcheatsheet.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Cheat Sheet</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BestPractices_Topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Best Practises</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BPTutorials.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Video tutorials</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="four" class="content">
+                        <h2>Blueprint Communication</h2>
+                        <h6>Last edited: 7/28/2017</h6>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/bp_comms_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Communication Usage</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BPCommTopic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Communication Project</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/CommStream.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Live Stream: Communications</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/direct_comm_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Direct Communication</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/event_dispatcher_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Event Dispatchers</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/blueprint_interface.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Interface</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="five" class="content">
+                        <h2>Doing More With Blueprints</h2>
+                        <h6>Last edited: 7/28/2017</h6>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/bp_api_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Node Reference</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/editor_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Editor Reference</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BPLiveStream.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Live Training Streams</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/placeholder_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Technical Guide</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/NativizingBlueprints_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Nativizing Blueprints</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/math_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Math Expression Node</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/OnlineNodesTopic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Online Session Nodes</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/random_stream.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Random Streams</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/timeline_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Timelines</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/level_blueprint_test_image.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Level Blueprint</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/macro_blueprint.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Macro Library</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/BitmaskBlueprintVariables_topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Bitmask Blueprint Variables</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <a data-item="six" class="tile" href="level2.html">
+                                    <img src="assets/images/content/tiles/Patching_Topic.jpg" class="img-responsive" style="width: 100%" alt="docs"/>
+                                    <div class="h2">Mobile Patch Itility Nodes</div>
+                                    <div class="desc">Guide to using and configuring the Unreal Editor toolset.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src='assets/javascript/vendor/jquery-1.11.3.min.js'></script>
+    <script src="assets/javascript/bootstrap.js"></script>
+</body>
+</html>

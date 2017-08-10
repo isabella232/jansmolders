@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Docs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assets/stylesheets/css/base.css">
+</head>
+
+<body>
+    <nav id="global-nav"></nav>
+    <div class="top-header">
+        <div class="top">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h1>Unreal Engine Documentation</h1>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="search-wrapper">
+                        <input placeholder="Search User Manual" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="level1.html">Blueprints Visual Scripting</a></li>
+                <li>Event Dispatcher</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-2">
+                <aside id="sideNav">
+                    <h6>On this Page:</h6>
+                    <ul id="menu">
+                        <li><a data-item="one" class="links" href="#">Creating Event Dispatchers</a></li>
+                        <li><a data-item="two" class="links" href="#">Setting Properties</a></li>
+                        <li><a data-item="three" class="links" href="#">Using Event Dispatchers</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-xs-12 col-md-9">
+                <section id="wrapper">
+                    <div class="content-heading">
+                        <div class="content-bar">
+                            <div class="version-tag"> 4.16x</div>
+                            <div class="os-toggle"><span class="windows"></span></div>
+                        </div>
+                        <h2>Event Dispatchers</h2>
+                        <h6>Last edited: 8/9/2017</h6>
+                        <p>By binding one or more events to an Event Dispatcher, you can cause all of those events to fire once the Event Dispatcher is called. These events can be bound within a Blueprint Class, but Event Dispatchers also allow events to be fired within the Level Blueprint. </p>
+                        <div class="callout tip">
+                            <strong>TIP:</strong>
+                            <p>&nbsp; This is a super handy tip we show inbetween the text to help you use this thing with a link to <a href="">more information</a>.</p>
+                        </div>
+                    </div>
+
+                    <div id="one" class="content">
+                        <h2>Creating Event Dispatchers</h2>
+                        <p>Event Dispatchers are created in the <a href="">My Blueprint</a> tab of the Blueprint Editor.</p>
+                        <p>To create a new Event Dispatcher:</p>
+                        <ol>
+                            <li>In the <strong>My Blueprint</strong> click the <img src="assets/images/content/tiles/plus_Button.jpg" class="inline" /> button on the Event Dispatcher category: <img src="assets/images/content/tiles/myblueprint_eventdispatcher.jpg" class="inline" /></li>
+                            <li>Enter a name for the Event Dispatcher in the name field that appears at the end of the list in the My Blueprint tab. <img src="assets/images/content/tiles/name_event_Dispatcher.jpg" class="inline" /></li>
+                        </ol>
+                    </div>
+                    <div id="two" class="content">
+                        <h2>Setting Properties</h2>
+                        <p>By selecting the Event Dispatcher in the My Blueprint tab, you can edit its properties in the Details panel. You can set the tooltip and category for your Event Dispatcher, as well as add inputs.</p>
+                        <p>Adding inputs to your Event Dispatcher allows you to send variables to each event bound to your Event Dispatcher. This allows data flow not only within your Blueprint Class, but also between your Blueprint Class and the Level Blueprint.</p>
+                        <p>The process to add inputs to your Event Dispatcher is similar to the workflow for adding inputs and outputs to functions, custom events, and macros. If you would like to use the same inputs as another event, you can use the Copy Signature from dropdown to indicate the event. To add your own inputs to the Event Dispatcher:</p>
+                        <ol>
+                            <li>Click on the New button in the Inputs section of the Details pane. <br/><br/> <img src="assets/images/content/tiles/new_input_Dispatcher.jpg" class="inline" /></li>
+                            <li>Name the new input and set its type using the dropdown menu. In this example, there is a String input parameter named <strong>MyStringParam</strong>. <br/><br/> <img src="assets/images/content/tiles/named_new_Dispatcher.jpg" class="inline" /></li>
+                            <li>You can also set a default value and indicate whether or not to pass the parameter by reference by expanding the entry for the parameter.
+                                <br/><br/>
+                                <img src="assets/images/content/tiles/expanded_input_Dispatcher.jpg" class="inline" />
+                                <br/><br/>
+                                To change the location of the pin for this parameter on the edge of the node, use the up and down arrows in the expanded Details pane entry.
+                            </li>
+                        </ol>
+                    </div>
+                    <div id="three" class="content">
+                        <h2>Using Event Dispatchers</h2>
+                        <p>Once you have created the Event Dispatcher, you can add event nodes, bind nodes, and unbind nodes linked to it. Although you can <strong>Double-click</strong> on the Event Dispatcher entry in the <strong>My Blueprint</strong> tab to open the Event Dispatcher's graph, the graph is locked and you cannot modify the Event Dispatcher directly. The bind, unbind, and assign methods all allow you to add events to the Event Dispatcher's event list, while the call method activates all the events stored in the event list.</p>
+                        <p>All of the nodes described below can be added in both the Blueprint Class and the Level Blueprint. Except for the Event node, each node has a <strong>Target</strong> input pin:</p>
+                        <ul>
+                            <li>In the Blueprint Class, this pin is automatically set to <strong>Self</strong>. This means that the event list is changed for the class, so every instance of the class will be changed.</li>
+                            <li>In the Level Blueprint, this pin must be connected to a reference to an instance of the class in the level. This means that the event list will only be changed for that particular instance of the class. <a href="">The Level Blueprint documentation</a> explains how to create any Actor references you might need.</li>
+                        </ul>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-md-4">
+                                <a data-item="six" class="tile" style="height: 500px" href="level2.html">
+                                    <img src="assets/images/content/tiles/Anatomy.jpg" class="img-responsive" style="width: 100%; height: 150px" alt="docs"/>
+                                    <div class="h2">Calling Event Dispatchers</div>
+                                    <div class="desc">Calling an Event Dispatcher with a Call node causes all of the events bound to the Event Dispatcher to fire. <br/> You can have more than one Call node for each Event Dispatcher, and you can also call the Event Dispatcher in both Blueprint Classes and Level Blueprints.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                <a data-item="six" class="tile" style="height: 500px" href="level2.html">
+                                    <img src="assets/images/content/tiles/bp_workflow_topic.jpg" class="img-responsive" style="width: 100%; height: 150px" alt="docs"/>
+                                    <div class="h2">Binding and Unbinding Events</div>
+                                    <div class="desc">Calling the Event Dispatcher will have no effect if there are no events bound to it. Consider that each Event Dispatcher has a list of events associated with it. <br/><br/>The way to add an event to this list is by using a Bind Event node, and the way to remove an event from this list is by using an Unbind Event node. It is also possible to unbind all of the events currently bound to an Event Dispatcher with an Unbind All Events node.</div>
+                                </a>
+                            </div>
+                            <div class="col-xs-6 col-md-4">
+                                <a data-item="six" class="tile" style="height: 500px" href="level2.html">
+                                    <img src="assets/images/content/tiles/BP_HowTo_Topic.jpg" class="img-responsive" style="width: 100%; height: 150px" alt="docs"/>
+                                    <div class="h2">Creating Dispatcher Events</div>
+                                    <div class="desc">Using the Event option on the Event Dispatcher's menu creates a custom event with the correct signature so that it can be bound to the Event Dispatcher.<br/>While the event node appears similar to a Custom Event node , without being connected to a Bind node, this event will never be triggered when the Call [EventDispatcherName] node is executed.</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src='assets/javascript/vendor/jquery-1.11.3.min.js'></script>
+    <script src="assets/javascript/bootstrap.js"></script>
+</body>
+</html>
