@@ -49,4 +49,15 @@ $(function(){
             didClick = false;
         },650)
     });
+
+    $('.searchInput').on('input', function(e) {
+        var InputVal = $(this).val();
+        if(InputVal === 'blueprint'){
+            $('.search-results').addClass('open');
+        } else if (InputVal === '') {
+            $('.search-results').removeClass('open');
+        }
+    });
+
+
 });

@@ -1,6 +1,6 @@
 .big-header
   height: 500px
-  background: url(../../images/header.jpg) no-repeat top left
+  background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fheader-1920x536-a77fe53fce3e4f86976d48ec36aa31916588e492.jpg) no-repeat top left
   background-size: cover
   width: 100vw
   +respond-max-width(sm)
@@ -28,6 +28,10 @@
     right: 0
     text-align: center
     top: 250px
+    a
+      text-decoration: none
+      color: $text-color
+      display: block
     +respond-max-width(sm)
       position: relative
       width: 100vw
@@ -43,10 +47,11 @@
       display: none
       position: relative
       z-index: 8
+      &.open,
       &:hover
         display: block
         + input
-          background: url(../../images/ripple.gif) no-repeat 43vw 22px #fff
+          background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 43vw 22px #fff
       ul
         margin: 0
         padding: 0
@@ -64,7 +69,9 @@
       .h2
         text-align: left
         font-size: 16px
-        font-family: $font-BrutalBold
+        font-family: $font-BrutalRegular
+        strong
+          font-family: $font-BrutalBold
       .desc
         font-size: 14px
         text-align: left
@@ -85,12 +92,10 @@
       width: 45vw
       +respond-max-width(sm)
         width: 80vw
-      background: url(../../images/search.png) no-repeat 43vw 27px #f5f5f5
+      background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fsearch-19x19-bac2bf87c7457b457a3e793c12b4ee0c86bafc5f.png) no-repeat 42vw 27px #f5f5f5
       &:focus,
       &:hover
-        background: url(../../images/ripple.gif) no-repeat 43vw 22px #fff
-        + .search-results
-          display: block
+        background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 42vw 22px #fff
 
 
 .top-header

@@ -35,7 +35,7 @@
 /* line 1, ../sass/_nav.sass */
 nav {
   height: 52px;
-  background: url(../../images/nav.jpg) no-repeat top left;
+  background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fnav-1920x52-f73cda0b307e4cb78787695ccf3891904c2c82b5.jpg) no-repeat top left;
   background-size: cover;
   width: 100vw;
   position: relative;
@@ -71,19 +71,19 @@ nav {
 }
 /* line 21, ../sass/_sideNav.sass */
 #sideNav a:hover {
-  border: 1px solid #f6f6f6;
+  border: 1px solid #edeff3;
 }
 /* line 23, ../sass/_sideNav.sass */
 #sideNav .active {
-  background-color: #f6f6f6;
-  border: 1px solid #f6f6f6;
+  background-color: #edeff3;
+  border: 1px solid #edeff3;
   border-radius: 4px;
 }
 
 /* line 1, ../sass/_header.sass */
 .big-header {
   height: 500px;
-  background: url(../../images/header.jpg) no-repeat top left;
+  background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fheader-1920x536-a77fe53fce3e4f86976d48ec36aa31916588e492.jpg) no-repeat top left;
   background-size: cover;
   width: 100vw;
 }
@@ -123,6 +123,12 @@ nav {
   text-align: center;
   top: 250px;
 }
+/* line 31, ../sass/_header.sass */
+.big-header .search-wrapper a {
+  text-decoration: none;
+  color: #232323;
+  display: block;
+}
 @media only screen and (max-width: 991px) {
   /* line 23, ../sass/_header.sass */
   .big-header .search-wrapper {
@@ -131,7 +137,7 @@ nav {
     top: 60px;
   }
 }
-/* line 35, ../sass/_header.sass */
+/* line 39, ../sass/_header.sass */
 .big-header .search-wrapper .search-results {
   background: #fff;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
@@ -143,54 +149,58 @@ nav {
   z-index: 8;
 }
 @media only screen and (max-width: 991px) {
-  /* line 35, ../sass/_header.sass */
+  /* line 39, ../sass/_header.sass */
   .big-header .search-wrapper .search-results {
     width: 80vw;
   }
 }
-/* line 46, ../sass/_header.sass */
-.big-header .search-wrapper .search-results:hover {
+/* line 50, ../sass/_header.sass */
+.big-header .search-wrapper .search-results.open, .big-header .search-wrapper .search-results:hover {
   display: block;
 }
-/* line 48, ../sass/_header.sass */
-.big-header .search-wrapper .search-results:hover + input {
-  background: url(../../images/ripple.gif) no-repeat 43vw 22px #fff;
+/* line 53, ../sass/_header.sass */
+.big-header .search-wrapper .search-results.open + input, .big-header .search-wrapper .search-results:hover + input {
+  background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 43vw 22px #fff;
 }
-/* line 50, ../sass/_header.sass */
+/* line 55, ../sass/_header.sass */
 .big-header .search-wrapper .search-results ul {
   margin: 0;
   padding: 0;
 }
-/* line 53, ../sass/_header.sass */
+/* line 58, ../sass/_header.sass */
 .big-header .search-wrapper .search-results ul li {
   position: relative;
   padding-bottom: 15px;
   border-bottom: 1px solid #dadada;
 }
-/* line 57, ../sass/_header.sass */
+/* line 62, ../sass/_header.sass */
 .big-header .search-wrapper .search-results ul li.show-all {
   border: 0;
   padding: 20px 0;
 }
-/* line 60, ../sass/_header.sass */
+/* line 65, ../sass/_header.sass */
 .big-header .search-wrapper .search-results ul li.show-all a {
   font-size: 16px;
   font-family: "Brutal_Bold", sans-serif, arial;
   color: #232323;
 }
-/* line 64, ../sass/_header.sass */
+/* line 69, ../sass/_header.sass */
 .big-header .search-wrapper .search-results .h2 {
   text-align: left;
   font-size: 16px;
+  font-family: "Brutal_Regular", sans-serif, arial;
+}
+/* line 73, ../sass/_header.sass */
+.big-header .search-wrapper .search-results .h2 strong {
   font-family: "Brutal_Bold", sans-serif, arial;
 }
-/* line 68, ../sass/_header.sass */
+/* line 75, ../sass/_header.sass */
 .big-header .search-wrapper .search-results .desc {
   font-size: 14px;
   text-align: left;
   width: 80%;
 }
-/* line 72, ../sass/_header.sass */
+/* line 79, ../sass/_header.sass */
 .big-header .search-wrapper .search-results .version-tag {
   padding: 5px 10px;
   font-size: 12px;
@@ -202,43 +212,39 @@ nav {
   right: -5px;
   top: 0;
 }
-/* line 82, ../sass/_header.sass */
+/* line 89, ../sass/_header.sass */
 .big-header .search-wrapper input {
   padding: 25px 20px;
   border: 1px solid #dadada;
   width: 45vw;
-  background: url(../../images/search.png) no-repeat 43vw 27px #f5f5f5;
+  background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fsearch-19x19-bac2bf87c7457b457a3e793c12b4ee0c86bafc5f.png) no-repeat 42vw 27px #f5f5f5;
 }
 @media only screen and (max-width: 991px) {
-  /* line 82, ../sass/_header.sass */
+  /* line 89, ../sass/_header.sass */
   .big-header .search-wrapper input {
     width: 80vw;
   }
 }
-/* line 89, ../sass/_header.sass */
+/* line 96, ../sass/_header.sass */
 .big-header .search-wrapper input:focus, .big-header .search-wrapper input:hover {
-  background: url(../../images/ripple.gif) no-repeat 43vw 22px #fff;
-}
-/* line 92, ../sass/_header.sass */
-.big-header .search-wrapper input:focus + .search-results, .big-header .search-wrapper input:hover + .search-results {
-  display: block;
+  background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 42vw 22px #fff;
 }
 
-/* line 96, ../sass/_header.sass */
+/* line 101, ../sass/_header.sass */
 .top-header {
   height: 165px;
   position: relative;
   width: 100%;
   z-index: 4;
 }
-/* line 101, ../sass/_header.sass */
+/* line 106, ../sass/_header.sass */
 .top-header .top, .top-header .bottom {
   padding: 20px 65px;
   float: left;
   position: relative;
   width: 100vw;
 }
-/* line 107, ../sass/_header.sass */
+/* line 112, ../sass/_header.sass */
 .top-header .top h1 {
   float: left;
   text-align: left;
@@ -246,21 +252,21 @@ nav {
   text-transform: uppercase;
   font-size: 30px;
 }
-/* line 113, ../sass/_header.sass */
+/* line 118, ../sass/_header.sass */
 .top-header .top .search-wrapper {
   position: absolute;
   right: 55px;
   top: 5px;
 }
 @media only screen and (max-width: 991px) {
-  /* line 113, ../sass/_header.sass */
+  /* line 118, ../sass/_header.sass */
   .top-header .top .search-wrapper {
     position: relative;
     top: auto;
     right: auto;
   }
 }
-/* line 121, ../sass/_header.sass */
+/* line 126, ../sass/_header.sass */
 .top-header .top .search-wrapper input {
   padding: 15px;
   border: 1px solid #ccc;
@@ -268,16 +274,16 @@ nav {
   background: transparent;
 }
 @media only screen and (max-width: 991px) {
-  /* line 121, ../sass/_header.sass */
+  /* line 126, ../sass/_header.sass */
   .top-header .top .search-wrapper input {
     width: 100%;
   }
 }
-/* line 128, ../sass/_header.sass */
+/* line 133, ../sass/_header.sass */
 .top-header .top .search-wrapper input:focus, .top-header .top .search-wrapper input:hover {
   background: #fff;
 }
-/* line 131, ../sass/_header.sass */
+/* line 136, ../sass/_header.sass */
 .top-header .bottom {
   border-bottom: 1px solid #dedede;
   border-top: 1px solid #dedede;
@@ -437,7 +443,7 @@ nav {
   width: 15px;
   height: 15px;
   display: inline-block;
-  background: url(../../images/content/windows-logo.png);
+  background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fcontent%2Fwindows-logo-15x15-03efdc26515dcaddd757acbe9530fdc6fd497362.png);
   margin: 3px 0 0 5px;
 }
 /* line 25, ../sass/_tags.sass */
