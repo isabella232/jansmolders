@@ -1,14 +1,14 @@
 .big-header
-  height: 500px
+  height: 400px
   background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fheader-1920x536-a77fe53fce3e4f86976d48ec36aa31916588e492.jpg) no-repeat top left
   background-size: cover
   width: 100vw
   +respond-max-width(sm)
-    height: 350px
+    height: 280px
   h1
     position: absolute
     left: 0
-    top: 150px
+    top: 80px
     width: 100vw
     text-align: center
     color: #fff
@@ -27,7 +27,7 @@
     left: 0
     right: 0
     text-align: center
-    top: 250px
+    top: 200px
     a
       text-decoration: none
       color: $text-color
@@ -38,20 +38,22 @@
       top: 60px
     .search-results
       background: #fff
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1)
+      box-shadow: 0 5px 6px rgba(0, 0, 0, 0.4)
       padding: 20px
       width: 45vw
       +respond-max-width(sm)
         width: 80vw
-      margin: 0 auto
       display: none
-      position: relative
+      position: absolute
+      margin-left: auto
+      margin-right: auto
+      left: 0
+      right: 0
+      top: 70px
       z-index: 8
       &.open,
       &:hover
         display: block
-        + input
-          background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 43vw 22px #fff
       ul
         margin: 0
         padding: 0
@@ -92,12 +94,15 @@
       width: 45vw
       +respond-max-width(sm)
         width: 80vw
+        background-position: 72vw 27px
       background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fsearch-19x19-bac2bf87c7457b457a3e793c12b4ee0c86bafc5f.png) no-repeat 42vw 27px #f5f5f5
       &:focus,
       &:hover
         background-color: #fff
       &.typing
         background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 42vw 22px #fff
+        +respond-max-width(sm)
+          background-position: 72vw 22px
 
 
 .top-header

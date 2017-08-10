@@ -82,7 +82,7 @@ nav {
 
 /* line 1, ../sass/_header.sass */
 .big-header {
-  height: 500px;
+  height: 400px;
   background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fheader-1920x536-a77fe53fce3e4f86976d48ec36aa31916588e492.jpg) no-repeat top left;
   background-size: cover;
   width: 100vw;
@@ -90,14 +90,14 @@ nav {
 @media only screen and (max-width: 991px) {
   /* line 1, ../sass/_header.sass */
   .big-header {
-    height: 350px;
+    height: 280px;
   }
 }
 /* line 8, ../sass/_header.sass */
 .big-header h1 {
   position: absolute;
   left: 0;
-  top: 150px;
+  top: 80px;
   width: 100vw;
   text-align: center;
   color: #fff;
@@ -121,7 +121,7 @@ nav {
   left: 0;
   right: 0;
   text-align: center;
-  top: 250px;
+  top: 200px;
 }
 /* line 31, ../sass/_header.sass */
 .big-header .search-wrapper a {
@@ -140,12 +140,16 @@ nav {
 /* line 39, ../sass/_header.sass */
 .big-header .search-wrapper .search-results {
   background: #fff;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.4);
   padding: 20px;
   width: 45vw;
-  margin: 0 auto;
   display: none;
-  position: relative;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 70px;
   z-index: 8;
 }
 @media only screen and (max-width: 991px) {
@@ -154,53 +158,49 @@ nav {
     width: 80vw;
   }
 }
-/* line 50, ../sass/_header.sass */
+/* line 54, ../sass/_header.sass */
 .big-header .search-wrapper .search-results.open, .big-header .search-wrapper .search-results:hover {
   display: block;
 }
-/* line 53, ../sass/_header.sass */
-.big-header .search-wrapper .search-results.open + input, .big-header .search-wrapper .search-results:hover + input {
-  background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 43vw 22px #fff;
-}
-/* line 55, ../sass/_header.sass */
+/* line 57, ../sass/_header.sass */
 .big-header .search-wrapper .search-results ul {
   margin: 0;
   padding: 0;
 }
-/* line 58, ../sass/_header.sass */
+/* line 60, ../sass/_header.sass */
 .big-header .search-wrapper .search-results ul li {
   position: relative;
   padding-bottom: 15px;
   border-bottom: 1px solid #dadada;
 }
-/* line 62, ../sass/_header.sass */
+/* line 64, ../sass/_header.sass */
 .big-header .search-wrapper .search-results ul li.show-all {
   border: 0;
   padding: 20px 0;
 }
-/* line 65, ../sass/_header.sass */
+/* line 67, ../sass/_header.sass */
 .big-header .search-wrapper .search-results ul li.show-all a {
   font-size: 16px;
   font-family: "Brutal_Bold", sans-serif, arial;
   color: #232323;
 }
-/* line 69, ../sass/_header.sass */
+/* line 71, ../sass/_header.sass */
 .big-header .search-wrapper .search-results .h2 {
   text-align: left;
   font-size: 16px;
   font-family: "Brutal_Regular", sans-serif, arial;
 }
-/* line 73, ../sass/_header.sass */
+/* line 75, ../sass/_header.sass */
 .big-header .search-wrapper .search-results .h2 strong {
   font-family: "Brutal_Bold", sans-serif, arial;
 }
-/* line 75, ../sass/_header.sass */
+/* line 77, ../sass/_header.sass */
 .big-header .search-wrapper .search-results .desc {
   font-size: 14px;
   text-align: left;
   width: 80%;
 }
-/* line 79, ../sass/_header.sass */
+/* line 81, ../sass/_header.sass */
 .big-header .search-wrapper .search-results .version-tag {
   padding: 5px 10px;
   font-size: 12px;
@@ -212,7 +212,7 @@ nav {
   right: -5px;
   top: 0;
 }
-/* line 89, ../sass/_header.sass */
+/* line 91, ../sass/_header.sass */
 .big-header .search-wrapper input {
   padding: 25px 20px;
   border: 1px solid #dadada;
@@ -220,35 +220,42 @@ nav {
   background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fsearch-19x19-bac2bf87c7457b457a3e793c12b4ee0c86bafc5f.png) no-repeat 42vw 27px #f5f5f5;
 }
 @media only screen and (max-width: 991px) {
-  /* line 89, ../sass/_header.sass */
+  /* line 91, ../sass/_header.sass */
   .big-header .search-wrapper input {
     width: 80vw;
+    background-position: 72vw 27px;
   }
 }
-/* line 96, ../sass/_header.sass */
+/* line 99, ../sass/_header.sass */
 .big-header .search-wrapper input:focus, .big-header .search-wrapper input:hover {
   background-color: #fff;
 }
-/* line 99, ../sass/_header.sass */
+/* line 102, ../sass/_header.sass */
 .big-header .search-wrapper input.typing {
   background: url(https://cdn3.unrealengine.com/Creative+Services%2FDocs-styled%2Fimages%2Fripple-c4d458bf35704c5e9ffbb8a23586f756ad4dfb6a.gif) no-repeat 42vw 22px #fff;
 }
+@media only screen and (max-width: 991px) {
+  /* line 102, ../sass/_header.sass */
+  .big-header .search-wrapper input.typing {
+    background-position: 72vw 22px;
+  }
+}
 
-/* line 103, ../sass/_header.sass */
+/* line 108, ../sass/_header.sass */
 .top-header {
   height: 165px;
   position: relative;
   width: 100%;
   z-index: 4;
 }
-/* line 108, ../sass/_header.sass */
+/* line 113, ../sass/_header.sass */
 .top-header .top, .top-header .bottom {
   padding: 20px 65px;
   float: left;
   position: relative;
   width: 100vw;
 }
-/* line 114, ../sass/_header.sass */
+/* line 119, ../sass/_header.sass */
 .top-header .top h1 {
   float: left;
   text-align: left;
@@ -256,21 +263,21 @@ nav {
   text-transform: uppercase;
   font-size: 30px;
 }
-/* line 120, ../sass/_header.sass */
+/* line 125, ../sass/_header.sass */
 .top-header .top .search-wrapper {
   position: absolute;
   right: 55px;
   top: 5px;
 }
 @media only screen and (max-width: 991px) {
-  /* line 120, ../sass/_header.sass */
+  /* line 125, ../sass/_header.sass */
   .top-header .top .search-wrapper {
     position: relative;
     top: auto;
     right: auto;
   }
 }
-/* line 128, ../sass/_header.sass */
+/* line 133, ../sass/_header.sass */
 .top-header .top .search-wrapper input {
   padding: 15px;
   border: 1px solid #ccc;
@@ -278,16 +285,16 @@ nav {
   background: transparent;
 }
 @media only screen and (max-width: 991px) {
-  /* line 128, ../sass/_header.sass */
+  /* line 133, ../sass/_header.sass */
   .top-header .top .search-wrapper input {
     width: 100%;
   }
 }
-/* line 135, ../sass/_header.sass */
+/* line 140, ../sass/_header.sass */
 .top-header .top .search-wrapper input:focus, .top-header .top .search-wrapper input:hover {
   background: #fff;
 }
-/* line 138, ../sass/_header.sass */
+/* line 143, ../sass/_header.sass */
 .top-header .bottom {
   border-bottom: 1px solid #dedede;
   border-top: 1px solid #dedede;
