@@ -266,7 +266,7 @@ nav {
 /* line 125, ../sass/_header.sass */
 .top-header .top .search-wrapper {
   position: absolute;
-  right: 55px;
+  right: 0;
   top: 5px;
 }
 @media only screen and (max-width: 991px) {
