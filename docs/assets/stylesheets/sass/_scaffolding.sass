@@ -34,6 +34,7 @@ body
       margin-bottom: 40px
       &.inline
         margin: 0 5px
+        max-height: 500px
     h6
       color: #333
       margin-bottom: 20px
@@ -64,3 +65,23 @@ body
   list-style: none
   li
     padding: 10px 0
+
+.finish-row
+  text-align: center
+  width: 100%
+  padding: 40px 0
+  border-bottom: 1px solid #edeff3
+  margin-bottom: 40px
+  .finish
+    display: inline-block
+    margin: 0 auto
+    padding: 20px 20px 20px 60px
+    text-align: center
+    border: 1px solid #edeff3
+    color: $text-color
+    text-decoration: none
+    background: url(../../images/check-grey.png) no-repeat 20px 24px
+    &.done,
+    &:hover
+      color: #fff
+      background: url(../../images/check-white.png) no-repeat 20px 24px #73bb95

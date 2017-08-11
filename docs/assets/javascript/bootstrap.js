@@ -4,7 +4,9 @@ $(function(){
     var $navElem = $('#sideNav');
     var $itemLinks = $('#sideNav a');
     var didClick = false;
-    $('.searchInput').val('');
+    var $searchInput = $('.searchInput');
+    var $searchResults = $('.search-results');
+    $searchInput.val('');
 
     $(window).scroll(function(){
         var currentScroll = $(this).scrollTop();
@@ -51,7 +53,7 @@ $(function(){
         },650)
     });
 
-    $('.searchInput').on('input', function(e) {
+    $searchInput.on('input', function(e) {
         var InputVal = $(this).val();
 
         if(InputVal.length > 0){
@@ -61,11 +63,24 @@ $(function(){
         }
 
         if(InputVal === 'blueprint'){
-            $('.search-results').addClass('open');
+            $searchResults.removeClass('landscape');
+            $searchResults.addClass('open').addClass('blueprint');
+        }  else if (InputVal === 'landscape') {
+            $searchResults.removeClass('blueprint');
+            $searchResults.addClass('open').addClass('landscape');
         } else if (InputVal === '') {
-            $('.search-results').removeClass('open');
+            $searchResults.removeClass('open').removeClass('blueprint').removeClass('landscape');
         }
     });
 
-
+    $('a.finish').on('click', function(e) {
+        e.preventDefault();
+        $(this).addClass('done');
+        var id = $(this).parents('.content').attr('id');
+        $itemLinks.each(function(){
+            if($(this).data("item") === id) {
+                $(this).addClass("done");
+            }
+        });
+    });
 });

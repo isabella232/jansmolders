@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Docs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="assets/stylesheets/css/base.css">
+</head>
+
+<body>
+    <nav id="global-nav"></nav>
+    <div class="top-header">
+        <div class="top">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h1>Unreal Engine Documentation</h1>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="search-wrapper">
+                        <input placeholder="Search User Manual" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Get Started with UE4</a></li>
+                <li>Landscape Quick Start Guide</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hidden-xs hidden-sm col-md-3">
+                <aside id="sideNav">
+                    <h6>On this Page:</h6>
+                    <ul id="menu" class="sequential">
+                        <li><a data-item="one" class="links" href="#">1. Working With the Landscape Tools</a></li>
+                        <li><a data-item="two" class="links" href="#">2. Creating New Landscape</a></li>
+                        <li><a data-item="three" class="links" href="#">3. Sculpting the Landscape</a></li>
+                        <li><a data-item="four" class="links" href="#">4. Creating Landscape Materials</a></li>
+                        <li><a data-item="five" class="links" href="#">5. Painting Landscape Materials</a></li>
+                        <li><a data-item="six" class="links" href="#">6. Landscape Tips and Tricks</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-xs-12 col-md-8">
+
+                <section id="wrapper">
+                    <div id="one" class="content">
+                        <div class="content-bar">
+                            <div class="version-tag"> 4.16x</div>
+                            <div class="os-toggle"><span class="windows"></span></div>
+                        </div>
+                        <h2>1. Working With the Landscape Tools</h2>
+                        <h6>Last edited: 8/9/2017</h6>
+                        <p>Creating a <strong>Landscape</strong> inside of Unreal Engine 4 (UE4) can be done in a few simple steps. But before we dive into creating our first Landscape, let us first familiarize ourselves with some of the tools and keyboard inputs that are most commonly used to interact with the Landscape system.</p>
+                        <h3>Opening the Landscape Tool</h3>
+                        <p><img src="assets/images/content/tiles/Landscape_ModesPanel.jpg" class="inline" /></p>
+                        <p>All of the tools that are used to interact with the Landscape system can be found under the Landscape icon that is located on the Modes Tool Bar. To enable the Landscape tools click on the icon that looks like mountains.</p>
+                        <h3>Manage, Sculpt, and Paint Mode</h3>
+                        <p>The Landscape tool has three modes, <strong>Manage, Sculpt,</strong> and <strong>Paint</strong> that are accessible by clicking on their icons at the top of the Landscape's toolbar window. Each mode will allow you to interact with the Landscape in a different manner. Here is a very quick rundown of what each mode allow you to do.</p>
+                        <p><img src="assets/images/content/tiles/Landscape_Modes.jpg" class="inline" /></p>
+
+                        <div class="finish-row">
+                            <a href="#" class="finish">Finished this Step</a>
+                        </div>
+                    </div>
+
+                    <div id="two" class="content">
+                        <h2>2. Creating a new Landscape</h2>
+                        <p>Creating a new Landscape is actually a simple process that we will be going over in the next few steps. However before we begin to create our Landscape, lets first create a new project <strong>Blueprint First Person Project</strong>. If you are unfamiliar with how to create a new project, please check out the following page on how to Create a New Project</p>
+                        <h3>Creating a Landscape</h3>
+                        <ol>
+                            <li>
+                                <p>First, create a new Blueprint First Person project if you have not done so already. While you can use other templates for this tutorial, the <strong>Blueprint First Person Project</strong> will make it a little easier to inspect your Landscape.</p>
+                                <p><img src="assets/images/content/tiles/T_Creating_a_new_FPS_BP_Project.jpg" class="inline" /></p>
+                            </li>
+                            <li>
+                                <p>Once you have created your new project and the editor has been loaded, create a new level using <strong>File->New Level</strong> and select the <strong>Default Level</strong> from the New Level Template.</p>
+                                <p><img src="assets/images/content/tiles/T_Creating_A_New_Level.jpg" class="inline" /></p>
+                            </li>
+                            <li>
+                                <p>With your new level now created, select the <strong>Floor</strong> from the level and press the <strong>Delete</strong> key to remove it from the level.</p>
+                                <div class="callout tip">
+                                    <strong>TIP:</strong>
+                                    <p>Make sure that you select your player start and move it up slightly in the Z axis. This will make sure that your player does not start under your newly created Landscape.</p>
+                                </div>
+                                <p><br/><img src="assets/images/content/tiles/T_Blank_Level.jpg" class="inline" /></p>
+                            </li>
+                        </ol>
+                        <div class="finish-row">
+                            <a href="#" class="finish">Finished this Step</a>
+                        </div>
+                    </div>
+                    <div id="three" class="content">
+                        <h2>3. Sculpting the Landscape</h2>
+                        <p>Sculpting the <strong>Landscape</strong> is a rather easy but time consuming process. All of the tools used for sculpting can be found under the Sculpt icon in the Landscape tools. If you would like to know more about what each of the Sculpting Tools does in detail, you can read the Sculpt Mode page. For quick reference, here is a list of the most common key and mouse interactions that are used when sculpting the Landscape.</p>
+                        <p>For this part of the Landscape tutorial, we are going to start with a completely flat section of the Landscape and then build up the details as we go along. The goal here is not to exactly mimic what was created in the tutorial but to get you familiar and comfortable with using the various Landscape tools.</p>
+                        <div class="callout tip">
+                            <strong>TIP:</strong>
+                            <p>There could be a lot of various reasons as to why what you do in this tutorial does not come out exactly the same as what you see in the following screen shots. Working with the Landscape tools requires a lot of trial and error so your results will vary, sometimes greatly, from what you are seeing in the following set of images. The most important thing to get out of this tutorial is to understand how each of the Landscape tools work and how all the tools work together to give you the final product.</p>
+                        </div>
+                        <ol>
+                            <li>
+                                <p>To begin, first find a section of the Landscape that you would like to work with. For this tutorial, we are not going to be filling in the entire Landscape but just a section of it. For ease of use, you should set a camera bookmark by pressing <strong>Ctrl + 1</strong> on the keyboard. This will set a camera bookmark which will make it easier for you to gauge how your Landscape is coming along by giving you a camera view to always come back to. At any time during your editor session, if you press the 1 Key, your camera will be returned to the exact same position that you set.</p>
+                                <p><img src="assets/images/content/tiles/T_Landscape_Flat.jpg" class="inline" /></p>
+                            </li>
+                            <li>
+                                <p>Now with the bookmark set, begin painting in the larger details for hills and valleys using the <strong>Sculpt Tool</strong>. You can find the brush size and strength settings that were used for this step listed below and when completed, you should have something that looks like the following.</p>
+                                <div class="callout tip">
+                                    <strong>TIP:</strong>
+                                    <p>Remember that you use Left Mouse Button to raise the Landscape height and Shift + Left Mouse Button will lower the height of the Landscape.</p>
+                                </div>
+                                <p><br/><img src="assets/images/content/tiles/T_Landscape_Sculpt_Tool.jpg" class="inline" /></p>
+                            </li>
+                            <li>
+                                <p>With the hills and valleys now blocked out, it is time to use the Smooth Tool to help refine the look and feel of them. You can find the brush size and strength settings that were used for this step listed below and when completed, you should have something that looks like the following.</p>
+                                <p><br/><img src="assets/images/content/tiles/T_Landscape_Smooth.jpg" class="inline" /></p>
+
+                            </li>
+                        </ol>
+                        <div class="finish-row">
+                            <a href="#" class="finish">Finished this Step</a>
+                        </div>
+                    </div>
+                    <div id="four" class="content">
+                        <h2>4. Creating Landscape Materials</h2>
+                        <p>Now that we have finished sculpting out the Landscape, it is now time to add some Materials to it so that it will better resemble something that we would see in the real world. But before we do this, let us first setup some folders so that the content that we create and migrate has somewhere to be stored. For this section of the tutorial, we are going to be making the following four folders.</p>
+
+                        <h3>Creating a Landscape</h3>
+                        <ol>
+                            <li>
+                                <p>Landscape</p>
+                            </li>
+                            <li>
+                                <p>Materials</p>
+                            </li>
+                            <li>
+                                <p>Resources</p>
+                            </li>
+                            <li>
+                                <p>Textures</p>
+                            </li>
+                        </ol>
+                        <p>When completed, you should have something that looks like the following.</p>
+                        <p><br/><img src="assets/images/content/tiles/T_Landscape_Folders.jpg" class="inline" /></p>
+                        <h3>Migrating Textures</h3>
+                        <p>Now that we have the folders in place, it is time to Migrate some Textures from the Landscape Content Example project so that we have some Textures to work with.</p>
+                        <div class="callout tip">
+                            <strong>TIP:</strong>
+                            <p>When Migrating content between projects, you could possibly end up with additional folders that you do not want. To fix this, select the Textures that you want inside of the <strong>Content Browser</strong> and then drag them from their current location into the folder that you want them to be placed in. This is purely a house keeping step and will have no impact on the outcome of the tutorial.</p>
+                        </div>
+                        <p>You can find the textures located in the following folder located in the Landscapes Content example project.</p>
+                        <p><strong>/Game/ExampleContent/Landscapes/Textures/</strong></p>
+                        <p>The Textures that we will be Migrating over from the Landscape Content Example project are as follows.</p>
+                        <ol>
+                            <li><strong>T_ForestGround_D</strong></li>
+                            <li><strong>T_ForestGround_N</strong></li>
+                            <li><strong>T_GroundGrass_D</strong></li>
+                            <li><strong>T_GroundGrass_N</strong></li>
+                            <li><strong>T_Noise_N</strong></li>
+                        </ol>
+                        <p>Once you have the textures migrated over, make sure they are placed in the <strong>Textures folder</strong> that was created in the steps above. Once that has been completed, it is now time to create our Material for the Landscape.</p>
+                        <h3>Creating the Landscape Material</h3>
+                        <p>Creating a Material for our Landscape can be done in the following steps.</p>
+                        <ol ><li><p>Navigate to the <strong>Materials</strong> folder.
+                        </p></li><li><p><strong>Right-click</strong> in the <strong>Content Browser</strong> and select <strong>Material</strong> from the <strong>Basic Assets</strong> list.
+                        </p></li><li><p>Name the newly created Material something that will allow you to easily find it like <strong>Landscape_Material</strong> for example.
+                        </p></li></ol>
+                        <div class="callout tip">
+                            <strong>TIP:</strong>
+                            <p>If you have not done so already, please check out the <a id="content_link" href="#" ><span>Materials</span></a>
+                                pages to gain a more in-depth understanding of how materials work inside of Unreal Engine 4.
+                            </p>
+                        </div>
+                        <p>Once this has been completed, you should have something that looks like this.</p>
+                        <p><br/><img src="assets/images/content/tiles/T_Landscape_Create_New_Material.jpg" class="inline" /></p>
+                        <div class="finish-row">
+                            <a href="#" class="finish">Finished this Step</a>
+                        </div>
+                    </div>
+                    <div id="five" class="content">
+                        <h2>5. Painting Landscape Materials</h2>
+                        <p>With the Landscape material now created, it is now time to apply that Material to the Landscape and begin using the Landscape Paint tools to paint the Landscape.</p>
+                        <h3>Landscape Painting Prep</h3>
+                        <p>Before we can begin painting the Landscape, there are a few things that we have to setup up first. The first thing that we have to do is apply our Landscape Material to the Landscape. This can be done in the following simple steps.</p>
+                        <ol>
+                            <li>
+                                <p>First, find our Material in the Content Browser. This should be located under a folder labeled <strong>Materials</strong> that was created in the previous section. When you find it, make sure that you click on it so that it is selected.</p>
+                                <p><img src="assets/images/content/tiles/T_Landscape_Materail_In_CB.jpg" class="inline" /></p>
+                            </li>
+                            <li>
+                                <p>With the Landscape Material selected in the Content Browser, select the Landscape in the world by clicking on it. Then, in the <strong>Details</strong> panel, expand the <strong>Landscape</strong> section and look for the <strong>Landscape Material</strong> input.</p>
+                                <p><img src="assets/images/content/tiles/T_Landscape_Material_Input.jpg" class="inline" /></p>
+                            </li>
+                            <li>
+                                <p>Apply the Material to the Landscape using the Use Selected Asset from the Content Browser arrow icon.</p>
+                                <div class="callout tip">
+                                    <strong>TIP:</strong>
+                                    <p>The black lines that you are seeing in the image above come from having Un-Built lighting on the Landscape. If you re-build your level's lighting, the black lines will go away.</p>
+                                </div>
+                                <p><br/><img src="assets/images/content/tiles/T_Landscape_With_Material_Applied.jpg" class="inline" /></p>
+                            </li>
+                        </ol>
+                        <div class="finish-row">
+                            <a href="#" class="finish">Finished this Step</a>
+                        </div>
+                    </div>
+                    <div id="six" class="content">
+                        <h2>6. Landscape Tips and Tricks</h2>
+                        <p>While the previous quick start tutorial for Landscape will get you up and running with a Landscape, it barely scratches the surface of what the Landscape tools can actually do. This section aims to show you some Tips and Tricks of using the Landscape Tool as well as some external tools that you can use to generate your Landscape.</p>
+                        <h3>Tips & Tricks</h3>
+                        <ul>
+                            <li>
+                                <p>When using the <strong>Paint Tools</strong>, you might find it easier to paint over what you would like to erase than to try and erase it using <strong>Shift + Left Mouse Button</strong>.</p>
+                            </li>
+                            <li>
+                                <p>When using the <strong>Alpha Brush</strong>, remember that you can change what the pattern that the brush uses by selecting a different RGB channels from the <strong>Texture Channel</strong> drop down menu. This is very handy because you can pack up to three different Alpha patterns in a single texture.</p>
+                                <p><img src="assets/images/content/tiles/T_Landscape_Tips_Tricks_00.jpg" class="inline" /></p>
+                            </li>
+                            <li>
+                                <p>Landscape compiles shaders separately for each component based on which layers are painted on them. So, for example, if you have a component with a dirt layer on it but no trace of the grass layer has been painted on it, the textures for the grass layer are left out of the material for that component, making it cheaper to render. So when do an optimization pass, it can be worthwhile to go over a Landscape and look for components that only have a tiny trace of a given layer and erase them to reduce material complexity.</p>
+                            </li>
+                            <li>
+                                <p>Another issue to watch out for when painting layers is to avoid having too many textures on one component. The material editor stats show the limit of how many texture samples you are allowed to use, but for Landscape materials the masks for each layer count as texture samples too and do not show in the stats. If a component starts showing the default texture (Grey Squares) when you paint a new layer onto it, it is likely that it is gone over the texture sample limit and either needs to have a layer erased or the material needs to be optimized to use less textures.</p>
+                            </li>
+                            <li>
+                                <p>You can change the LOD Distance Factor for individual Landscape components so they will simplify at closer or further distance thresholds. Things like mountain peaks or anything with a distinct silhouette will LOD the most noticeably as you move further away, so you can reduce the LOD bias for those components to preserve their shape. You can also raise the LOD bias for low-detail areas like flat plains that will not look noticeably different with less tessellation.
+                                    World Composition</p>
+                            </li>
+                        </ul>
+                        <div class="finish-row">
+                            <a href="#" class="finish">Finished this Step</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src='assets/javascript/vendor/jquery-1.11.3.min.js'></script>
+    <script src="assets/javascript/bootstrap.js"></script>
+</body>
+</html>
