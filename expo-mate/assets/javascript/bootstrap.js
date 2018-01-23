@@ -82,7 +82,7 @@ $(function () {
         mobileNav.toggleClass("open");
     });
 
-    $(window).on('mousewheel DOMMouseScroll', function() {
+    $(window).on('mousewheel DOMMouseScroll touchmove', function() {
         hasScrolled = true;
     });
 
@@ -92,6 +92,9 @@ $(function () {
     });
 
     $(document.body).on('touchmove', function(){
+		
+		$('.contact-btn')
+		
         var scroll = ~~$(this).scrollTop();
         if(Math.abs(lastScrollTop - scroll) <= delta) {
             return;
@@ -144,7 +147,7 @@ $(function () {
             ignoreFixed = false
         }
     });
-	
+
     $(window).on('scroll', function(){
         var scroll = ~~$(this).scrollTop();
         if(Math.abs(lastScrollTop - scroll) <= delta) {
