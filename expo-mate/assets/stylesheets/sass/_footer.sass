@@ -1,0 +1,67 @@
+#footer
+  height: auto
+  min-height: 400px
+  padding-top: 80px
+  background: $bg-color
+  z-index: 6
+  position: relative
+  overflow: hidden
+  #map-canvas,
+  #contact-info,
+  #footer-bottom-liner
+    width: 70vw
+    +respond-max-width(sm)
+      width: 100%
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+      width: 80vw
+    height: 400px
+    margin: 0 auto
+  #contact-info
+    height: auto
+    margin: 40px auto
+    strong
+      color: $header-text-color
+
+    a
+      color: $text-color
+      margin-top: 10px
+      display: block
+
+    h3,
+    *
+      text-align: left
+    .row
+      > div
+        padding: 20px
+        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+          width: 50% !important
+    .contact-heading
+      h3
+        padding: 0 0 0 20px
+        word-spacing: 100vw
+        +respond-max-width(xs)
+          padding: 0
+          word-spacing: normal
+        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+          padding: 0
+          word-spacing: normal
+        line-height: 1.5em
+        margin-top: 0
+    .contact-content
+      border-right: 1px solid #1a1b20
+      @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+        border: 0
+      +respond-max-width(sm)
+        border: 0
+      line-height: 1.6em
+
+  #footer-bottom-liner
+    color: darken($text-color, 20%)
+    font-size: .85em
+    +respond-max-width(xs)
+      font-size: .75em
+    text-align: center
+    height: auto
+    margin-bottom: 20px
+    p
+      text-align: center

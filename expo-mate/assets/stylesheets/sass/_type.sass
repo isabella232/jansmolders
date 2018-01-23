@@ -1,0 +1,102 @@
+
+h1,h2,h3,h4
+  color: $header-text-color
+  text-align: center
+  text-transform: uppercase
+  font-weight: 600
+
+*
+  color: $text-color
+  font-family: $font
+
+h2
+  padding-bottom: 40px
+  position: relative
+  margin-bottom: 30px
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+    font-size: 1.5em
+  &:after
+    content: ''
+    position: absolute
+    bottom: 10px
+    background: $cta-color
+    height: 1px
+    width: 175px
+    left: 50%
+    transform: translateX(-50%)
+
+  &.left-aligned
+    text-align: left
+    &:after
+      left: 0
+      transform: translateX(0)
+
+p
+  font-size: 1.15em
+  line-height: 1.85em
+
+.btn-primary.btn
+  background: $cta-color
+  border: 0
+  border-radius: 0
+  color: #fff
+  text-transform: uppercase
+  padding: 20px 40px
+  transition: all .3s ease
+  &:hover,
+  &:active
+    background: darken($cta-color, 10%)
+
+.btn-secondary.btn
+  background: none
+  border: 1px solid $header-text-color
+  border-radius: 0
+  color: $header-text-color
+  text-transform: uppercase
+  padding: 20px 40px
+  transition: all .3s ease
+  &:hover,
+  &:active
+    background: darken($header-text-color, 10%)
+    color: $bg-color
+
+.btn-primary.btn,
+.btn-secondary.btn
+  margin: 40px 0
+
+.offset-bg-color
+  background: $offset-bg-color
+
+.secondary-offset-bg-color
+  background: $secondary-offset-bg-color
+.left-align
+  text-align: left
+
+section.content
+  .offset-bg-color,
+  .secondary-offset-bg-color
+    padding: 40px
+
+.tile-image
+  width: 100%
+  height: 100%
+  text-align: center
+  position: relative
+  overflow: hidden
+  img
+    margin: 0 auto
+    display: block
+    height: 100%
+  &.tall
+    height: 80vh
+    +respond-max-width(sm)
+      height: 40vh
+    img
+      height: 100%
+      width: 100%
+  &.narrow
+    height: 40vh
+    img
+      height: auto
+      vertical-align: top
+      width: 100%

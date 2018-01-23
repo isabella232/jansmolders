@@ -1,0 +1,38 @@
+$imageScrollHeight : 100vh
+
+section#image-scroll
+  height: $imageScrollHeight * 2
+  width: 100%
+  margin: 0
+  position: relative
+  overflow: hidden
+  .image-scroll-wrapper
+    height: $imageScrollHeight * 2
+    width: 100%
+    position: absolute
+    overflow: hidden
+    .background-image,
+    .foreground-image
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: left top
+      background-color: $bg-color
+      width: 100%
+      height: $imageScrollHeight
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 0
+
+    .background-image
+      bottom: auto
+      top: 0
+
+    .foreground-image
+      z-index: 3
+
+    &.fixed
+      .background-image
+        position: fixed
+        top: 0
+        left: 0

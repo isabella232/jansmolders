@@ -1,0 +1,168 @@
+$navColor: #222
+
+#nav
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+  height: 200px
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 2
+  transition: all .3s ease
+  &.fixed
+    height: 60px
+    background: $navColor
+    position: fixed
+    box-shadow: 9px 10px 25px rgba(34,34,34,.6)
+    z-index: 9
+    ul
+      margin-top: 20px
+      ul
+        background: $navColor
+        top: 40px!important
+    .logo
+      position: absolute
+      top: 0
+      left: 100px
+      +respond-max-width(xs)
+        left: 0
+  ul
+    float: right
+    margin: 40px 100px 0 0
+    list-style: none
+    +respond-max-width(sm)
+      margin-right: 50px
+    +respond-max-width(xs)
+      position: absolute
+      width: 100%
+      left: 0
+      background: #222
+      top: -400px
+      height: 300px
+      transition: all .5s ease
+      z-index: 6
+    &.open
+      +respond-max-width(xs)
+        top: -40px
+        padding-top: 50px
+    li
+      float: left
+      margin-right: 40px
+      position: relative
+      &.sub
+        padding-right: 20px
+        cursor: pointer
+        &:after
+          content: "\e901"
+          font-family: $font_0
+          position: absolute
+          color: $header-text-color
+          top: 2px
+          right: 0
+          font-size: .75em
+        ul
+          margin: 0
+          height: 0
+          opacity: 0
+          position: absolute
+          top: 10px
+          left: -20px
+          pointer-events: none
+          padding: 0 20px
+          transition: all .3s ease
+          color: $header-text-color
+        &:hover
+          height: 190px
+          ul
+            height: 150px
+            padding: 20px
+            opacity: 1
+            pointer-events: all
+            z-index: 6
+            li
+              padding-bottom: 10px
+      +respond-max-width(xs)
+        width: 100%
+        float: none
+        padding-bottom: 20px
+      &:last-child
+        margin-right: 0
+      a
+        color: $header-text-color
+        text-shadow: 2px 2px 2px rgba(34,34,34,.6)
+        text-transform: uppercase
+        font-size: 1em
+        &:hover,
+        &:active
+          color: darken(#fff, 20%)
+          text-decoration: none
+        i
+          font-size: 1.2em
+          line-height: 1.2em
+          color: $header-text-color
+
+
+  .logo
+    width: 200px
+    height: 175px
+    position: relative
+    top: 0
+    left: 100px
+    background: #fff
+    box-shadow: 9px 10px 25px rgba(34,34,34,.6)
+    text-align: center
+    float: left
+    cursor: pointer
+    img
+      height: 85%
+      display: block
+      margin: 0 auto
+      padding-top: 30px
+    +respond-max-width(sm)
+      top: 0
+      left: 0
+      width: 100px
+      height: 75px
+      img
+        padding-top: 10px!important
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+      top: 0
+      left: 0!important
+      width: 140px
+      height: 100px
+      img
+        padding-top: 10px!important
+    +respond-max-width(xs)
+      z-index: 3
+
+
+.hamburger
+  cursor: pointer
+  display: none
+  position: absolute
+  top: 20px
+  right: 20px
+  z-index: 8
+  +respond-max-width(xs)
+    display: block
+  .line
+    width: 30px
+    height: 2px
+    background-color: #ecf0f1
+    display: block
+    margin: 5px auto
+    transition: all 0.2s ease-in-out
+
+  &.is-active
+    transition: all 0.2s ease-in-out
+    transition-delay: 0.5s
+    transform: rotate(45deg)
+    .line:nth-child(2)
+      width: 0
+    .line:nth-child(1),
+    .line:nth-child(3)
+      transition-delay: 0.3s
+    .line:nth-child(1)
+      transform: translateY(7px)
+    .line:nth-child(3)
+      transform: translateY(-7px) rotate(90deg)
