@@ -1367,3 +1367,8 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
     left: 106.66667px;
   }
 }
+/* line 1, ../sass/_caseStudies.sass */
+#case-studies {
+  background: #141519;
+  position: relative;
+}
