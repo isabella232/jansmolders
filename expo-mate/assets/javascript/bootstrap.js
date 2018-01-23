@@ -91,7 +91,60 @@ $(function () {
         viewPortOffset = $(this).offset().top;
     });
 
+    $(document.body).on('touchmove', function(){
+        var scroll = ~~$(this).scrollTop();
+        if(Math.abs(lastScrollTop - scroll) <= delta) {
+            return;
+        }
 
+        hamburgerElem.removeClass("is-active");
+        mobileNav.removeClass("open");
+
+        if (scroll > lastScrollTop){
+            direction = 'down';
+        } else {
+            direction = 'up';
+        }
+        lastScrollTop = scroll;
+
+        fixNav(scroll);
+
+        if(scroll && hasScrolled && !ignoreFixed) {
+
+            if(direction === 'down') {
+                //on
+                if (scroll > scrollContainerOffsetTop) {
+                    imageScroll.addClass('fixed');
+                }
+
+                //off
+                if (foregroundImageOffset === scrollContainerOffsetTop) {
+                    imageScroll.removeClass('fixed');
+                }
+            }
+
+            if(direction === 'up') {
+                //off
+                if (scroll < scrollContainerOffsetTop) {
+                    imageScroll.removeClass('fixed');
+                }
+            }
+
+
+            // show sections
+            if (scroll >= methodContainerOffset) {
+                methodContainer.addClass('show');
+                aboutContainer.removeClass('show');
+            }
+
+            if (scroll >= aboutContainerOffset) {
+                aboutContainer.addClass('show');
+            }
+        } else {
+            ignoreFixed = false
+        }
+    });
+	
     $(window).on('scroll', function(){
         var scroll = ~~$(this).scrollTop();
         if(Math.abs(lastScrollTop - scroll) <= delta) {
