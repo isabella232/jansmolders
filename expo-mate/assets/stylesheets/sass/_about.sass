@@ -1,4 +1,7 @@
 #about
+  padding-bottom: 150px
+  +respond-max-width(sm)
+    padding-bottom: 50px
   .equal-height
     > div
       opacity: 0
@@ -17,3 +20,32 @@
           left: 0
         &:last-child
           right: 0
+
+  .brandlist
+    list-style: none
+    margin: 40px auto
+    text-align: center
+    li
+      float: left
+      margin-right: 10px
+      max-width: 15%
+      img
+        width: 100%
+        opacity: .4
+      &:last-child
+        margin-right: 0
+  .btn-secondary
+    margin-bottom: 150px
+    +respond-max-width(sm)
+      margin-bottom: 50px
+
+  h4
+    text-align: left
+    padding: 0
+    margin-left: -15px
+    text-transform: capitalize
+    font-size: 1em
+  .signature
+    margin: 20px 0 0 -40px
+    img
+      opacity: .6

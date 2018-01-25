@@ -21,7 +21,6 @@ $(function () {
     , aboutContainerOffset = aboutContainer.offset().top
     , viewPortHeight = $(window).height()
     , viewPortOffset = $(window).scrollTop()
-    , ignoreFixed = false
     , mobileNav = $('#nav ul')
     , hamburgerElem = $('.hamburger');
 
@@ -59,15 +58,14 @@ $(function () {
 
     $('.contact-btn').on('click', function(){
         var footerOffset = $('footer').offset().top;
-        ignoreFixed = true;
         $("html, body").animate({ scrollTop: footerOffset });
     });
 
 
     $('#diagram .method-item').on("mouseenter", function() {
-        $('.fadeIn[data-item = '+$(this).data("item")+']').addClass('show');
+        $(this).addClass('focused').find('.fadeIn').addClass('show');
     }).on("mouseleave", function() {
-        $('.method-info .fadeIn').data("item", $(this).attr('id')).removeClass('show');
+        $(this).removeClass('focused').find('.fadeIn').removeClass('show');
     });
 
     $('#nav li a').on('click', function(e){
@@ -92,116 +90,94 @@ $(function () {
     });
 
     $(document.body).on('touchmove', function(){
-		
-		$('.contact-btn')
-		
         var scroll = ~~$(this).scrollTop();
-        if(Math.abs(lastScrollTop - scroll) <= delta) {
-            return;
-        }
 
-        hamburgerElem.removeClass("is-active");
-        mobileNav.removeClass("open");
+        getDirection(scroll, lastScrollTop, function(direction, scroll){
+            lastScrollTop = scroll;
 
-        if (scroll > lastScrollTop){
-            direction = 'down';
-        } else {
-            direction = 'up';
-        }
-        lastScrollTop = scroll;
+            fixNav(scroll);
 
-        fixNav(scroll);
-
-        if(scroll && hasScrolled && !ignoreFixed) {
-
-            if(direction === 'down') {
-                //on
-                if (scroll > scrollContainerOffsetTop) {
-                    imageScroll.addClass('fixed');
-                }
-
-                //off
-                if (foregroundImageOffset === scrollContainerOffsetTop) {
-                    imageScroll.removeClass('fixed');
-                }
+            if(scroll && hasScrolled) {
+                handleScroll(scroll, direction);
             }
-
-            if(direction === 'up') {
-                //off
-                if (scroll < scrollContainerOffsetTop) {
-                    imageScroll.removeClass('fixed');
-                }
-            }
-
-
-            // show sections
-            if (scroll >= methodContainerOffset) {
-                methodContainer.addClass('show');
-                aboutContainer.removeClass('show');
-            }
-
-            if (scroll >= aboutContainerOffset) {
-                aboutContainer.addClass('show');
-            }
-        } else {
-            ignoreFixed = false
-        }
+        });
     });
 
     $(window).on('scroll', function(){
         var scroll = ~~$(this).scrollTop();
-        if(Math.abs(lastScrollTop - scroll) <= delta) {
-            return;
-        }
 
-        hamburgerElem.removeClass("is-active");
-        mobileNav.removeClass("open");
+        getDirection(scroll, lastScrollTop, function(direction, scroll){
+            lastScrollTop = scroll;
 
-        if (scroll > lastScrollTop){
-            direction = 'down';
-        } else {
-            direction = 'up';
-        }
-        lastScrollTop = scroll;
+            fixNav(scroll);
 
-        fixNav(scroll);
-
-        if(scroll && hasScrolled && !ignoreFixed) {
-
-            if(direction === 'down') {
-                //on
-                if (scroll > scrollContainerOffsetTop) {
-                    imageScroll.addClass('fixed');
-                }
-
-                //off
-                if (foregroundImageOffset === scrollContainerOffsetTop) {
-                    imageScroll.removeClass('fixed');
-                }
+            if(scroll && hasScrolled && !ignoreFixed) {
+                handleScroll(scroll, direction);
             }
-
-            if(direction === 'up') {
-                //off
-                if (scroll < scrollContainerOffsetTop) {
-                    imageScroll.removeClass('fixed');
-                }
-            }
-
-
-            // show sections
-            if (scroll >= methodContainerOffset) {
-                methodContainer.addClass('show');
-                aboutContainer.removeClass('show');
-            }
-
-            if (scroll >= aboutContainerOffset) {
-                aboutContainer.addClass('show');
-            }
-        } else {
-            ignoreFixed = false
-        }
+        });
     });
 });
+
+function getDirection (scroll, lastScrollTop, callback){
+    var direction = null
+        , delta = 5;
+
+    if(Math.abs(lastScrollTop - scroll) <= delta) {
+        return;
+    }
+
+    if (scroll > lastScrollTop){
+        direction = 'down';
+    } else {
+        direction = 'up';
+    }
+    callback(direction, scroll);
+}
+
+function handleScroll(scroll, direction){
+
+    var imageScroll = $(".image-scroll-wrapper")
+    , foregroundImageOffset = $('.foreground-image').offset().top
+    , scrollContainerOffsetTop = imageScroll.offset().top
+    , methodContainer = $('#method')
+    , methodContainerOffset = methodContainer.offset().top
+    , aboutContainer = $('#about')
+    , aboutContainerOffset = aboutContainer.offset().top
+    , mobileNav = $('#nav ul')
+    , hamburgerElem = $('.hamburger');
+
+    hamburgerElem.removeClass("is-active");
+    mobileNav.removeClass("open");
+
+    if(direction === 'down') {
+        //on
+        if (scroll > scrollContainerOffsetTop) {
+            imageScroll.addClass('fixed');
+        }
+
+        //off
+        if (foregroundImageOffset === scrollContainerOffsetTop) {
+            imageScroll.removeClass('fixed');
+        }
+    }
+
+    if(direction === 'up') {
+        //off
+        if (scroll < scrollContainerOffsetTop) {
+            imageScroll.removeClass('fixed');
+        }
+    }
+
+    // show sections
+    if (scroll >= methodContainerOffset) {
+        methodContainer.addClass('show');
+        aboutContainer.removeClass('show');
+    }
+
+    if (scroll >= aboutContainerOffset) {
+        aboutContainer.addClass('show');
+    }
+}
 
 function fixNav(scroll){
     var nav = $("#nav");
