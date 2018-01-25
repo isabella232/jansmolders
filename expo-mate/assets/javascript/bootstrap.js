@@ -111,7 +111,7 @@ $(function () {
 
             fixNav(scroll);
 
-            if(scroll && hasScrolled && !ignoreFixed) {
+            if(scroll && hasScrolled) {
                 handleScroll(scroll, direction);
             }
         });
