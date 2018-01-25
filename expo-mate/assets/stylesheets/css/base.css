@@ -371,28 +371,19 @@ section.content .secondary-offset-bg-color {
   margin-top: 20px;
 }
 /* line 18, ../sass/_nav.sass */
-#nav.fixed ul ul {
-  background: #222;
-  top: 40px !important;
-}
-/* line 21, ../sass/_nav.sass */
-#nav.fixed .logo {
-  display: none;
-}
-/* line 23, ../sass/_nav.sass */
 #nav ul {
   float: right;
   margin: 40px 100px 0 0;
   list-style: none;
 }
 @media only screen and (max-width: 991px) {
-  /* line 23, ../sass/_nav.sass */
+  /* line 18, ../sass/_nav.sass */
   #nav ul {
     margin-right: 50px;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 23, ../sass/_nav.sass */
+  /* line 18, ../sass/_nav.sass */
   #nav ul {
     position: absolute;
     width: 100%;
@@ -405,24 +396,24 @@ section.content .secondary-offset-bg-color {
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 38, ../sass/_nav.sass */
+  /* line 33, ../sass/_nav.sass */
   #nav ul.open {
     top: -40px;
     padding-top: 50px;
   }
 }
-/* line 42, ../sass/_nav.sass */
+/* line 37, ../sass/_nav.sass */
 #nav ul li {
   float: left;
   margin-right: 40px;
   position: relative;
 }
-/* line 46, ../sass/_nav.sass */
+/* line 41, ../sass/_nav.sass */
 #nav ul li.sub {
   padding-right: 20px;
   cursor: pointer;
 }
-/* line 49, ../sass/_nav.sass */
+/* line 44, ../sass/_nav.sass */
 #nav ul li.sub:after {
   content: "";
   font-family: "icomoon";
@@ -432,7 +423,7 @@ section.content .secondary-offset-bg-color {
   right: 0;
   font-size: 0.75em;
 }
-/* line 57, ../sass/_nav.sass */
+/* line 52, ../sass/_nav.sass */
 #nav ul li.sub ul {
   margin: 0;
   height: 0;
@@ -445,11 +436,11 @@ section.content .secondary-offset-bg-color {
   transition: all 0.3s ease;
   color: #fff;
 }
-/* line 68, ../sass/_nav.sass */
+/* line 63, ../sass/_nav.sass */
 #nav ul li.sub:hover {
   height: 190px;
 }
-/* line 70, ../sass/_nav.sass */
+/* line 65, ../sass/_nav.sass */
 #nav ul li.sub:hover ul {
   height: 150px;
   padding: 20px;
@@ -457,42 +448,42 @@ section.content .secondary-offset-bg-color {
   pointer-events: all;
   z-index: 6;
 }
-/* line 76, ../sass/_nav.sass */
+/* line 71, ../sass/_nav.sass */
 #nav ul li.sub:hover ul li {
   padding-bottom: 10px;
 }
 @media only screen and (max-width: 767px) {
-  /* line 42, ../sass/_nav.sass */
+  /* line 37, ../sass/_nav.sass */
   #nav ul li {
     width: 100%;
     float: none;
     padding-bottom: 20px;
   }
 }
-/* line 82, ../sass/_nav.sass */
+/* line 77, ../sass/_nav.sass */
 #nav ul li:last-child {
   margin-right: 0;
 }
-/* line 84, ../sass/_nav.sass */
+/* line 79, ../sass/_nav.sass */
 #nav ul li a {
   color: #fff;
   text-shadow: 2px 2px 2px rgba(34, 34, 34, 0.6);
   text-transform: uppercase;
   font-size: 1em;
 }
-/* line 89, ../sass/_nav.sass */
+/* line 84, ../sass/_nav.sass */
 #nav ul li a:hover, #nav ul li a:active {
   color: #cccccc;
   text-decoration: none;
 }
-/* line 93, ../sass/_nav.sass */
+/* line 88, ../sass/_nav.sass */
 #nav ul li a i {
   font-size: 1.2em;
   line-height: 1.2em;
   color: #fff;
 }
 
-/* line 99, ../sass/_nav.sass */
+/* line 94, ../sass/_nav.sass */
 .hamburger {
   cursor: pointer;
   display: none;
@@ -502,12 +493,12 @@ section.content .secondary-offset-bg-color {
   z-index: 8;
 }
 @media only screen and (max-width: 767px) {
-  /* line 99, ../sass/_nav.sass */
+  /* line 94, ../sass/_nav.sass */
   .hamburger {
     display: block;
   }
 }
-/* line 108, ../sass/_nav.sass */
+/* line 103, ../sass/_nav.sass */
 .hamburger .line {
   width: 30px;
   height: 2px;
@@ -516,26 +507,26 @@ section.content .secondary-offset-bg-color {
   margin: 5px auto;
   transition: all 0.2s ease-in-out;
 }
-/* line 116, ../sass/_nav.sass */
+/* line 111, ../sass/_nav.sass */
 .hamburger.is-active {
   transition: all 0.2s ease-in-out;
   transition-delay: 0.5s;
   transform: rotate(45deg);
 }
-/* line 120, ../sass/_nav.sass */
+/* line 115, ../sass/_nav.sass */
 .hamburger.is-active .line:nth-child(2) {
   width: 0;
 }
-/* line 122, ../sass/_nav.sass */
+/* line 117, ../sass/_nav.sass */
 .hamburger.is-active .line:nth-child(1),
 .hamburger.is-active .line:nth-child(3) {
   transition-delay: 0.3s;
 }
-/* line 125, ../sass/_nav.sass */
+/* line 120, ../sass/_nav.sass */
 .hamburger.is-active .line:nth-child(1) {
   transform: translateY(7px);
 }
-/* line 127, ../sass/_nav.sass */
+/* line 122, ../sass/_nav.sass */
 .hamburger.is-active .line:nth-child(3) {
   transform: translateY(-7px) rotate(90deg);
 }
