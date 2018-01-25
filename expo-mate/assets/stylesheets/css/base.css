@@ -1326,7 +1326,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
 /* line 198, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .intro .fadeIn {
   background: #1a1b20 !important;
-  left: -125px !important;
+  left: -80px !important;
 }
 /* line 200, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .intro .fadeIn h3, #method .method-scroll-wrapper #diagram .intro .fadeIn p {
