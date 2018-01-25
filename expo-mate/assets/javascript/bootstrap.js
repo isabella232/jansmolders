@@ -13,8 +13,8 @@ $(function () {
     , delta = 5
     , hasScrolled = false
     , imageScroll = $(".image-scroll-wrapper")
-    , foregroundImageOffset = $('.foreground-image').offset().top
-    , scrollContainerOffsetTop = imageScroll.offset().top
+    //, foregroundImageOffset = $('.foreground-image').offset().top
+  //  , scrollContainerOffsetTop = imageScroll.offset().top
     , methodContainer = $('#method')
     , methodContainerOffset = methodContainer.offset().top
     , aboutContainer = $('#about')
@@ -98,7 +98,16 @@ $(function () {
             fixNav(scroll);
 
             if(scroll && hasScrolled) {
-                handleScroll(scroll, direction);
+                // show sections
+                if (scroll >= methodContainerOffset) {
+                    methodContainer.addClass('show');
+                    aboutContainer.removeClass('show');
+                }
+
+                if (scroll >= aboutContainerOffset) {
+                    aboutContainer.addClass('show');
+                }
+              // handleScroll(scroll, direction);
             }
         });
     });
@@ -112,7 +121,16 @@ $(function () {
             fixNav(scroll);
 
             if(scroll && hasScrolled) {
-                handleScroll(scroll, direction);
+                // show sections
+                if (scroll >= methodContainerOffset) {
+                    methodContainer.addClass('show');
+                    aboutContainer.removeClass('show');
+                }
+
+                if (scroll >= aboutContainerOffset) {
+                    aboutContainer.addClass('show');
+                }
+               // handleScroll(scroll, direction);
             }
         });
     });
@@ -146,8 +164,7 @@ function handleScroll(scroll, direction){
     , mobileNav = $('#nav ul')
     , hamburgerElem = $('.hamburger');
 
-    hamburgerElem.removeClass("is-active");
-    mobileNav.removeClass("open");
+
 
     if(direction === 'down') {
         //on

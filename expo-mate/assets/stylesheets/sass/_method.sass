@@ -4,11 +4,6 @@ $mobileMethodSize: 160px
 #method
   position: relative
   overflow: hidden
-  height: 100vh
-  +respond-max-width(sm)
-    height: auto
-  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-    height: auto
   width: 100%
   background: $bg-color
   padding-top: 100px
@@ -92,13 +87,12 @@ $mobileMethodSize: 160px
       padding-top: 100px
     #diagram
       width: $methodSize * 2 + $methodSize / 4
-      height: $methodSize * 3
+      height: $methodSize * 2 + $methodSize
       position: relative
       float: right
       z-index: 3
       opacity: 0
       transition: opacity .3s ease
-      margin-bottom: 300px
       +respond-max-width(xs)
         width: $mobileMethodSize * 2 + $mobileMethodSize / 4
         height: $mobileMethodSize * 3

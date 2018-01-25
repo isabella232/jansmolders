@@ -2,7 +2,7 @@ $navColor: #222
 
 #nav
   background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
-  height: 200px
+  height: 250px
   position: absolute
   top: 0
   left: 0
@@ -11,9 +11,7 @@ $navColor: #222
   transition: all .3s ease
   &.fixed
     height: 60px
-    background: $navColor
     position: fixed
-    box-shadow: 9px 10px 25px rgba(34,34,34,.6)
     z-index: 9
     ul
       margin-top: 20px
@@ -21,11 +19,7 @@ $navColor: #222
         background: $navColor
         top: 40px!important
     .logo
-      position: absolute
-      top: 0
-      left: 100px
-      +respond-max-width(xs)
-        left: 0
+      display: none
   ul
     float: right
     margin: 40px 100px 0 0
@@ -100,40 +94,6 @@ $navColor: #222
           font-size: 1.2em
           line-height: 1.2em
           color: $header-text-color
-
-
-  .logo
-    width: 200px
-    height: 175px
-    position: relative
-    top: 0
-    left: 100px
-    background: #fff
-    box-shadow: 9px 10px 25px rgba(34,34,34,.6)
-    text-align: center
-    float: left
-    cursor: pointer
-    img
-      height: 85%
-      display: block
-      margin: 0 auto
-      padding-top: 30px
-    +respond-max-width(sm)
-      top: 0
-      left: 0
-      width: 100px
-      height: 75px
-      img
-        padding-top: 10px!important
-    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-      top: 0
-      left: 0!important
-      width: 140px
-      height: 100px
-      img
-        padding-top: 10px!important
-    +respond-max-width(xs)
-      z-index: 3
 
 
 .hamburger
