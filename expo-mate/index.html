@@ -33,7 +33,7 @@
                 <span class="line"></span>
             </div>
             <ul>
-                <li><a href="#about">Ons Verhaal</a></li>
+                <li><a href="#preabout">Ons Verhaal</a></li>
                 <li><a href="#method">Onze Werkwijze</a></li>
                 <li><a href="#case-studies">Projecten</a></li>
                 <li><a href="#footer">Contact</a></li>
@@ -118,10 +118,9 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
-        <section id="about" class="content">
+        <section id="preabout" class="content">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 text-centered">
@@ -143,8 +142,51 @@
                             <li><img src="assets/images/toshiba.png" alt="toshiba" /></li>
                         </ul>
 
-                        <a href="#" class="btn btn-lg btn-secondary">Meer over ons</a>
+                        <a href="#" class="btn btn-lg btn-secondary toggle-about">
+                            <span class="closed">Meer over ons</span>
+                            <span class="open"><i class="icon-close"></i> Sluiten</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="our-people">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="image-container">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81VStYnDGrL.jpg" alt="Jan" />
+                        </div>
+                        <div class="desc">
+                            <h2 class="left-aligned">Niek van Gent</h2>
+                            <p>10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing
+                                ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten
+                                bedenken die zorgen voor de hoogste return on investment. Wie we zijn?
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="image-container">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/81VStYnDGrL.jpg" alt="Jan" />
+                        </div>
+                        <div class="desc">
+                            <h2 class="left-aligned">Jan Maas</h2>
+                            <p>10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing
+                                ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten
+                                bedenken die zorgen voor de hoogste return on investment. Wie we zijn?
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content">
+            <div class="container">
+                <div class="row">
                         <div class="row equal-height">
                             <div class="col-xs-12 col-md-4">
                                 <div class="tile-image">
@@ -196,7 +238,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
 
@@ -214,11 +255,37 @@
                             </p>
                         </div>
 
-                        <div class="col-xs-12 col-md-4">
-                            <h3 class="left-align" style="padding-top: 50px">Introduction</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
-                                fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
-                                nostra, per inceptos himenaeos.</p>
+                        <div class="col-xs-12 col-md-4 method-info-container">
+                            <div class="fadeIn intro" data-item="intro">
+                                <h3 class="left-align">Introduction</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
+                                    fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos.</p>
+                            </div>
+                            <div class="fadeIn design" data-item="design">
+                                <h3 class="left-align">Design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
+                                    fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos.</p>
+                            </div>
+                            <div class="fadeIn tuning" data-item="tuning">
+                                <h3 class="left-align">Tuning</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
+                                    fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos.</p>
+                            </div>
+                            <div class="fadeIn construction" data-item="construction">
+                                <h3 class="left-align">Construction</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
+                                    fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos.</p>
+                            </div>
+                            <div class="fadeIn eval" data-item="eval">
+                                <h3 class="left-align">Evaluation</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
+                                    fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
+                                    nostra, per inceptos himenaeos.</p>
+                            </div>
                         </div>
                         <div class="col-xs-12 col-md-8">
                             <div id="diagram">
@@ -227,36 +294,18 @@
                                         <div class="step-content">
                                             <i class="icon-intro"></i>
                                             <span>Introductie</span>
-                                            <div class="fadeIn" data-item="intro">
-                                                <h3 class="left-align">Introduction</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
-                                                    fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
-                                                    nostra, per inceptos himenaeos.</p>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="design method-item" data-item="design">
                                         <div class="step-content">
                                             <i class="icon-design"></i>
                                             <span>Design</span>
-                                            <div class="fadeIn" data-item="design">
-                                                <h3 class="left-align">Design</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
-                                                    fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
-                                                    nostra, per inceptos himenaeos.</p>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="tuning method-item" data-item="tuning">
                                         <div class="step-content">
                                             <i class="icon-tune"></i>
                                             <span>Finetuning</span>
-                                        </div>
-                                        <div class="fadeIn" data-item="tuning">
-                                            <h3 class="left-align">Finetuning</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
-                                                fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
-                                                nostra, per inceptos himenaeos.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -266,42 +315,15 @@
                                             <i class="icon-construction"></i>
                                             <span>Constructie</span>
                                         </div>
-
-                                        <div class="fadeIn" data-item="construction">
-                                            <h3 class="left-align">Construction</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
-                                                fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
-                                                nostra, per inceptos himenaeos.</p>
-                                        </div>
                                     </div>
                                     <div class="eval method-item" data-item="eval">
                                         <div class="step-content">
                                             <i class="icon-eval"></i>
                                             <span>Evaluatie</span>
                                         </div>
-                                        <div class="fadeIn" data-item="eval">
-                                            <h3 class="left-align">Evaluation</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
-                                                fringilla quam quis, tempus nisl. Class aptent taciti sociosqu ad litora torquent per conubia
-                                                nostra, per inceptos himenaeos.</p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-
-                        <div class="col-xs-12">
-                            <h3> Het Expo-mate model</h3>
-                            <p>
-                                In onze optiek de belangrijkste stap in het gehele proces. Door tijd te investeren en kennis te delen in het begin van het proces, hoeven er geen aannames te worden gedaan bij het ontwerp van het concept,
-                                maar gaat om datgene wat telt: Integreren van uw identiteit, wensen en behoeftes als beursdeelnemer.
-                            </p>
-
-                            <p>
-                                EXPO-MATE heeft een eigen -uniek- model ontwikkeld dat ons in staat stelt om uw belangrijkste organisatie kenmerken/waardes en uw identiteit concreet te verwerken in het ontwerp voorstel. Wij geloven erin dat alleen dan de hoogste return on investment kan
-                                worden behaald. We komen dit model graag gedetailleerd aan u uitleggen en met u in de praktijk brengen.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -315,6 +337,11 @@
                         <a href="#">
                             <div class="tile-image tall">
                                 <img src="https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg" alt="Niek & Jan" />
+                                <div class="desc">
+                                    <h2>Toshiba</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
+                                        fringilla quam quis, tempus nisl.</p>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -323,6 +350,11 @@
                             <a href="#">
                                 <div class="tile-image narrow">
                                     <img src="https://i.pinimg.com/originals/4b/87/30/4b8730ac3ef28f85456ae69ee99a5aa8.jpg" alt="Niek & Jan" />
+                                    <div class="desc">
+                                        <h2>Epic Games</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
+                                            fringilla quam quis, tempus nisl.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -330,9 +362,17 @@
                             <a href="#">
                                 <div class="tile-image narrow">
                                     <img src="https://cnet2.cbsistatic.com/img/L_JE_N4R6c0IEC2rfhsXA80gFmg=/936x527/2017/06/16/8c8b034e-19e1-4797-b8d1-1d92e8cc08fb/wolfenstein-diner.jpg" alt="Niek & Jan" />
+                                    <div class="desc">
+                                        <h2>Wolfenstein II: The new Colossus</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mi scelerisque,
+                                            fringilla quam quis, tempus nisl.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
+                    </div>
+                    <div class="col-xs-12 btn-wrapper">
+                        <a href="#" class="btn btn-lg btn-secondary">Bekijk alle Projecten</a>
                     </div>
                 </div>
             </div>

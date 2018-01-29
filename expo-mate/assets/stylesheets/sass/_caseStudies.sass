@@ -1,3 +1,35 @@
 #case-studies
   background: $bg-color
   position: relative
+  opacity: 0
+  transition: opacity ease 1s
+  &.show
+    opacity: 1
+
+  .btn-wrapper
+    text-align: center
+    .btn
+      margin: 60px auto 50px
+
+  .tile-image
+    position: relative
+    background: #000
+    *
+      transition: all ease .5s
+    &:hover
+      img
+        transform: scale(1.1)
+        opacity: .2
+      .desc
+        opacity: 1
+    .desc
+      opacity: 0
+      pointer-events: none
+      width: 400px
+      height: 300px
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      margin: auto
