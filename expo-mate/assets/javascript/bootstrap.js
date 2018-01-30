@@ -147,6 +147,7 @@ $(function () {
                     }
                     if(hasSnapped) {
                         if (scroll > methodContainerOffset + animationIncrements && scroll < methodContainerOffset + animationIncrements * 2) {
+                            $('.method-item').removeClass('show').removeClass('slideOut');
                             step = 1;
                         } else if (scroll > methodContainerOffset + animationIncrements * 2 && scroll < methodContainerOffset + animationIncrements * 3) {
                             step = 2;
@@ -178,6 +179,7 @@ $(function () {
                     //on
                     if (scroll < CaseStudyContainerOffset - animationIncrements) {
                         if (!hasSnapped) {
+                            $('.method-item').removeClass('show').removeClass('slideOut');
                             methodScrollContainer.addClass('fixed');
                         }
                         hasSnapped = true;
