@@ -9,30 +9,29 @@ google.maps.event.addDomListener(window, 'load', googleMapsInit);
 $(function () {
     //********* Const
     var lastScrollTop = 0
-    , hasScrolled = false
-    , imageScroll = $(".image-scroll-wrapper")
-    , methodContainer = $('#method')
-    , methodScrollContainer = $('.method-scroll-wrapper')
-    , methodContainerHeight = $('#method').height()
-    , methodContainerOffset = methodContainer.offset().top
-    , CaseStudyContainer = $('#case-studies')
-    , CaseStudyContainerOffset = ~~$('#case-studies').offset().top
-    , aboutContainer = $('#about')
-    , preAboutContainer = $('#preabout')
-    , preAboutContainerOffset = preAboutContainer.offset().top
-    , aboutContainerOffset = aboutContainer.offset().top
-    , viewPortHeight = $(window).height()
-    , animationIncrements = 600
-    , step = 0
-    , hasSnapped = false
-    , viewPortOffset = $(window).scrollTop()
-    , mobileNav = $('#nav ul')
-    , hamburgerElem = $('.hamburger');
+        , hasScrolled = false
+        , methodContainer = $('#method')
+        , methodScrollContainer = $('.method-scroll-wrapper')
+        , methodContainerHeight = methodContainer.height()
+        , methodContainerOffset = methodContainer.offset().top
+        , CaseStudyContainer = $('#case-studies')
+        , CaseStudyContainerOffset = ~~CaseStudyContainer.offset().top
+        , aboutContainer = $('#about')
+        , headerElem = $('#header')
+        , preAboutContainer = $('#preabout')
+        , preAboutContainerOffset = preAboutContainer.offset().top
+        , aboutContainerOffset = aboutContainer.offset().top
+        , viewPortHeight = $(window).height()
+        , animationIncrements = 600
+        , step = 0
+        , scroll = 0
+        , hasSnapped = false
+        , viewPortOffset = $(window).scrollTop()
+        , mobileNav = $('#nav ul')
+        , hamburgerElem = $('.hamburger');
 
-    //********* Reset page on load
-    //$(window).scrollTop(0);
-    imageScroll.removeClass('fixed');
-
+    //       , imageScroll = $(".image-scroll-wrapper")
+   // imageScroll.removeClass('fixed');
 
     fixNav(viewPortOffset);
 
@@ -51,12 +50,8 @@ $(function () {
     //********* Event Handlers
 
     $('.play-video-wrapper').on('click', function(){
-        $('#header').addClass('play');
-        $('#header .video-container').addClass('play');
-    });
-
-    $('.logo').on('click', function(){
-        $("html, body").animate({ scrollTop: 0 });
+        headerElem.addClass('play');
+        headerElem.find('.video-container').addClass('play');
     });
 
     $('.toggle-about').on('click', function(e){
@@ -67,8 +62,8 @@ $(function () {
 
 
     $('.close-btn').on('click', function(){
-        $('#header').removeClass('play');
-        $('#header .video-container').removeClass('play');
+        headerElem.removeClass('play');
+        headerElem.find('.video-container').removeClass('play');
     });
 
     $('.contact-btn').on('click', function(){
@@ -105,31 +100,14 @@ $(function () {
     });
 
     $(document.body).on('touchmove', function(){
-        var scroll = ~~$(this).scrollTop();
-
-        getDirection(scroll, lastScrollTop, function(direction, scroll){
-            lastScrollTop = scroll;
-
-            fixNav(scroll);
-
-            if(scroll && hasScrolled) {
-                // show sections
-                if (scroll >= methodContainerOffset) {
-                    methodContainer.addClass('show');
-                    aboutContainer.removeClass('show');
-                }
-
-                if (scroll >= preAboutContainerOffset) {
-                    aboutContainer.addClass('show');
-                }
-              // handleScroll(scroll, direction);
-            }
-        });
+        scroll = ~~$(this).scrollTop();
     });
 
     $(window).on('scroll', function(){
-        var scroll = ~~$(this).scrollTop();
+        scroll = ~~$(this).scrollTop();
+    });
 
+    setInterval(function(){
         getDirection(scroll, lastScrollTop, function(direction, scroll){
             lastScrollTop = scroll;
 
@@ -145,22 +123,6 @@ $(function () {
                         }
                         hasSnapped = true;
                     }
-                    if(hasSnapped) {
-                        if (scroll > methodContainerOffset + animationIncrements && scroll < methodContainerOffset + animationIncrements * 2) {
-                            $('.method-item').removeClass('show').removeClass('slideOut');
-                            step = 1;
-                        } else if (scroll > methodContainerOffset + animationIncrements * 2 && scroll < methodContainerOffset + animationIncrements * 3) {
-                            step = 2;
-                        } else if (scroll > methodContainerOffset + animationIncrements * 3 && scroll < methodContainerOffset + animationIncrements * 4) {
-                            step = 3;
-                        } else if (scroll > methodContainerOffset + animationIncrements * 4 && scroll < methodContainerOffset + animationIncrements * 5) {
-                            step = 4;
-                        } else if (scroll > methodContainerOffset + animationIncrements * 5 && scroll < CaseStudyContainerOffset) {
-                            step = 5;
-                        }
-                    }
-
-                    handleMethodScroll(step);
 
                     if (isElementInViewport(CaseStudyContainer) || scroll >= methodContainerOffset + methodContainerHeight) {
                         $('#case-studies').addClass('show');
@@ -185,23 +147,6 @@ $(function () {
                         hasSnapped = true;
                     }
 
-                    if(hasSnapped){
-                        if (scroll < CaseStudyContainerOffset && scroll > CaseStudyContainerOffset - animationIncrements * 2) {
-                            step = 1;
-                        } else if (scroll < CaseStudyContainerOffset - animationIncrements * 2 && scroll > CaseStudyContainerOffset - animationIncrements * 3 ) {
-                            step = 2;
-                        } else if (scroll < CaseStudyContainerOffset - animationIncrements * 3 && scroll > CaseStudyContainerOffset - animationIncrements * 4) {
-                            step = 3;
-                        } else if (scroll < CaseStudyContainerOffset - animationIncrements * 4 && scroll > CaseStudyContainerOffset - animationIncrements * 5) {
-                            step = 4;
-                        } else if (scroll < methodContainerOffset + animationIncrements * 2 && scroll > methodContainerOffset) {
-                            step = 5;
-                        }
-
-                        handleMethodScroll(step);
-                    }
-
-
                     if (scroll <= methodContainerOffset) {
                         $('#case-studies').addClass('show');
                     }
@@ -213,9 +158,26 @@ $(function () {
                         hasSnapped = false;
                     }
                 }
+
+                if(hasSnapped) {
+                    if (scroll > methodContainerOffset && scroll < methodContainerOffset + animationIncrements) {
+                        step = 1;
+                    } else if (scroll > methodContainerOffset + animationIncrements && scroll < methodContainerOffset + animationIncrements * 2) {
+                        step = 2;
+                    } else if (scroll > methodContainerOffset + animationIncrements * 2 && scroll < methodContainerOffset + animationIncrements * 3) {
+                        step = 3;
+                    } else if (scroll > methodContainerOffset + animationIncrements * 3 && scroll < methodContainerOffset + animationIncrements * 4) {
+                        step = 4;
+                    } else if (scroll > methodContainerOffset + animationIncrements * 4 && scroll < CaseStudyContainerOffset) {
+                        step = 5;
+                    }
+
+                    handleMethodScroll(step);
+                }
+
             }
         });
-    });
+    },500);
 });
 
 function getDirection (scroll, lastScrollTop, callback){
@@ -238,44 +200,49 @@ function getDirection (scroll, lastScrollTop, callback){
 
 function handleMethodScroll(step){
     var toggleClassName = 'show'
-    , fadeInElemClass = '.fadeIn'
-    , introElemClass = '.intro'
-    , designElemClass = '.design'
-    , tuningElemClass = '.tuning'
-    , constructionElemClass = '.construction'
-    , evalElemClass = '.eval'
-    , activeElemClass = ''
-    , stepMatch = false;
+        , fadeInElemClass = '.fadeIn'
+        , methodElem = '.method-item'
+        , introElemClass = '.intro'
+        , designElemClass = '.design'
+        , tuningElemClass = '.tuning'
+        , constructionElemClass = '.construction'
+        , evalElemClass = '.eval';
+
+    $(fadeInElemClass).removeClass(toggleClassName);
+    $(methodElem).removeClass(toggleClassName);
 
     if(step === 1){
-        activeElemClass = introElemClass;
-        stepMatch = true;
+        $(fadeInElemClass+introElemClass).addClass(toggleClassName);
+        $(methodElem+introElemClass).addClass(toggleClassName);
     } else if(step === 2) {
-        activeElemClass = designElemClass;
-        stepMatch = true;
+        $(methodElem+introElemClass).addClass(toggleClassName);
+        $(fadeInElemClass+designElemClass).addClass(toggleClassName);
+        $(methodElem+designElemClass).addClass(toggleClassName);
     } else if(step === 3) {
-        activeElemClass = tuningElemClass;
-        stepMatch = true;
+        $(methodElem+introElemClass).addClass(toggleClassName);
+        $(methodElem+designElemClass).addClass(toggleClassName);
+        $(fadeInElemClass+tuningElemClass).addClass(toggleClassName);
+        $(methodElem+tuningElemClass).addClass(toggleClassName);
     } else if(step === 4) {
-        activeElemClass = constructionElemClass;
-        stepMatch = true;
+        $(methodElem+introElemClass).addClass(toggleClassName);
+        $(methodElem+designElemClass).addClass(toggleClassName);
+        $(methodElem+tuningElemClass).addClass(toggleClassName);
+        $(fadeInElemClass+constructionElemClass).addClass(toggleClassName);
+        $(methodElem+constructionElemClass).addClass(toggleClassName);
     } else if(step === 5) {
-        activeElemClass = evalElemClass;
-        stepMatch = true;
+        $(methodElem+introElemClass).addClass(toggleClassName);
+        $(methodElem+designElemClass).addClass(toggleClassName);
+        $(methodElem+tuningElemClass).addClass(toggleClassName);
+        $(methodElem+constructionElemClass).addClass(toggleClassName);
+        $(fadeInElemClass+evalElemClass).addClass(toggleClassName);
+        $(methodElem+evalElemClass).addClass(toggleClassName);
     }
 
-    if(stepMatch === true){
-        $(fadeInElemClass).removeClass(toggleClassName);
-        $(fadeInElemClass+activeElemClass).addClass(toggleClassName);
-        $(activeElemClass).addClass(toggleClassName);
-
-        if(step >= 2){
-            $(introElemClass).addClass('slideOut');
-        } else {
-            $(introElemClass).removeClass('slideOut');
-        }
+    if(step >= 2){
+        $(introElemClass).addClass('slideOut');
+    } else {
+        $(introElemClass).removeClass('slideOut');
     }
-
 }
 
 function fixNav(scroll){
