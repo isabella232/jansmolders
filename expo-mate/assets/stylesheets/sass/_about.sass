@@ -11,6 +11,15 @@
       &:last-child
         right: -40px
 
+  +respond-max-width(md)
+    .equal-height
+      > div
+        opacity: 1
+        transition: all .5s ease
+        &:first-child
+          left: 0
+        &:last-child
+          right: 0
   &.show
     .equal-height
       > div

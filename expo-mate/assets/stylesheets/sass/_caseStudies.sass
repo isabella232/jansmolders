@@ -3,6 +3,8 @@
   position: relative
   opacity: 0
   transition: opacity ease 1s
+  +respond-max-width(md)
+    opacity: 1
   &.show
     opacity: 1
 

@@ -132,53 +132,68 @@
 #about .equal-height > div:last-child, #preabout .equal-height > div:last-child {
   right: -40px;
 }
-/* line 16, ../sass/_about.sass */
+@media only screen and (max-width: 1199px) {
+  /* line 16, ../sass/_about.sass */
+  #about .equal-height > div, #preabout .equal-height > div {
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  /* line 19, ../sass/_about.sass */
+  #about .equal-height > div:first-child, #preabout .equal-height > div:first-child {
+    left: 0;
+  }
+  /* line 21, ../sass/_about.sass */
+  #about .equal-height > div:last-child, #preabout .equal-height > div:last-child {
+    right: 0;
+  }
+}
+/* line 25, ../sass/_about.sass */
 #about.show .equal-height > div, #preabout.show .equal-height > div {
   opacity: 1;
   transition: all 0.5s ease;
 }
-/* line 19, ../sass/_about.sass */
+/* line 28, ../sass/_about.sass */
 #about.show .equal-height > div:first-child, #preabout.show .equal-height > div:first-child {
   left: 0;
 }
-/* line 21, ../sass/_about.sass */
+/* line 30, ../sass/_about.sass */
 #about.show .equal-height > div:last-child, #preabout.show .equal-height > div:last-child {
   right: 0;
 }
-/* line 24, ../sass/_about.sass */
+/* line 33, ../sass/_about.sass */
 #about .brandlist, #preabout .brandlist {
   list-style: none;
   margin: 40px auto;
   text-align: center;
 }
-/* line 28, ../sass/_about.sass */
+/* line 37, ../sass/_about.sass */
 #about .brandlist li, #preabout .brandlist li {
   float: left;
   margin-right: 10px;
   max-width: 15%;
 }
 @media only screen and (max-width: 991px) {
-  /* line 28, ../sass/_about.sass */
+  /* line 37, ../sass/_about.sass */
   #about .brandlist li, #preabout .brandlist li {
     max-width: 25%;
   }
 }
 @media only screen and (max-width: 1199px) {
-  /* line 28, ../sass/_about.sass */
+  /* line 37, ../sass/_about.sass */
   #about .brandlist li, #preabout .brandlist li {
     max-width: 30%;
   }
 }
-/* line 36, ../sass/_about.sass */
+/* line 45, ../sass/_about.sass */
 #about .brandlist li img, #preabout .brandlist li img {
   width: 100%;
   opacity: 0.4;
 }
-/* line 39, ../sass/_about.sass */
+/* line 48, ../sass/_about.sass */
 #about .brandlist li:last-child, #preabout .brandlist li:last-child {
   margin-right: 0;
 }
-/* line 41, ../sass/_about.sass */
+/* line 50, ../sass/_about.sass */
 #about .btn-secondary, #preabout .btn-secondary {
   margin-bottom: 150px;
   width: 200px;
@@ -186,7 +201,7 @@
   position: relative;
   overflow: hidden;
 }
-/* line 47, ../sass/_about.sass */
+/* line 56, ../sass/_about.sass */
 #about .btn-secondary .open,
 #about .btn-secondary .closed, #preabout .btn-secondary .open,
 #preabout .btn-secondary .closed {
@@ -198,29 +213,29 @@
   height: 100%;
   transition: all ease 0.5s;
 }
-/* line 57, ../sass/_about.sass */
+/* line 66, ../sass/_about.sass */
 #about .btn-secondary.open .closed, #preabout .btn-secondary.open .closed {
   opacity: 0;
 }
-/* line 59, ../sass/_about.sass */
+/* line 68, ../sass/_about.sass */
 #about .btn-secondary.open .open, #preabout .btn-secondary.open .open {
   opacity: 1;
 }
-/* line 61, ../sass/_about.sass */
+/* line 70, ../sass/_about.sass */
 #about .btn-secondary .open, #preabout .btn-secondary .open {
   opacity: 0;
 }
-/* line 63, ../sass/_about.sass */
+/* line 72, ../sass/_about.sass */
 #about .btn-secondary .closed, #preabout .btn-secondary .closed {
   opacity: 1;
 }
 @media only screen and (max-width: 991px) {
-  /* line 41, ../sass/_about.sass */
+  /* line 50, ../sass/_about.sass */
   #about .btn-secondary, #preabout .btn-secondary {
     margin-bottom: 50px;
   }
 }
-/* line 68, ../sass/_about.sass */
+/* line 77, ../sass/_about.sass */
 #about h4, #preabout h4 {
   text-align: left;
   padding: 0;
@@ -228,16 +243,16 @@
   text-transform: capitalize;
   font-size: 1em;
 }
-/* line 74, ../sass/_about.sass */
+/* line 83, ../sass/_about.sass */
 #about .signature, #preabout .signature {
   margin: 20px 0 0 -40px;
 }
-/* line 76, ../sass/_about.sass */
+/* line 85, ../sass/_about.sass */
 #about .signature img, #preabout .signature img {
   opacity: 0.6;
 }
 
-/* line 79, ../sass/_about.sass */
+/* line 88, ../sass/_about.sass */
 #our-people {
   background: #111111;
   height: 0;
@@ -248,16 +263,16 @@
   margin: -150px 0 100px;
 }
 @media only screen and (max-width: 991px) {
-  /* line 79, ../sass/_about.sass */
+  /* line 88, ../sass/_about.sass */
   #our-people {
     margin-bottom: -50px;
   }
-  /* line 89, ../sass/_about.sass */
+  /* line 98, ../sass/_about.sass */
   #our-people .row > div {
     margin-bottom: 40px;
   }
 }
-/* line 91, ../sass/_about.sass */
+/* line 100, ../sass/_about.sass */
 #our-people.open {
   min-height: 60vh;
   height: 60vh;
@@ -265,12 +280,12 @@
   padding: 40px 0;
 }
 @media only screen and (max-width: 991px) {
-  /* line 91, ../sass/_about.sass */
+  /* line 100, ../sass/_about.sass */
   #our-people.open {
     height: 600px;
   }
 }
-/* line 99, ../sass/_about.sass */
+/* line 108, ../sass/_about.sass */
 #our-people .image-container {
   width: 300px;
   height: 400px;
@@ -278,25 +293,25 @@
   text-align: center;
   overflow: hidden;
 }
-/* line 105, ../sass/_about.sass */
+/* line 114, ../sass/_about.sass */
 #our-people .image-container img {
   width: 100%;
   margin: 0 auto;
 }
 @media only screen and (max-width: 767px) {
-  /* line 99, ../sass/_about.sass */
+  /* line 108, ../sass/_about.sass */
   #our-people .image-container {
     height: 200px;
     width: 100px;
     float: left;
   }
-  /* line 112, ../sass/_about.sass */
+  /* line 121, ../sass/_about.sass */
   #our-people .image-container img {
     margin-top: 30px;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 115, ../sass/_about.sass */
+  /* line 124, ../sass/_about.sass */
   #our-people .desc {
     float: left;
     width: 200px;
@@ -305,7 +320,7 @@
 }
 
 @media only screen and (max-width: 1199px) {
-  /* line 121, ../sass/_about.sass */
+  /* line 130, ../sass/_about.sass */
   #about {
     margin: 200px 0 0 0;
   }
@@ -511,7 +526,7 @@ section.content .secondary-offset-bg-color {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 97;
   transition: all 0.3s ease;
 }
 @media only screen and (min-width: 992px) {
@@ -1129,7 +1144,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   text-align: center;
 }
 
-/* line 5, ../sass/_method.sass */
+/* line 6, ../sass/_method.sass */
 #method {
   position: relative;
   overflow: hidden;
@@ -1139,109 +1154,73 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   height: 5000px;
 }
 @media only screen and (max-width: 1199px) {
-  /* line 5, ../sass/_method.sass */
+  /* line 6, ../sass/_method.sass */
   #method {
-    height: 4000px;
+    height: 2000px;
   }
 }
-/* line 16, ../sass/_method.sass */
+/* line 17, ../sass/_method.sass */
 #method.show .method-scroll-wrapper #diagram,
 #method.show .method-scroll-wrapper .method-text {
   opacity: 1;
 }
-/* line 21, ../sass/_method.sass */
+/* line 22, ../sass/_method.sass */
 #method.show .method-scroll-wrapper #diagram .intro.show {
   animation: showIntro cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
 }
-@media only screen and (max-width: 1199px) {
-  /* line 21, ../sass/_method.sass */
-  #method.show .method-scroll-wrapper #diagram .intro.show {
-    animation: fadeInMobile cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-  }
-}
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 21, ../sass/_method.sass */
+  /* line 22, ../sass/_method.sass */
   #method.show .method-scroll-wrapper #diagram .intro.show {
     animation: showIntro cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   }
 }
-@media only screen and (min-width: 992px) {
-  /* line 27, ../sass/_method.sass */
-  #method.show .method-scroll-wrapper #diagram .intro.slideOut {
-    animation: slideIntroLabel cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-  }
-}
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 27, ../sass/_method.sass */
+  /* line 26, ../sass/_method.sass */
   #method.show .method-scroll-wrapper #diagram .intro.slideOut {
     animation: mobileSlideIntroLabel cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   }
 }
-/* line 33, ../sass/_method.sass */
+/* line 30, ../sass/_method.sass */
 #method.show .method-scroll-wrapper #diagram .design.show {
   animation: showDesign cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
 }
-@media only screen and (max-width: 1199px) {
-  /* line 33, ../sass/_method.sass */
-  #method.show .method-scroll-wrapper #diagram .design.show {
-    animation: fadeInMobile cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-  }
-}
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 33, ../sass/_method.sass */
+  /* line 30, ../sass/_method.sass */
   #method.show .method-scroll-wrapper #diagram .design.show {
     animation: mobileShowDesign cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   }
 }
-/* line 40, ../sass/_method.sass */
+/* line 35, ../sass/_method.sass */
 #method.show .method-scroll-wrapper #diagram .tuning.show {
   animation: showTuning cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
 }
-@media only screen and (max-width: 1199px) {
-  /* line 40, ../sass/_method.sass */
-  #method.show .method-scroll-wrapper #diagram .tuning.show {
-    animation: fadeInMobile cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-  }
-}
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 40, ../sass/_method.sass */
+  /* line 35, ../sass/_method.sass */
   #method.show .method-scroll-wrapper #diagram .tuning.show {
     animation: mobileShowTuning cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   }
 }
-/* line 47, ../sass/_method.sass */
+/* line 40, ../sass/_method.sass */
 #method.show .method-scroll-wrapper #diagram .construction.show {
   animation: showConstruction cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
 }
-@media only screen and (max-width: 1199px) {
-  /* line 47, ../sass/_method.sass */
-  #method.show .method-scroll-wrapper #diagram .construction.show {
-    animation: fadeInMobile cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-  }
-}
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 47, ../sass/_method.sass */
+  /* line 40, ../sass/_method.sass */
   #method.show .method-scroll-wrapper #diagram .construction.show {
     animation: mobileShowConstruction cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   }
 }
-/* line 54, ../sass/_method.sass */
+/* line 45, ../sass/_method.sass */
 #method.show .method-scroll-wrapper #diagram .eval.show {
   animation: showEval cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
 }
-@media only screen and (max-width: 1199px) {
-  /* line 54, ../sass/_method.sass */
-  #method.show .method-scroll-wrapper #diagram .eval.show {
-    animation: fadeInMobile cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-  }
-}
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 54, ../sass/_method.sass */
+  /* line 45, ../sass/_method.sass */
   #method.show .method-scroll-wrapper #diagram .eval.show {
     animation: mobileShowEval cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   }
 }
-/* line 60, ../sass/_method.sass */
+/* line 49, ../sass/_method.sass */
 #method .method-scroll-wrapper {
   position: relative;
   overflow: hidden;
@@ -1249,7 +1228,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   height: 100%;
   background: #141519;
 }
-/* line 66, ../sass/_method.sass */
+/* line 55, ../sass/_method.sass */
 #method .method-scroll-wrapper.fixed {
   position: fixed;
   top: 0;
@@ -1258,7 +1237,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   width: 100%;
   opacity: 1;
 }
-/* line 73, ../sass/_method.sass */
+/* line 62, ../sass/_method.sass */
 #method .method-scroll-wrapper:before {
   content: "";
   position: absolute;
@@ -1270,7 +1249,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   background: rgba(26, 27, 32, 0.8);
   z-index: 0;
 }
-/* line 83, ../sass/_method.sass */
+/* line 72, ../sass/_method.sass */
 #method .method-scroll-wrapper:after {
   content: "";
   position: absolute;
@@ -1283,24 +1262,24 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   z-index: 0;
 }
 @media only screen and (max-width: 1199px) {
-  /* line 94, ../sass/_method.sass */
+  /* line 83, ../sass/_method.sass */
   #method .method-scroll-wrapper:after, #method .method-scroll-wrapper:before {
     display: none;
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 98, ../sass/_method.sass */
+  /* line 87, ../sass/_method.sass */
   #method .method-scroll-wrapper:after, #method .method-scroll-wrapper:before {
     display: none;
   }
 }
-/* line 101, ../sass/_method.sass */
+/* line 90, ../sass/_method.sass */
 #method .method-scroll-wrapper .method-text {
   opacity: 0;
   transition: opacity 0.3s ease;
   padding-top: 100px;
 }
-/* line 105, ../sass/_method.sass */
+/* line 94, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram {
   width: 675px;
   height: 900px;
@@ -1311,22 +1290,35 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   transition: opacity 0.3s ease;
 }
 @media only screen and (max-width: 1199px) {
-  /* line 105, ../sass/_method.sass */
+  /* line 94, ../sass/_method.sass */
   #method .method-scroll-wrapper #diagram {
     float: left;
-    width: 160px;
-    height: 160px;
+    opacity: 1;
+    width: 120px;
+    height: 2850px;
+    overflow: hidden;
+  }
+  /* line 108, ../sass/_method.sass */
+  #method .method-scroll-wrapper #diagram:after {
+    content: "";
+    height: 2850px;
+    left: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    bottom: 0;
+    width: 1px;
+    background: #494949;
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 105, ../sass/_method.sass */
+  /* line 94, ../sass/_method.sass */
   #method .method-scroll-wrapper #diagram {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
   }
 }
 @media only screen and (max-width: 1199px) {
-  /* line 105, ../sass/_method.sass */
+  /* line 94, ../sass/_method.sass */
   #method .method-scroll-wrapper #diagram {
     margin-top: 20px;
   }
@@ -1372,11 +1364,12 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   #method .method-scroll-wrapper #diagram .construction,
   #method .method-scroll-wrapper #diagram .eval {
     font-size: 0.75em;
-    height: 160px;
-    width: 160px;
-    padding: 64px 32px 0;
-    top: 160px;
+    height: 120px;
+    width: 120px;
+    padding: 48px 24px 0;
+    top: 120px;
     transition: all ease 0.5s;
+    opacity: 1;
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -1387,13 +1380,13 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   #method .method-scroll-wrapper #diagram .construction,
   #method .method-scroll-wrapper #diagram .eval {
     font-size: 0.75em;
-    height: 160px;
-    width: 160px;
-    padding: 64px 32px 0;
-    top: 160px;
+    height: 120px;
+    width: 120px;
+    padding: 48px 24px 0;
+    top: 120px;
   }
 }
-/* line 161, ../sass/_method.sass */
+/* line 162, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .intro .step-content span, #method .method-scroll-wrapper #diagram .intro .step-content i,
 #method .method-scroll-wrapper #diagram .design .step-content span,
 #method .method-scroll-wrapper #diagram .design .step-content i,
@@ -1405,7 +1398,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
 #method .method-scroll-wrapper #diagram .eval .step-content i {
   display: block;
 }
-/* line 163, ../sass/_method.sass */
+/* line 164, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .intro .step-content i,
 #method .method-scroll-wrapper #diagram .design .step-content i,
 #method .method-scroll-wrapper #diagram .tuning .step-content i,
@@ -1415,7 +1408,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   color: #fff;
 }
 @media only screen and (max-width: 767px) {
-  /* line 163, ../sass/_method.sass */
+  /* line 164, ../sass/_method.sass */
   #method .method-scroll-wrapper #diagram .intro .step-content i,
   #method .method-scroll-wrapper #diagram .design .step-content i,
   #method .method-scroll-wrapper #diagram .tuning .step-content i,
@@ -1424,55 +1417,78 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
     font-size: 1.5em;
   }
 }
-/* line 168, ../sass/_method.sass */
+/* line 169, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .construction,
 #method .method-scroll-wrapper #diagram .eval {
   background: #fff;
   border: 0;
 }
-/* line 173, ../sass/_method.sass */
+/* line 174, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .construction .step-content i,
 #method .method-scroll-wrapper #diagram .eval .step-content i {
   color: #505058;
 }
-/* line 175, ../sass/_method.sass */
+/* line 176, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .intro {
   top: 150px;
   left: 0;
   z-index: 5;
 }
 @media only screen and (max-width: 1199px) {
-  /* line 175, ../sass/_method.sass */
+  /* line 176, ../sass/_method.sass */
   #method .method-scroll-wrapper #diagram .intro {
-    top: 160px;
+    top: 120px;
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 175, ../sass/_method.sass */
+  /* line 176, ../sass/_method.sass */
   #method .method-scroll-wrapper #diagram .intro {
-    top: 160px;
+    top: 120px;
   }
 }
-/* line 183, ../sass/_method.sass */
+/* line 184, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .design {
   z-index: 4;
 }
-/* line 185, ../sass/_method.sass */
+@media only screen and (max-width: 1199px) {
+  /* line 184, ../sass/_method.sass */
+  #method .method-scroll-wrapper #diagram .design {
+    top: 390px;
+  }
+}
+/* line 188, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .tuning {
   z-index: 3;
 }
-/* line 187, ../sass/_method.sass */
+@media only screen and (max-width: 1199px) {
+  /* line 188, ../sass/_method.sass */
+  #method .method-scroll-wrapper #diagram .tuning {
+    top: 660px;
+  }
+}
+/* line 192, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .construction {
   z-index: 6;
 }
-/* line 189, ../sass/_method.sass */
+@media only screen and (max-width: 1199px) {
+  /* line 192, ../sass/_method.sass */
+  #method .method-scroll-wrapper #diagram .construction {
+    top: 930px;
+  }
+}
+/* line 196, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .eval {
   z-index: 5;
 }
-/* line 191, ../sass/_method.sass */
+@media only screen and (max-width: 1199px) {
+  /* line 196, ../sass/_method.sass */
+  #method .method-scroll-wrapper #diagram .eval {
+    top: 1200px;
+  }
+}
+/* line 200, ../sass/_method.sass */
 #method .method-scroll-wrapper #diagram .goo1,
 #method .method-scroll-wrapper #diagram .goo2 {
-  filter: url("#goo1");
   position: absolute;
   top: 0;
   left: 0;
@@ -1480,16 +1496,25 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   right: 0;
   pointer-events: none;
 }
-/* line 200, ../sass/_method.sass */
-#method .method-scroll-wrapper #diagram .goo2 {
-  filter: url("#goo2");
+@media only screen and (min-width: 992px) {
+  /* line 200, ../sass/_method.sass */
+  #method .method-scroll-wrapper #diagram .goo1,
+  #method .method-scroll-wrapper #diagram .goo2 {
+    filter: url("#goo1");
+  }
 }
-/* line 203, ../sass/_method.sass */
+@media only screen and (min-width: 992px) {
+  /* line 210, ../sass/_method.sass */
+  #method .method-scroll-wrapper #diagram .goo2 {
+    filter: url("#goo2");
+  }
+}
+/* line 214, ../sass/_method.sass */
 #method .method-info-container {
   position: relative;
   z-index: 2;
 }
-/* line 206, ../sass/_method.sass */
+/* line 217, ../sass/_method.sass */
 #method .method-info-container .fadeIn {
   opacity: 0;
   position: absolute;
@@ -1497,51 +1522,51 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   left: -100px;
   width: 100%;
 }
-/* line 212, ../sass/_method.sass */
+@media only screen and (max-width: 1199px) {
+  /* line 217, ../sass/_method.sass */
+  #method .method-info-container .fadeIn {
+    opacity: 1;
+    left: auto;
+    right: 0;
+    width: 53%;
+  }
+  /* line 228, ../sass/_method.sass */
+  #method .method-info-container .fadeIn.intro {
+    top: 120px;
+  }
+  /* line 230, ../sass/_method.sass */
+  #method .method-info-container .fadeIn.design {
+    top: 390px;
+  }
+  /* line 232, ../sass/_method.sass */
+  #method .method-info-container .fadeIn.tuning {
+    top: 660px;
+  }
+  /* line 234, ../sass/_method.sass */
+  #method .method-info-container .fadeIn.construction {
+    top: 930px;
+  }
+  /* line 236, ../sass/_method.sass */
+  #method .method-info-container .fadeIn.eval {
+    top: 1200px;
+  }
+}
+/* line 238, ../sass/_method.sass */
 #method .method-info-container .fadeIn.show {
   animation: fadeIn cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
 }
-@media only screen and (max-width: 1199px) {
-  /* line 212, ../sass/_method.sass */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* line 238, ../sass/_method.sass */
   #method .method-info-container .fadeIn.show {
     animation: fadeInMobile cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 212, ../sass/_method.sass */
-  #method .method-info-container .fadeIn.show {
-    animation: fadeInMobile cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  /* line 203, ../sass/_method.sass */
-  #method .method-info-container {
-    padding-left: 180px;
-  }
-  /* line 220, ../sass/_method.sass */
-  #method .method-info-container .fadeIn {
-    width: 50%;
-    left: auto;
-    right: 0;
-    transition: all ease 0.5s;
-  }
-}
-@media only screen and (max-width: 991px) {
-  /* line 203, ../sass/_method.sass */
-  #method .method-info-container {
-    padding-left: 150px;
-  }
-  /* line 227, ../sass/_method.sass */
-  #method .method-info-container .fadeIn {
-    width: 65%;
-  }
-}
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* line 203, ../sass/_method.sass */
+  /* line 214, ../sass/_method.sass */
   #method .method-info-container {
     font-size: 0.875em;
   }
-  /* line 231, ../sass/_method.sass */
+  /* line 244, ../sass/_method.sass */
   #method .method-info-container .fadeIn {
     width: 85%;
   }
@@ -1650,8 +1675,8 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
     transform: scale(1);
     top: 0;
     opacity: 1;
-    left: 106.66667px;
-    padding-top: 26.66667px;
+    left: 80px;
+    padding-top: 20px;
   }
 }
 @keyframes mobileShowTuning {
@@ -1659,43 +1684,43 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
     transform: scale(0.2);
     opacity: 0;
     top: 0;
-    left: 106.66667px;
+    left: 80px;
   }
   100% {
     transform: scale(1);
     opacity: 1;
     padding-right: 0;
-    left: 205.71429px;
-    top: 80px;
-    padding-left: 64px;
+    left: 154.28571px;
+    top: 60px;
+    padding-left: 48px;
   }
 }
 @keyframes mobileShowConstruction {
   0% {
     transform: scale(0.2);
     opacity: 0;
-    left: 224px;
-    top: 80px;
+    left: 168px;
+    top: 60px;
   }
   100% {
     transform: scale(1);
     opacity: 1;
-    top: 80px;
-    left: 106.66667px;
+    top: 60px;
+    left: 80px;
   }
 }
 @keyframes mobileShowEval {
   0% {
     transform: scale(0.2);
     opacity: 0;
-    top: 80px;
-    left: 106.66667px;
+    top: 60px;
+    left: 80px;
   }
   100% {
     transform: scale(1);
     opacity: 1;
-    top: 240px;
-    left: 106.66667px;
+    top: 180px;
+    left: 80px;
   }
 }
 /* line 1, ../sass/_caseStudies.sass */
@@ -1705,37 +1730,43 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   opacity: 0;
   transition: opacity ease 1s;
 }
-/* line 6, ../sass/_caseStudies.sass */
+@media only screen and (max-width: 1199px) {
+  /* line 1, ../sass/_caseStudies.sass */
+  #case-studies {
+    opacity: 1;
+  }
+}
+/* line 8, ../sass/_caseStudies.sass */
 #case-studies.show {
   opacity: 1;
 }
-/* line 9, ../sass/_caseStudies.sass */
+/* line 11, ../sass/_caseStudies.sass */
 #case-studies .btn-wrapper {
   text-align: center;
 }
-/* line 11, ../sass/_caseStudies.sass */
+/* line 13, ../sass/_caseStudies.sass */
 #case-studies .btn-wrapper .btn {
   margin: 60px auto 50px;
 }
-/* line 14, ../sass/_caseStudies.sass */
+/* line 16, ../sass/_caseStudies.sass */
 #case-studies .tile-image {
   position: relative;
   background: #000;
 }
-/* line 17, ../sass/_caseStudies.sass */
+/* line 19, ../sass/_caseStudies.sass */
 #case-studies .tile-image * {
   transition: all ease 0.5s;
 }
-/* line 20, ../sass/_caseStudies.sass */
+/* line 22, ../sass/_caseStudies.sass */
 #case-studies .tile-image:hover img {
   transform: scale(1.1);
   opacity: 0.2;
 }
-/* line 23, ../sass/_caseStudies.sass */
+/* line 25, ../sass/_caseStudies.sass */
 #case-studies .tile-image:hover .desc {
   opacity: 1;
 }
-/* line 25, ../sass/_caseStudies.sass */
+/* line 27, ../sass/_caseStudies.sass */
 #case-studies .tile-image .desc {
   opacity: 0;
   pointer-events: none;

@@ -29,10 +29,11 @@ $(function () {
         , navIsOpen = false
         , viewPortOffset = $(window).scrollTop()
         , mobileNav = $('#nav ul')
+        , isMobile = window.orientation > -1 && screen.width <= 640
         , hamburgerElem = $('.hamburger');
 
-    //       , imageScroll = $(".image-scroll-wrapper")
-   // imageScroll.removeClass('fixed');
+
+    isMobile = true;
 
     fixNav(viewPortOffset);
 
@@ -121,7 +122,7 @@ $(function () {
             lastScrollTop = scroll;
 
             fixNav(scroll);
-            if(scroll && hasScrolled) {
+            if(scroll && hasScrolled && !isMobile) {
                 if(direction === 'down') {
                     //on
                     if (scroll >= methodContainerOffset) {
