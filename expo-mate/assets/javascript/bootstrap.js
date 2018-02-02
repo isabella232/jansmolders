@@ -32,9 +32,6 @@ $(function () {
         , isMobile = window.orientation > -1 && screen.width <= 640
         , hamburgerElem = $('.hamburger');
 
-
-    isMobile = true;
-
     fixNav(viewPortOffset);
 
     if (~~viewPortOffset >= ~~methodContainerOffset) {
