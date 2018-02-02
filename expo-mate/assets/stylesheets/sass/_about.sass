@@ -29,6 +29,10 @@
       float: left
       margin-right: 10px
       max-width: 15%
+      +respond-max-width(sm)
+        max-width: 25%
+      +respond-max-width(md)
+        max-width: 30%
       img
         width: 100%
         opacity: .4
@@ -82,11 +86,15 @@
   margin: -150px 0 100px
   +respond-max-width(sm)
     margin-bottom: -50px
+    .row > div
+      margin-bottom: 40px
   &.open
     min-height: 60vh
     height: 60vh
     opacity: 1
     padding: 40px 0
+    +respond-max-width(sm)
+      height: 600px
 
   .image-container
     width: 300px
@@ -97,3 +105,19 @@
     img
       width: 100%
       margin: 0 auto
+    +respond-max-width(xs)
+      height: 200px
+      width: 100px
+      float: left
+      img
+        margin-top: 30px
+
+  .desc
+    +respond-max-width(xs)
+      float: left
+      width: 200px
+      margin-left: 20px
+
+#about
+  +respond-max-width(md)
+    margin: 200px 0 0 0

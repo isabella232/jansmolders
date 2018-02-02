@@ -26,6 +26,7 @@ $(function () {
         , step = 0
         , scroll = 0
         , hasSnapped = false
+        , navIsOpen = false
         , viewPortOffset = $(window).scrollTop()
         , mobileNav = $('#nav ul')
         , hamburgerElem = $('.hamburger');
@@ -50,6 +51,7 @@ $(function () {
     //********* Event Handlers
 
     $('.play-video-wrapper').on('click', function(){
+        $('body').toggleClass('isPlaying');
         headerElem.addClass('play');
         headerElem.find('.video-container').addClass('play');
     });
@@ -62,6 +64,7 @@ $(function () {
 
 
     $('.close-btn').on('click', function(){
+        $('body').toggleClass('isPlaying');
         headerElem.removeClass('play');
         headerElem.find('.video-container').removeClass('play');
     });
@@ -83,11 +86,17 @@ $(function () {
         var link = $(this).attr('href');
         var linkPos = $(link).offset().top;
         $("html, body").animate({ scrollTop: linkPos });
+
+        if (navIsOpen) {
+            hamburgerElem.removeClass("is-active");
+            mobileNav.removeClass("open");
+        }
     });
 
     hamburgerElem.click(function(){
         $(this).toggleClass("is-active");
         mobileNav.toggleClass("open");
+        navIsOpen = true;
     });
 
     $(window).on('mousewheel DOMMouseScroll touchmove', function() {

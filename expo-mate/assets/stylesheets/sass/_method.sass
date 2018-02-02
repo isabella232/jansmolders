@@ -9,6 +9,8 @@ $imageScrollHeight : 1000px
   background: $bg-color
   padding-top: 100px
   height: $imageScrollHeight * 5
+  +respond-max-width(md)
+    height: $imageScrollHeight * 4
   &.show
     .method-scroll-wrapper
       #diagram,
@@ -18,42 +20,41 @@ $imageScrollHeight : 1000px
         .intro
           &.show
             animation: showIntro cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            +respond-max-width(xs)
-              animation: mobileShowIntro cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            +respond-max-width(md)
+              animation: fadeInMobile cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
             @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-              animation: mobileShowIntro cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+              animation: showIntro cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
           &.slideOut
-            animation: slideIntroLabel cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            +respond-max-width(xs)
-              animation: mobileSlideIntroLabel cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            +respond-min-width(md)
+              animation: slideIntroLabel cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
             @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
               animation: mobileSlideIntroLabel cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
         .design
           &.show
             animation: showDesign cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            +respond-max-width(xs)
-              animation: mobileShowDesign cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            +respond-max-width(md)
+              animation: fadeInMobile cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
             @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
               animation: mobileShowDesign cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
         .tuning
           &.show
             animation: showTuning cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            +respond-max-width(xs)
-              animation: mobileShowTuning cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            +respond-max-width(md)
+              animation: fadeInMobile cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
             @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
               animation: mobileShowTuning cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
         .construction
           &.show
             animation: showConstruction cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            +respond-max-width(xs)
-              animation: mobileShowConstruction cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            +respond-max-width(md)
+              animation: fadeInMobile cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
             @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
               animation: mobileShowConstruction cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
         .eval
           &.show
             animation: showEval cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            +respond-max-width(xs)
-              animation: mobileShowEval cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            +respond-max-width(md)
+              animation: fadeInMobile cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
             @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
               animation: mobileShowEval cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
   .method-scroll-wrapper
@@ -89,7 +90,7 @@ $imageScrollHeight : 1000px
       bottom: -40vh
       background: rgba(26,27,32,.4)
       z-index: 0
-    +respond-max-width(sm)
+    +respond-max-width(md)
       &:after,
       &:before
         display: none
@@ -109,13 +110,14 @@ $imageScrollHeight : 1000px
       z-index: 3
       opacity: 0
       transition: opacity .3s ease
-      +respond-max-width(xs)
-        width: $mobileMethodSize * 2 + $mobileMethodSize / 4
-        height: $mobileMethodSize * 3
-      @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-        width: $mobileMethodSize * 2 + $mobileMethodSize / 4
-        height: $mobileMethodSize * 3
-      +respond-max-width(sm)
+      +respond-max-width(md)
+        float: left
+        width: $mobileMethodSize
+        height: $mobileMethodSize
+      @media screen and (min-device-width: 768px) and (max-device-width: 1024px)
+        width: $mobileMethodSize
+        height: $mobileMethodSize
+      +respond-max-width(md)
         margin-top: 20px
       .intro,
       .design,
@@ -142,18 +144,19 @@ $imageScrollHeight : 1000px
         pointer-events: all
         &.focused
           z-index: 9
-        +respond-max-width(xs)
+        +respond-max-width(md)
           font-size: .75em
           height: $mobileMethodSize
           width: $mobileMethodSize
           padding: $mobileMethodSize / 2.5 $mobileMethodSize / 5 0
-          top: $mobileMethodSize / 2
-        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+          top: $mobileMethodSize
+          transition: all ease .5s
+        @media screen and (min-device-width: 768px) and (max-device-width: 1024px)
           font-size: .75em
           height: $mobileMethodSize
           width: $mobileMethodSize
           padding: $mobileMethodSize / 2.5 $mobileMethodSize / 5 0
-          top: $mobileMethodSize / 2
+          top: $mobileMethodSize
         .step-content
           span, i
             display: block
@@ -171,12 +174,10 @@ $imageScrollHeight : 1000px
             color: #505058
       .intro
         top: $methodSize / 2
-        +respond-max-width(xs)
-          padding-left: $mobileMethodSize / 8
-          top: $mobileMethodSize / 2
-        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-          padding-left: $mobileMethodSize / 8
-          top: $mobileMethodSize / 2
+        +respond-max-width(md)
+          top: $mobileMethodSize
+        @media screen and (min-device-width: 768px) and (max-device-width: 1024px)
+          top: $mobileMethodSize
         left: 0
         z-index: 5
       .design
@@ -199,10 +200,9 @@ $imageScrollHeight : 1000px
       .goo2
         filter: url('#goo2')
 
-
-
   .method-info-container
     position: relative
+    z-index: 2
     .fadeIn
       opacity: 0
       position: absolute
@@ -211,7 +211,25 @@ $imageScrollHeight : 1000px
       width: 100%
       &.show
         animation: fadeIn cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-
+        +respond-max-width(md)
+          animation: fadeInMobile cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+          animation: fadeInMobile cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+    +respond-max-width(md)
+      padding-left: 180px
+      .fadeIn
+        width: 50%
+        left: auto
+        right: 0
+        transition: all ease .5s
+    +respond-max-width(sm)
+      padding-left: 150px
+      .fadeIn
+        width: 65%
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
+      font-size: .875em
+      .fadeIn
+        width: 85%
 
 
 // Desktop animations
@@ -284,6 +302,15 @@ $imageScrollHeight : 1000px
     top: $methodSize + ($methodSize / 2)
     left: $methodSize - $methodSize / 3
     opacity: 1
+
+
+// Mobile Animations
+
+@keyframes fadeInMobile
+  100%
+    opacity: 1
+    top: 0
+    z-index: 5
 
 
 // Mobile Animations

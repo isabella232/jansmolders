@@ -16,9 +16,10 @@ body, html
 section
   min-height: 500px
 .equal-height
-  > div
-    height: 450px
-    margin-bottom: 20px
+  +respond-min-width(md)
+    > div
+      height: 450px
+      margin-bottom: 20px
 
 .no-gutter
   .row

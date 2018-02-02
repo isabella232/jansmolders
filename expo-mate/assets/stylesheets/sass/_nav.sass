@@ -1,8 +1,11 @@
 $navColor: #222
 
 #nav
-  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
+  +respond-min-width(md)
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%)
   height: 250px
+  +respond-max-width(md)
+    height: 50px
   position: absolute
   top: 0
   left: 0
@@ -19,9 +22,7 @@ $navColor: #222
     float: right
     margin: 40px 100px 0 0
     list-style: none
-    +respond-max-width(sm)
-      margin-right: 50px
-    +respond-max-width(xs)
+    +respond-max-width(md)
       position: absolute
       width: 100%
       left: 0
@@ -31,9 +32,24 @@ $navColor: #222
       transition: all .5s ease
       z-index: 6
     &.open
-      +respond-max-width(xs)
+      +respond-max-width(md)
         top: -40px
         padding-top: 50px
+        z-index: 98
+        li.sub
+          i
+            display: none
+          span
+            display: block
+            color: #fff
+          ul
+            top: 40px
+            width: 400px
+            background: #333
+            padding-top: 50px
+            left: -40px
+            li
+              padding-left: 20px
     li
       float: left
       margin-right: 40px
@@ -41,6 +57,8 @@ $navColor: #222
       &.sub
         padding-right: 20px
         cursor: pointer
+        span
+          display: none
         &:after
           content: "\e901"
           font-family: $font_0
@@ -70,8 +88,8 @@ $navColor: #222
             z-index: 6
             li
               padding-bottom: 10px
-      +respond-max-width(xs)
-        width: 100%
+      +respond-max-width(md)
+        width: 75%
         float: none
         padding-bottom: 20px
       &:last-child
@@ -97,8 +115,8 @@ $navColor: #222
   position: absolute
   top: 20px
   right: 20px
-  z-index: 8
-  +respond-max-width(xs)
+  z-index: 99
+  +respond-max-width(md)
     display: block
   .line
     width: 30px
