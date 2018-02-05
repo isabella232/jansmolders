@@ -140,9 +140,10 @@ $navColor: #222
     .line:nth-child(3)
       transform: translateY(-7px) rotate(90deg)
 
-body.projects:not(.dark)
+body.projects
   #nav
     background: none
+  &:not(.dark)
     *
       color: invert($nav-text-color)
       text-shadow: none
