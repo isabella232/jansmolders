@@ -22,7 +22,7 @@ $(function () {
         , preAboutContainerOffset = preAboutContainer.offset().top
         , aboutContainerOffset = aboutContainer.offset().top
         , viewPortHeight = $(window).height()
-        , animationIncrements = 600
+        , animationIncrements = 950
         , step = 0
         , scroll = 0
         , hasSnapped = false
@@ -108,13 +108,12 @@ $(function () {
 
     $(document.body).on('touchmove', function(){
         scroll = ~~$(this).scrollTop();
+        $('#case-studies').addClass('show');
+        aboutContainer.addClass('show');
     });
 
     $(window).on('scroll', function(){
         scroll = ~~$(this).scrollTop();
-    });
-
-    setInterval(function(){
         getDirection(scroll, lastScrollTop, function(direction, scroll){
             lastScrollTop = scroll;
 
@@ -184,7 +183,8 @@ $(function () {
 
             }
         });
-    },500);
+    });
+
 });
 
 function getDirection (scroll, lastScrollTop, callback){
