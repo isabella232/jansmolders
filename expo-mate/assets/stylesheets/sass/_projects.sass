@@ -1,0 +1,225 @@
+
+#projects
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  --color-text: $header-text-color
+  --color-bg: $project-bg-color
+  --color-link: $cta-color
+  --color-link-hover: #000
+  --color-info: #333
+  --grid-columns: 2
+  --details-bg-up: $secondary-offset-bg-color
+  --details-bg-down: $offset-bg-color
+  --color-product-title: $header-text-color
+  --color-product-subtitle: #a09897
+  --color-details-title: $header-text-color
+  --color-details-subtitle: $header-text-color
+  --color-descr: $text-color
+  --color-close: #000
+  --color-bg-magnifier: #000
+  --color-magnifier: #fff
+  --color-btn-hover: #000
+
+  .grid
+    margin: 10em auto 7em
+    position: relative
+    padding: 0 1em
+    width: 100%
+    max-width: 1400px
+    display: grid
+    grid-template-columns: repeat(var(--grid-columns), 1fr)
+
+    .grid__item
+      padding: 0 4vw
+      margin: 0 0 12vh
+      width: 100%
+      &:nth-child(odd) .product
+        margin-top: -8em
+
+  .product
+    height: 100%
+    padding-top: 10em
+    position: relative
+    cursor: pointer
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+    .product__bg
+      height: 20em
+      background: var(--details-bg-down)
+      position: relative
+
+    .product__img
+      max-height: 25em
+      margin: 0 auto
+      display: block
+      position: absolute
+      top: 0
+      left: 50%
+      pointer-events: none
+      transform: translate3d(-50%, 0, 0)
+
+    .product__title
+      position: relative
+      margin: 0.5em 0 0
+      font-size: 1.75em
+      color: var(--color-product-title)
+      font-family: $font
+      font-weight: 700
+
+    .product__subtitle
+      position: relative
+      margin: 0
+      text-transform: uppercase
+      color: var(--color-product-subtitle)
+      font-size: 0.85em
+      letter-spacing: 0.115em
+
+    &:hover .product__subtitle
+      color: var(--color-link)
+
+    .product__description
+      opacity: 0
+      position: absolute
+
+  .details
+    position: fixed
+    width: 100%
+    height: 100%
+    bottom: 0
+    left: 0
+    padding: 40vh 0 10vh 10vw
+    z-index: 1000
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    pointer-events: none
+    > *
+      position: relative
+      opacity: 0
+
+    &.details--open
+      pointer-events: auto
+
+    .details__bg
+      width: 100%
+      position: fixed
+      left: 0
+
+    .details__bg--up
+      top: 0
+      height: 100vh
+      background: var(--details-bg-up)
+
+    .details__bg--down
+      top: 40vh
+      height: 60vh
+      background: var(--details-bg-down)
+
+    .details__img
+      position: absolute
+      bottom: 20vh
+      right: 10vw
+      max-height: 70vh
+      max-width: 65vw
+
+    .details__bg, .details__img
+      transform-origin: 0 0
+
+    .details__title
+      margin: -1.5em 0 0.1em
+      font-size: 4.5em
+      color: var(--color-details-title)
+      font-family: $font
+      font-weight: 700
+
+    .details__subtitle
+      text-transform: uppercase
+      margin: 0.75em 0 1em 0
+      letter-spacing: 0.115em
+      font-size: 1.75em
+      color: var(--color-details-subtitle)
+
+    .details__description
+      line-height: 2
+      font-weight: normal
+      max-width: 400px
+      margin: 2em 0 0 0
+      color: var(--color-details-desc)
+
+    .details__close
+      position: absolute
+      top: 0
+      right: 0
+      border: 0
+      background: none
+      margin: 2em
+      cursor: pointer
+      font-size: 0.85em
+      color: var(--color-close)
+      a:hover
+        text-decoration: none
+      i
+        font-size: 2.5em
+
+    .details__magnifier
+      border: 0
+      background: none
+      background: var(--color-bg-magnifier)
+      color: var(--color-magnifier)
+      padding: 1em
+      border-radius: 90%
+      position: absolute
+      z-index: 1000
+      right: calc(21.5vh + 10vw)
+      top: 75vh
+      cursor: pointer
+      width: 50px
+      height: 50px
+      a:hover
+        text-decoration: none
+      i
+        font-size: 1.5em
+        color: #fff
+      &:hover
+        background: var(--color-btn-hover)
+
+
+    .details__deco
+      width: 7em
+      height: 20px
+      background-position: 50% 97%
+      background-size: 150%
+
+  @media screen and (max-width: 40em)
+    .grid
+      padding: 0 1vw
+    .grid__item
+      padding: 0 2vw
+    .product__bg
+      height: 10em
+    .product__img
+      max-height: 19em
+    .product__title
+      font-size: 1.25em
+    .product__subtitle
+      font-size: 0.75em
+    .details
+      padding: 30vh 0 5vh 10vw
+    .details__bg--down
+      top: 30vh
+      height: 70vh
+    .details__title
+      font-size: 2em
+    .details__subtitle
+      font-size: 1em
+    .details__description
+      max-width: 70%
+      font-size: 0.85em
+      margin: 1em 0 0 0
+    .details__deco
+      height: 7px
+      width: 4em
+    .details__img
+      right: -12vh
+    .details__magnifier
+      right: 7vh

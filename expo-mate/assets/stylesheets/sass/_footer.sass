@@ -32,6 +32,9 @@
       text-align: left
       +respond-min-width(lg)
         font-size: 1em
+    h3
+      @media screen and (min-device-width: 1600px)
+        font-size: 1.5em
     .row
       > div
         padding: 20px
@@ -50,7 +53,8 @@
         line-height: 1.5em
         margin-top: 0
     .contact-content
-      border-right: 1px solid #1a1b20
+      border-right: 1px solid $footer-border-color
+      min-height: 275px
       @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
         border: 0
       +respond-max-width(sm)
