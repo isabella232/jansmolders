@@ -190,9 +190,10 @@
       background-position: 50% 97%
       background-size: 150%
 
-  @media screen and (max-width: 40em)
+  +respond-max-width(sm)
     .grid
       padding: 0 1vw
+      grid-template-columns: repeat(1, 1fr)
     .grid__item
       padding: 0 2vw
     .product__bg
