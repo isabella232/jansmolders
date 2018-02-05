@@ -9,6 +9,7 @@ $(function () {
         , headerElem = $('#header')
         , isHomePage = $('body.homepage')
         , viewPortHeight = $(window).height()
+        , viewPortWidth = $(window).width()
         , animationIncrements = 950
         , step = 0
         , scroll = 0
@@ -63,6 +64,7 @@ $(function () {
 
     $(window).on('resize', function(){
         viewPortHeight = $(this).height();
+        viewPortWidth = $(this).width();
         animationIncrements = $(window).height() / 100 * 20;
     });
 
@@ -125,11 +127,15 @@ $(function () {
 
         $(window).on('scroll', function(){
             scroll = ~~$(this).scrollTop();
+
+            if(viewPortHeight < 1100){
+                animationIncrements = 1050;
+            }
             getDirection(scroll, lastScrollTop, function(direction, scroll){
                 lastScrollTop = scroll;
 
                 fixNav(scroll);
-                if(scroll && hasScrolled && !isMobile) {
+                if(scroll && hasScrolled && !isMobile && viewPortWidth > 400) {
                     if(direction === 'down') {
                         //on
                         if (scroll >= methodContainerOffset) {
