@@ -2063,65 +2063,66 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   background-position: 50% 97%;
   background-size: 150%;
 }
-@media screen and (max-width: 40em) {
+@media only screen and (max-width: 991px) {
   /* line 194, ../sass/_projects.sass */
   #projects .grid {
     padding: 0 1vw;
+    grid-template-columns: repeat(1, 1fr);
   }
-  /* line 196, ../sass/_projects.sass */
+  /* line 197, ../sass/_projects.sass */
   #projects .grid__item {
     padding: 0 2vw;
   }
-  /* line 198, ../sass/_projects.sass */
+  /* line 199, ../sass/_projects.sass */
   #projects .product__bg {
     height: 10em;
   }
-  /* line 200, ../sass/_projects.sass */
+  /* line 201, ../sass/_projects.sass */
   #projects .product__img {
     max-height: 19em;
   }
-  /* line 202, ../sass/_projects.sass */
+  /* line 203, ../sass/_projects.sass */
   #projects .product__title {
     font-size: 1.25em;
   }
-  /* line 204, ../sass/_projects.sass */
+  /* line 205, ../sass/_projects.sass */
   #projects .product__subtitle {
     font-size: 0.75em;
   }
-  /* line 206, ../sass/_projects.sass */
+  /* line 207, ../sass/_projects.sass */
   #projects .details {
     padding: 30vh 0 5vh 10vw;
   }
-  /* line 208, ../sass/_projects.sass */
-  #projects .details__bg--down {
+  /* line 209, ../sass/_projects.sass */
+  #projects .details .details__bg--down {
     top: 30vh;
     height: 70vh;
   }
-  /* line 211, ../sass/_projects.sass */
-  #projects .details__title {
+  /* line 212, ../sass/_projects.sass */
+  #projects .details .details__title {
     font-size: 2em;
   }
-  /* line 213, ../sass/_projects.sass */
-  #projects .details__subtitle {
+  /* line 214, ../sass/_projects.sass */
+  #projects .details .details__subtitle {
     font-size: 1em;
   }
-  /* line 215, ../sass/_projects.sass */
-  #projects .details__description {
+  /* line 216, ../sass/_projects.sass */
+  #projects .details .details__description {
     max-width: 70%;
     font-size: 0.85em;
     margin: 1em 0 0 0;
   }
-  /* line 219, ../sass/_projects.sass */
-  #projects .details__deco {
+  /* line 220, ../sass/_projects.sass */
+  #projects .details .details__deco {
     height: 7px;
     width: 4em;
   }
-  /* line 222, ../sass/_projects.sass */
-  #projects .details__img {
-    right: -12vh;
+  /* line 223, ../sass/_projects.sass */
+  #projects .details .details__img {
+    max-width: 80vw;
   }
-  /* line 224, ../sass/_projects.sass */
-  #projects .details__magnifier {
+  /* line 225, ../sass/_projects.sass */
+  #projects .details .details__magnifier {
     right: 7vh;
   }
 }
