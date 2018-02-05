@@ -11,7 +11,7 @@ $(function () {
             var linkPos = $(link).offset().top;
             $("html, body").animate({ scrollTop: linkPos });
         } else {
-            window.location.href = link;
+            window.location.href = '/'+link;
         }
 
         if (navIsOpen) {

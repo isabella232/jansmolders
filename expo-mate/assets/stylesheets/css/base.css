@@ -738,11 +738,11 @@ section.content .secondary-offset-bg-color {
 }
 
 /* line 144, ../sass/_nav.sass */
-body.projects:not(.dark) #nav {
+body.projects #nav {
   background: none;
 }
-/* line 146, ../sass/_nav.sass */
-body.projects:not(.dark) #nav * {
+/* line 147, ../sass/_nav.sass */
+body.projects:not(.dark) * {
   color: #0a0a0a;
   text-shadow: none;
 }
