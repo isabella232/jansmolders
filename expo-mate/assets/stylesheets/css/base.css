@@ -1977,7 +1977,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   bottom: 20vh;
   right: 10vw;
   max-height: 70vh;
-  max-width: 65vw;
+  max-width: 55vw;
 }
 /* line 125, ../sass/_projects.sass */
 #projects .details .details__bg, #projects .details .details__img {
@@ -2120,8 +2120,9 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   /* line 223, ../sass/_projects.sass */
   #projects .details .details__img {
     max-width: 80vw;
+    bottom: 20px;
   }
-  /* line 225, ../sass/_projects.sass */
+  /* line 226, ../sass/_projects.sass */
   #projects .details .details__magnifier {
     right: 7vh;
   }
