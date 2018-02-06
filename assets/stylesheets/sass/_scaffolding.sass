@@ -18,16 +18,18 @@ body, html
 
 .contact
   position: absolute
-  left: -230px
+  left: -160px
   z-index: 9
   top: 45%
   transform: rotate(-90deg)
   +respond-max-width(sm)
     top: auto
-    bottom: 200px
+    bottom: 225px
     @media only screen and (orientation: landscape)
-      bottom: 80px
-      left: -70px
+      transform: rotate(0deg)
+      top: 100px
+      left: auto
+      right: 50px
   ul
     list-style: none
     li
@@ -37,9 +39,8 @@ body, html
         margin: 0 20px
         text-transform: uppercase
         +respond-max-width(sm)
-          @media only screen and (orientation: landscape)
-            margin: 0 5px
-            font-size: 11px
+          margin: 0 10px
+          font-size: 12px
         &:hover
           text-decoration: none
           color: darken(#f5f5f5, 20%)

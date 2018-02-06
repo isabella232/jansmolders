@@ -217,7 +217,7 @@ body, html {
 /* line 19, ../sass/_scaffolding.sass */
 .contact {
   position: absolute;
-  left: -230px;
+  left: -160px;
   z-index: 9;
   top: 45%;
   transform: rotate(-90deg);
@@ -226,53 +226,54 @@ body, html {
   /* line 19, ../sass/_scaffolding.sass */
   .contact {
     top: auto;
-    bottom: 200px;
+    bottom: 225px;
   }
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
   /* line 19, ../sass/_scaffolding.sass */
   .contact {
-    bottom: 80px;
-    left: -70px;
+    transform: rotate(0deg);
+    top: 100px;
+    left: auto;
+    right: 50px;
   }
 }
 
-/* line 31, ../sass/_scaffolding.sass */
+/* line 33, ../sass/_scaffolding.sass */
 .contact ul {
   list-style: none;
 }
-/* line 33, ../sass/_scaffolding.sass */
+/* line 35, ../sass/_scaffolding.sass */
 .contact ul li {
   float: left;
 }
-/* line 35, ../sass/_scaffolding.sass */
+/* line 37, ../sass/_scaffolding.sass */
 .contact ul li a {
   color: #f5f5f5;
   margin: 0 20px;
   text-transform: uppercase;
 }
-@media only screen and (max-width: 991px) and (orientation: landscape) {
-  /* line 35, ../sass/_scaffolding.sass */
+@media only screen and (max-width: 991px) {
+  /* line 37, ../sass/_scaffolding.sass */
   .contact ul li a {
-    margin: 0 5px;
-    font-size: 11px;
+    margin: 0 10px;
+    font-size: 12px;
   }
 }
-
-/* line 43, ../sass/_scaffolding.sass */
+/* line 44, ../sass/_scaffolding.sass */
 .contact ul li a:hover {
   text-decoration: none;
   color: #c2c2c2;
 }
 
-/* line 47, ../sass/_scaffolding.sass */
+/* line 48, ../sass/_scaffolding.sass */
 #epic {
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
-/* line 52, ../sass/_scaffolding.sass */
+/* line 53, ../sass/_scaffolding.sass */
 #epic #hero {
   background: linear-gradient(135deg, #2f2f31 0%, #151517 100%);
   position: absolute;
@@ -285,12 +286,12 @@ body, html {
   opacity: 0;
 }
 @media only screen and (max-width: 991px) {
-  /* line 52, ../sass/_scaffolding.sass */
+  /* line 53, ../sass/_scaffolding.sass */
   #epic #hero {
     display: none;
   }
 }
-/* line 65, ../sass/_scaffolding.sass */
+/* line 66, ../sass/_scaffolding.sass */
 #epic .content {
   position: absolute;
   bottom: 20%;
@@ -298,7 +299,7 @@ body, html {
   width: 550px;
 }
 @media only screen and (max-width: 991px) {
-  /* line 65, ../sass/_scaffolding.sass */
+  /* line 66, ../sass/_scaffolding.sass */
   #epic .content {
     position: absolute;
     bottom: auto;
@@ -308,7 +309,7 @@ body, html {
     height: 100vh;
   }
 }
-/* line 77, ../sass/_scaffolding.sass */
+/* line 78, ../sass/_scaffolding.sass */
 #epic .content .ribbon {
   position: absolute;
   bottom: 0;
@@ -320,7 +321,7 @@ body, html {
   vertical-align: bottom;
 }
 @media only screen and (max-width: 991px) {
-  /* line 77, ../sass/_scaffolding.sass */
+  /* line 78, ../sass/_scaffolding.sass */
   #epic .content .ribbon {
     width: 100%;
     height: 150px;
@@ -330,7 +331,7 @@ body, html {
   }
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
-  /* line 77, ../sass/_scaffolding.sass */
+  /* line 78, ../sass/_scaffolding.sass */
   #epic .content .ribbon {
     height: 57px;
     top: 20px;
@@ -338,7 +339,7 @@ body, html {
   }
 }
 
-/* line 96, ../sass/_scaffolding.sass */
+/* line 97, ../sass/_scaffolding.sass */
 #epic .content .ribbon span {
   position: absolute;
   bottom: 90px;
@@ -349,14 +350,14 @@ body, html {
   opacity: 0;
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
-  /* line 96, ../sass/_scaffolding.sass */
+  /* line 97, ../sass/_scaffolding.sass */
   #epic .content .ribbon span {
     bottom: 10px;
     font-size: 16px;
   }
 }
 
-/* line 108, ../sass/_scaffolding.sass */
+/* line 109, ../sass/_scaffolding.sass */
 #epic .content .ribbon h2 {
   position: absolute;
   bottom: 0;
@@ -368,7 +369,7 @@ body, html {
   opacity: 0;
 }
 @media only screen and (max-width: 991px) and (orientation: landscape) {
-  /* line 108, ../sass/_scaffolding.sass */
+  /* line 109, ../sass/_scaffolding.sass */
   #epic .content .ribbon h2 {
     font-size: 24px;
     right: 20px;
@@ -376,7 +377,7 @@ body, html {
   }
 }
 
-/* line 122, ../sass/_scaffolding.sass */
+/* line 123, ../sass/_scaffolding.sass */
 #epic .content .work {
   color: #f5f5f5;
   position: absolute;
@@ -386,20 +387,20 @@ body, html {
   opacity: 0;
 }
 @media only screen and (max-width: 991px) {
-  /* line 122, ../sass/_scaffolding.sass */
+  /* line 123, ../sass/_scaffolding.sass */
   #epic .content .work {
     width: auto;
     bottom: 30px;
     right: 0;
   }
 }
-/* line 133, ../sass/_scaffolding.sass */
+/* line 134, ../sass/_scaffolding.sass */
 #epic .content .work h3 {
   font-weight: 400;
   margin-bottom: 20px;
   line-height: 30px;
 }
-/* line 137, ../sass/_scaffolding.sass */
+/* line 138, ../sass/_scaffolding.sass */
 #epic .content .work p {
   color: #d8d8d8;
   line-height: 26px;
