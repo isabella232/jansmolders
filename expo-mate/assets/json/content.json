@@ -1,7 +1,12 @@
-var jsonData = {
+{
   "en": {
     "nav": {
-      "labels": ['Ons Verhaal', 'Onze Werkwijze', 'projecten', 'contact']
+      "labels": [
+        "Ons Verhaal",
+        "Onze Werkwijze",
+        "projecten",
+        "contact"
+      ]
     },
     "homepage": {
         "header": {
@@ -184,17 +189,10 @@ var jsonData = {
                 }
             ],
             "visit": {
-                "description":"Garnizoenweg 3\n" +
-                        "Building A\n" +
-                        "5928 NA Venlo\n" +
-                        "The Netherlands"
+                "description":"Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
             },
             "copyright": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
         }
     }
   }
-};
-
-
-
-var dataLang;
+}
