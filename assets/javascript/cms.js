@@ -51,7 +51,7 @@ function parseData(item){
                     var pages = locales.pages;
                     if (pages) {
                         var page = Object.keys(pages);
-                        langContainer.append('<h2>Pagina: ' + page + '</h2>');
+                        langContainer.append('<h2>' + page + '</h2>');
 
 
                         $.each(pages, function (index, pageData) {
@@ -63,8 +63,7 @@ function parseData(item){
 
                                 $.each(pageData, function (index, sectionData) {
                                     if (index === section) {
-                                        var sectionElem = Object.keys(sectionData);
-
+                                        langContainer.append('<h3>' + section.toUpperCase() + '</h3>');
                                         $.each(sectionData, function (index, sectionelemData) {
                                             if(typeof sectionelemData === 'string'){
                                                 createFields(langContainer, landKey+'.'+page+'.'+section, index, sectionelemData);
