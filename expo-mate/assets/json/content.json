@@ -10,7 +10,7 @@
         "contact"
       ],
       "pages":{
-        "homepage":{
+          "pageTitle":"homepage",
           "header":{
             "title":"Management in Authentic and Trending Exhibition Participations",
             "button":"Neem Contact Op"
@@ -194,7 +194,7 @@
             }
           }
         }
-      }
+
     },
     {
       "code":"de",
@@ -205,7 +205,7 @@
         "contact"
       ],
       "pages":{
-        "homepage":{
+          "pageTitle": "homepage",
           "header":{
             "title":"Management in Authentic und Trending Exhibition Participations",
             "button":"Contact aufnehmen"
@@ -390,6 +390,6 @@
           }
         }
       }
-    }
+
   ]
 }
