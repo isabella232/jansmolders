@@ -35,58 +35,58 @@ function parseData(item){
     //build dom
     var resultEl =  $('#results');
 
-    //Language selector
-    resultEl.append('<h1>'+item.title+'</h1>');
-
     var languages = Object.keys(item);
     if(languages){
         for (var i = 0; i < languages.length; i++) {
             var langCount = i;
-            var landData = languages[i];
-            var pages = languages[i].pages;
+            var landKey = languages[i];
 
-            console.log('landData',landData)
+            $.each(item, function (index, locales) {
+                if (index === landKey) {
 
-            resultEl.append('<div class="lang-container lang'+langCount+'"></div>');
-            var langContainer = $(".lang"+langCount);
-            langContainer.append('<h2>Taal: '+landData.toUpperCase()+'</h2>');
+                    resultEl.append('<div class="lang-container lang' + langCount + '"></div>');
+                    var langContainer = $(".lang" + langCount);
+                    langContainer.append('<h2>Taal: ' + landKey.toUpperCase() + '</h2>');
 
-            var pageData;
-            if(pages.length === 1){
-                pagedata = pages[0];
-            } else {
-                for (i = 0; i < pages.length; i++) {
-                    pagedata = pages[i];
-                }
-            }
-            langContainer.append('<h2>Pagina: '+pagedata.pageTitle+'</h2>');
+                    var pages = locales.pages;
+                    if (pages) {
+                        var page = Object.keys(pages);
+                        langContainer.append('<h2>Pagina: ' + page + '</h2>');
 
-            langContainer.append('<div class="content"></div>');
-            var contentContainer = langContainer.find('.content');
-            var header = pagedata.header;
-            if(header){
-                $.each(header, function(index, item){
-                    createFields(contentContainer, 'header', index, item);
-                });
-            }
-            contentContainer.append('<hr/>')
-            var contentData = pagedata.content;
-            if(contentData){
-                for (var j = 0; j < contentData.length; j++) {
-                    var section = contentData[j];
-                    $.each(section, function(index, item){
-                        if(typeof item === 'array'){
-                            for (var k = 0; k < contentData.length; k++) {
+
+                        $.each(pages, function (index, pageData) {
+
+                            var sections = Object.keys(pageData);
+
+                            for (var j = 0; j < sections.length; j++) {
+                                var section = sections[j];
+
+                                $.each(pageData, function (index, sectionData) {
+                                    if (index === section) {
+                                        var sectionElem = Object.keys(sectionData);
+
+                                        $.each(sectionData, function (index, sectionelemData) {
+                                            if(typeof sectionelemData === 'string'){
+                                                createFields(langContainer, landKey+'.'+page+'.'+section, index, sectionelemData);
+                                            } else {
+                                                for (var k = 0; k < sectionelemData.length; k++) {
+
+                                                }
+                                            }
+
+                                        });
+                                    }
+                                });
+
 
                             }
-                        } else {
-                            createFields(contentContainer,'content', index, item);
-                        }
-                    });
-                }
-            }
 
-            resultEl.append('<button type="submit">Opslaan</button>');
+                            resultEl.append('<button type="submit">Opslaan</button>');
+
+                        });
+                    }
+                }
+            });
 
         }
     }
