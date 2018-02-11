@@ -141,12 +141,10 @@
         },
         "footer": {
           "title": "De koffie staat altijd klaar",
-          "headers": [
-            "Schrijf Ons",
-            "Bel Ons",
-            "Bezoek Ons"
-          ],
           "contacts": [
+            {
+              "title": "Schrijf Ons"
+            },
             {
               "title": "Jan Maas",
               "links": [
@@ -180,6 +178,9 @@
           ],
           "call": [
             {
+              "title": "Bel Ons"
+            },
+            {
               "links": [
                 {
                   "title": "Jan Maas",
@@ -192,9 +193,14 @@
               ]
             }
           ],
-          "visit": {
-            "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
-          },
+          "visit": [
+            {
+              "title": "Bezoek Ons"
+            },
+            {
+              "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
+            }
+          ],
           "copyright": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
         }
       }
