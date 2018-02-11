@@ -1,0 +1,138 @@
+$(function(){
+    $('#ghsubmitbtn').on('click', function(e){
+        e.preventDefault();
+
+        var owner =  $('#owner').val();
+        var passwrd =  $('#passwrd').val();
+        var repo =  $('#repo').val();
+        var path = $('#path').val();
+        var level = 0;
+
+        $.ajax({
+            url: "https://api.github.com/repos/"+owner+"/"+repo+"/contents/"+path,
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader("Authorization", "user" + btoa(owner+":"+passwrd));
+            },
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                var jsonFile = data.content;
+                var decodedJson = atob(jsonFile);
+                var parsedDecodedJson = JSON.parse(decodedJson);
+                $('#login').hide();
+                parseData(parsedDecodedJson);
+            },
+            error: function(error){
+                console.log("Cannot get data", error);
+            }
+        });
+    });
+});
+
+function parseData(item){
+    //level++;
+    //build dom
+    var resultEl =  $('#results');
+
+    //Language selector
+    resultEl.append('<h1>'+item.title+'</h1>');
+
+    var languages = Object.keys(item);
+    if(languages){
+        for (var i = 0; i < languages.length; i++) {
+            var langCount = i;
+            var landData = languages[i];
+            var pages = languages[i].pages;
+
+            console.log('landData',landData)
+
+            resultEl.append('<div class="lang-container lang'+langCount+'"></div>');
+            var langContainer = $(".lang"+langCount);
+            langContainer.append('<h2>Taal: '+landData.toUpperCase()+'</h2>');
+
+            var pageData;
+            if(pages.length === 1){
+                pagedata = pages[0];
+            } else {
+                for (i = 0; i < pages.length; i++) {
+                    pagedata = pages[i];
+                }
+            }
+            langContainer.append('<h2>Pagina: '+pagedata.pageTitle+'</h2>');
+
+            langContainer.append('<div class="content"></div>');
+            var contentContainer = langContainer.find('.content');
+            var header = pagedata.header;
+            if(header){
+                $.each(header, function(index, item){
+                    createFields(contentContainer, 'header', index, item);
+                });
+            }
+            contentContainer.append('<hr/>')
+            var contentData = pagedata.content;
+            if(contentData){
+                for (var j = 0; j < contentData.length; j++) {
+                    var section = contentData[j];
+                    $.each(section, function(index, item){
+                        if(typeof item === 'array'){
+                            for (var k = 0; k < contentData.length; k++) {
+
+                            }
+                        } else {
+                            createFields(contentContainer,'content', index, item);
+                        }
+                    });
+                }
+            }
+
+            resultEl.append('<button type="submit">Opslaan</button>');
+
+        }
+    }
+
+
+    $( "#results" ).submit( function( e ) {
+        e.preventDefault();
+        var formData = $(this).serializeArray();
+        console.log(formData);
+
+    });
+
+
+}
+
+function createFields(container, rootpath, index, item) {
+    var uniqueID = Math.floor(Math.random() * 1000000000);
+    if(index === 'description') {
+        container.append('<div class="form-group">\n' +
+            '<label for="content'+index+uniqueID+'">'+index+'</label>\n' +
+            '<textarea name="'+rootpath+'.'+index+'" id="content'+index+uniqueID+'" class="form-control">'+item+'</textarea>\n' +
+            '</div>');
+    } else {
+        container.append('<div class="form-group">\n' +
+            '<label for="content' + index + uniqueID + '">' + index + '</label>\n' +
+            '<input name="'+rootpath+'.'+index+'" value="' + item + '" id="content' + index + uniqueID + '" class="form-control" />\n' +
+            '</div>');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+function getFormData($form){
+    var unindexed_array = $form.serializeArray();
+    var indexed_array = {};
+
+    $.map(unindexed_array, function(n, i){
+        indexed_array[n['name']] = n['value'];
+    });
+
+    return indexed_array;
+}
