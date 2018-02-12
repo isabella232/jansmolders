@@ -51,11 +51,13 @@ function parseData(item){
                 if (index === landKey) {
                     resultEl.append('<div class="lang-container lang' + langCount + '"></div>');
                     var langContainer = $(".lang" + langCount);
-                    langContainer.append('<h2>'+landKey.toUpperCase() + '</h2>');
+                    langContainer.append('<div class="lang-content-wrapper"></div>');
+                    var contentWrapper = $('.lang-content-wrapper');
+                    contentWrapper.append('<h2>'+landKey.toUpperCase() + '</h2>');
                     var pages = locales.pages;
                     if (pages) {
                         var page = Object.keys(pages);
-                        langContainer.append('<h2>' + page + '</h2>');
+                        contentWrapper.append('<h3>' + page + '</h3>');
                         $.each(pages, function (index, pageData) {
                             var sections = Object.keys(pageData);
                             for (var j = 0; j < sections.length; j++) {
@@ -63,14 +65,14 @@ function parseData(item){
                                 prefix = landKey + '.pages.' + page + '.' + section;
                                 $.each(pageData, function (index, sectionData) {
                                     if (index === section) {
-                                        langContainer.append('<h3>' + section.toUpperCase() + '</h3>');
+                                        contentWrapper.append('<h4>' + section.toUpperCase() + '</h4>');
                                         var sectionHeaders = Object.keys(sectionData);
                                         for (var k = 0; k < sectionHeaders.length; k++) {
                                             var subSectionHeader = sectionHeaders[k];
-                                            langContainer.append('<h4>' + sectionHeaders[k] + '</h4>');
+                                            contentWrapper.append('<h4>' + sectionHeaders[k].toUpperCase() + '</h4>');
                                             $.each(sectionData, function (index, data) {
                                                 if (index === sectionHeaders[k]) {
-                                                    traverseDownTree(langContainer, prefix+'.'+subSectionHeader, index, data);
+                                                    traverseDownTree(contentWrapper, prefix+'.'+subSectionHeader, index, data);
                                                 }
                                             });
                                         }
@@ -85,6 +87,11 @@ function parseData(item){
 
         }
     }
+
+
+    $('.lang-content-wrapper h2').on('click', function(){
+        $(this).parent().toggleClass('open');
+    });
 
 
     resultEl.submit( function( e ) {
@@ -111,12 +118,16 @@ function parseData(item){
 }
 
 function traverseDownTree(container, prefix, index, data){
+    var uniqueID = Math.floor(Math.random() * 1000000000);
+    container.append('<div class="section" id="'+uniqueID+'"></div>');
+    var wrapper = $('#'+uniqueID);
     if(typeof data === 'string') {
-        createFields(container, prefix, index, data);
+        wrapper.append('<h4>' + index.toUpperCase() + '</h4>');
+        createFields(wrapper, prefix, index, data);
     } else if(typeof data === 'object'){
         $.each(data, function (index, data) {
             if(typeof data === 'string') {
-                createFields(container, prefix, index, data);
+                createFields(wrapper, prefix, index, data);
             } else {
                 traverseDownTree(container, prefix+'.'+index, index, data);
             }
