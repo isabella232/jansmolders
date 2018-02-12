@@ -6,7 +6,6 @@ $(function(){
         var passwrd =  $('#passwrd').val();
         var repo =  $('#repo').val();
         var path = $('#path').val();
-        var level = 0;
 
         $.ajax({
             url: "https://api.github.com/repos/"+owner+"/"+repo+"/contents/"+path,
@@ -31,10 +30,8 @@ $(function(){
 });
 
 function parseData(item){
-    //level++;
-    //build dom
     var resultEl =  $('#results');
-
+    var prefix;
     var languages = Object.keys(item);
     if(languages){
         for (var i = 0; i < languages.length; i++) {
@@ -43,45 +40,35 @@ function parseData(item){
 
             $.each(item, function (index, locales) {
                 if (index === landKey) {
-
                     resultEl.append('<div class="lang-container lang' + langCount + '"></div>');
                     var langContainer = $(".lang" + langCount);
-                    langContainer.append('<h2>Taal: ' + landKey.toUpperCase() + '</h2>');
-
+                    langContainer.append('<h2>'+landKey.toUpperCase() + '</h2>');
                     var pages = locales.pages;
                     if (pages) {
                         var page = Object.keys(pages);
                         langContainer.append('<h2>' + page + '</h2>');
-
-
                         $.each(pages, function (index, pageData) {
-
                             var sections = Object.keys(pageData);
-
                             for (var j = 0; j < sections.length; j++) {
                                 var section = sections[j];
-
+                                prefix = landKey + '.' + page + '.' + section;
                                 $.each(pageData, function (index, sectionData) {
                                     if (index === section) {
                                         langContainer.append('<h3>' + section.toUpperCase() + '</h3>');
-                                        $.each(sectionData, function (index, sectionelemData) {
-                                            if(typeof sectionelemData === 'string'){
-                                                createFields(langContainer, landKey+'.'+page+'.'+section, index, sectionelemData);
-                                            } else {
-                                                for (var k = 0; k < sectionelemData.length; k++) {
-
+                                        var sectionHeaders = Object.keys(sectionData);
+                                        for (var k = 0; k < sectionHeaders.length; k++) {
+                                            prefix += '.'+sectionHeaders[k];
+                                            langContainer.append('<h4>' + sectionHeaders[k] + '</h4>');
+                                            $.each(sectionData, function (index, data) {
+                                                if (index === sectionHeaders[k]) {
+                                                    traverseDownTree(langContainer, prefix, index, data);
                                                 }
-                                            }
-
-                                        });
+                                            });
+                                        }
                                     }
                                 });
-
-
                             }
-
-                            resultEl.append('<button type="submit">Opslaan</button>');
-
+                            resultEl.append('<button class="btn btn-lg btn-primary" type="submit">Opslaan</button>');
                         });
                     }
                 }
@@ -91,19 +78,51 @@ function parseData(item){
     }
 
 
-    $( "#results" ).submit( function( e ) {
+    resultEl.submit( function( e ) {
         e.preventDefault();
-        var formData = $(this).serializeArray();
-        console.log(formData);
-
+       // var formData = $(this).serializeArray();
+        var obj = $(this).serializeObject();
+        console.log(obj);
+        /*
+        $.ajax({
+            url: "https://api.github.com/repos/"+owner+"/"+repo+"/contents/"+path,
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader("Authorization", "user" + btoa(owner+":"+passwrd));
+            },
+            type: 'POST',
+            data: formData,
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                console.log("Success!!!", data);
+            },
+            error: function(error){
+                console.log("Cannot get data", error);
+            }
+        });
+        */
     });
 
 
 }
 
+function traverseDownTree(container, prefix, index, data){
+    if(typeof data === 'string') {
+        createFields(container, prefix, index, data);
+    } else if(typeof data === 'object'){
+        $.each(data, function (index, data) {
+            if(typeof data === 'string') {
+                createFields(container, prefix, index, data);
+            } else {
+                traverseDownTree(container, prefix+'.'+index, index, data);
+            }
+        });
+    }
+}
+
 function createFields(container, rootpath, index, item) {
     var uniqueID = Math.floor(Math.random() * 1000000000);
-    if(index === 'description') {
+    if(index === 'description' || index === 'text' || index === 'textarea') {
         container.append('<div class="form-group">\n' +
             '<label for="content'+index+uniqueID+'">'+index+'</label>\n' +
             '<textarea name="'+rootpath+'.'+index+'" id="content'+index+uniqueID+'" class="form-control">'+item+'</textarea>\n' +
@@ -116,22 +135,16 @@ function createFields(container, rootpath, index, item) {
     }
 }
 
+$.fn.serializeObject = function() {
+    var o = {}; // final object
+    var a = this.serializeArray(); // retrieves an array of all form values as
+                                   // objects { name: "", value: "" }
 
-
-
-
-
-
-
-
-
-function getFormData($form){
-    var unindexed_array = $form.serializeArray();
-    var indexed_array = {};
-
-    $.map(unindexed_array, function(n, i){
-        indexed_array[n['name']] = n['value'];
+    $.each(a, function() {
+        var ns = this.name.split("."); // split name to get namespace
+        AddToTree(o, ns, this.value); // creates a tree structure
+                                      // with values in the namespace
     });
 
-    return indexed_array;
-}
+    return o;
+};
