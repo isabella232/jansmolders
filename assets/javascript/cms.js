@@ -23,9 +23,13 @@ $(function(){
                 sha = data.sha;
                 var decodedJson = atob(jsonFile);
                 var parsedDecodedJson = JSON.parse(decodedJson);
-                $('#login').hide();
-                alert.addClass('hidden');
-                parseData(parsedDecodedJson);
+
+                if(parsedDecodedJson){
+                    $('#login').hide();
+                    alert.addClass('hidden');
+                    parseData(parsedDecodedJson);
+                }
+
             },
             error: function(error){
                 alert.addClass('alert-danger').removeClass('hidden').html('Something went wrong:'+error.responseText);
