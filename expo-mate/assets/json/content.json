@@ -3,12 +3,10 @@
     "pages": {
       "homepage": {
         "header": {
-          "title": {
-            "title": "Management in Authentic and Trending Exhibition Participations"
-          },
+          "title": "Management in Authentic and Trending Exhibition Participations",
           "button": {
             "label": "Neem Contact Op",
-            "link": "Neem Contact Op"
+            "link": "#contact"
           }
         },
         "content": {
@@ -16,43 +14,43 @@
             "title": "Ons Verhaal",
             "description": "We geloven in de kracht van diversiteit. Diversiteit en het samenbrengen van verschillende disciplines zorgt er namelijk voor dat we iedere dag het beste resultaat voor, maar vooral met, onze klanten kunnen realiseren.",
             "images": {
-              "0": {
+              "image1": {
                 "src": "assets/images/toshiba.png",
                 "alt": "Toshiba"
               },
-              "1": {
+              "image2": {
                 "src": "assets/images/toshiba.png",
                 "alt": "Toshiba"
               },
-              "2": {
+              "image3": {
                 "src": "assets/images/toshiba.png",
                 "alt": "Toshiba"
               },
-              "3": {
+              "image4": {
                 "src": "assets/images/toshiba.png",
                 "alt": "Toshiba"
               },
-              "4": {
+              "image5": {
                 "src": "assets/images/toshiba.png",
                 "alt": "Toshiba"
               },
-              "5": {
+              "image6": {
                 "src": "assets/images/toshiba.png",
                 "alt": "Toshiba"
               }
             },
             "buttons": {
-              "0": {
+              "button1": {
                 "label": "Meer over ons"
               },
-              "1": {
+              "button2": {
                 "label": "Sluiten"
               }
             }
           },
           "about": {
             "employees": {
-              "0": {
+              "niek": {
                 "title": "Niek van Gent",
                 "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. ",
                 "image": {
@@ -60,7 +58,7 @@
                   "alt": "Niek van Gent"
                 }
               },
-              "1": {
+              "jan": {
                 "title": "Jan Maas",
                 "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. ",
                 "image": {
@@ -90,44 +88,42 @@
             "title": "ONZE WERKWIJZE",
             "description": "Totale ontzorging. Minder vinden we niet goed genoeg voor onze relaties. Door onze verschillende achtergronden en ervaringen hebben we een werkwijze kunnen ontwikkelen die uniek is in de branche en welke ons in staat stelt de hoogst mogelijke return on investment voor onze relaties te behalen.",
             "methode": {
-              "0": {
+              "intro": {
                 "title": "Introductie",
                 "description": "Lorem Ipsum"
               },
-              "1": {
+              "design": {
                 "title": "Design",
                 "description": "Lorem Ipsum"
               },
-              "2": {
+              "tuning": {
                 "title": "Tuning",
                 "description": "Lorem Ipsum"
               },
-              "3": {
+              "construction": {
                 "title": "Construction",
                 "description": "Lorem Ipsum"
               },
-              "4": {
+              "eval": {
                 "title": "Evaluation",
                 "description": "Lorem Ipsum"
               }
             },
             "projecten": {
-              "images": {
-                "0": {
-                  "title": "ONZE VISIE",
-                  "description": "Lorem Ipsum.",
-                  "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
-                },
-                "1": {
-                  "title": "ONZE VISIE",
-                  "description": "Lorem Ipsum.",
-                  "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
-                },
-                "2": {
-                  "title": "ONZE VISIE",
-                  "description": "Lorem Ipsum.",
-                  "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
-                }
+              "project1": {
+                "title": "ONZE VISIE",
+                "description": "Lorem Ipsum.",
+                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+              },
+              "project2": {
+                "title": "ONZE VISIE",
+                "description": "Lorem Ipsum.",
+                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+              },
+              "project3": {
+                "title": "ONZE VISIE",
+                "description": "Lorem Ipsum.",
+                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
               }
             },
             "button": "Bekijk alle projecten"
@@ -138,33 +134,31 @@
             "title": "De koffie staat altijd klaar"
           },
           "contacts": {
-            "0": {
-              "title": "Schrijf Ons"
-            },
-            "1": {
+            "header": "Schrijf Ons",
+            "jan" : {
               "title": "Jan Maas",
               "links": {
-                "0": {
+                "email": {
                   "title": "j.maas@expo-mate.com",
                   "src": "mailto:j.maas@expo-mate.com",
                   "alt": "Email Jan"
                 },
-                "1": {
+                "linkedin": {
                   "title": "Jan on",
                   "src": "http://google.com",
                   "alt": "Jan On LinkedIn"
                 }
               }
             },
-            "2": {
+            "niek": {
               "title": "Niek van Gent",
               "links": {
-                "0": {
+                "email": {
                   "title": "n.van.gent@expo-mate.com",
                   "src": "mailto:n.van.gent@expo-mate.com",
                   "alt": "Email Niek"
                 },
-                "1": {
+                "linkedin": {
                   "title": "Niek on",
                   "src": "http://google.com",
                   "alt": "Niek On LinkedIn"
@@ -173,29 +167,19 @@
             }
           },
           "call": {
-            "0": {
-              "title": "Bel Ons"
+            "header": "Bel Ons",
+            "jan": {
+              "title": "Jan Maas",
+              "phone": "+31 6 50 28 18 91"
             },
-            "1": {
-              "links": {
-                "0": {
-                  "title": "Jan Maas",
-                  "phone": "+31 6 50 28 18 91"
-                },
-                "1": {
-                  "title": "Niek van Gent",
-                  "phone": "+31 6 41 78 15 81"
-                }
-              }
+            "niek": {
+              "title": "Niek van Gent",
+              "phone": "+31 6 41 78 15 81"
             }
           },
           "visit": {
-            "0": {
-              "title": "Bezoek Ons"
-            },
-            "1": {
-              "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
-            }
+            "header": "Bezoek Ons"
+            "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
           },
           "copyright": {
             "copyright": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
