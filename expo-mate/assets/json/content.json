@@ -2,7 +2,9 @@
   "nl": {
     "pages": {
       "homepage": {
-        "header":  "Management in Authentic and Trending Exhibition Participations",
+        "header":  {
+          "title": "Management in Authentic and Trending Exhibition Participations"
+        },
         "content": {
           "intro": {
             "title": "Ons Verhaal",
