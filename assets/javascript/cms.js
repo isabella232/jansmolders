@@ -55,7 +55,7 @@ function parseData(item){
                             var sections = Object.keys(pageData);
                             for (var j = 0; j < sections.length; j++) {
                                 var section = sections[j];
-                                prefix = landKey + '.' + page + '.' + section;
+                                prefix = landKey + '.pages.' + page + '.' + section;
                                 $.each(pageData, function (index, sectionData) {
                                     if (index === section) {
                                         langContainer.append('<h3>' + section.toUpperCase() + '</h3>');
@@ -84,37 +84,24 @@ function parseData(item){
 
     resultEl.submit( function( e ) {
         e.preventDefault();
-
         var obj = $(this).serializeObject();
-        var postData = {
-            "message": "CMS Update",
-            "commiter": {
-                "name": owner
-            },
-            "content": btoa(obj),
-            "sha": sha,
-            "branch":"gh-pages"
-        };
+        var api = new GithubAPI({token: '473ecd9560dd252f252c06e65dbc7628c0bffc7a'});
+        var blob = JSON.stringify(obj, null, 2);
 
-        $.ajax({
-            url: "https://api.github.com/repos/"+owner+"/"+repo+"/contents/"+path,
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader("Authorization", "user" + btoa(owner+":"+passwrd));
-            },
-            type: 'PUT',
-            data: postData,
-            dataType: 'json',
-            contentType: 'application/json',
-            success: function (data) {
-                console.log("Success!!!", data);
-            },
-            error: function(error){
-                console.log("Cannot get data", error);
-            }
-        });
+        api.setRepo(owner, repo);
+        api.setBranch('gh-pages');
+        setTimeout(function () {
+            api.pushFiles(
+                'CMS Update',
+                [
+                    {content: blob, path: path}
+                ]
+            );
+
+            $(this).hide();
+        }, 2000)
 
     });
-
 
 }
 
