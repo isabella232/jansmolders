@@ -2,13 +2,7 @@
   "nl": {
     "pages": {
       "homepage": {
-        "header": {
-          "title": "Management in Authentic and Trending Exhibition Participations",
-          "button": {
-            "label": "Neem Contact Op",
-            "link": "#contact"
-          }
-        },
+        "header":  "Management in Authentic and Trending Exhibition Participations",
         "content": {
           "intro": {
             "title": "Ons Verhaal",
