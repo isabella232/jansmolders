@@ -1,11 +1,13 @@
+var sha;
+var owner =  $('#owner').val();
+var passwrd =  $('#passwrd').val();
+var repo =  $('#repo').val();
+var path = $('#path').val();
+var alert = $('.alert');
+
 $(function(){
     $('#ghsubmitbtn').on('click', function(e){
         e.preventDefault();
-
-        var owner =  $('#owner').val();
-        var passwrd =  $('#passwrd').val();
-        var repo =  $('#repo').val();
-        var path = $('#path').val();
 
         $.ajax({
             url: "https://api.github.com/repos/"+owner+"/"+repo+"/contents/"+path,
@@ -17,13 +19,15 @@ $(function(){
             contentType: 'application/json',
             success: function (data) {
                 var jsonFile = data.content;
+                sha = data.sha;
                 var decodedJson = atob(jsonFile);
                 var parsedDecodedJson = JSON.parse(decodedJson);
                 $('#login').hide();
+                alert.addClass('hidden');
                 parseData(parsedDecodedJson);
             },
             error: function(error){
-                console.log("Cannot get data", error);
+                alert.addClass('alert-danger').removeClass('hidden').html('Something went wrong:'+error.responseText);
             }
         });
     });
@@ -57,11 +61,11 @@ function parseData(item){
                                         langContainer.append('<h3>' + section.toUpperCase() + '</h3>');
                                         var sectionHeaders = Object.keys(sectionData);
                                         for (var k = 0; k < sectionHeaders.length; k++) {
-                                            prefix += '.'+sectionHeaders[k];
+                                            var subSectionHeader = sectionHeaders[k];
                                             langContainer.append('<h4>' + sectionHeaders[k] + '</h4>');
                                             $.each(sectionData, function (index, data) {
                                                 if (index === sectionHeaders[k]) {
-                                                    traverseDownTree(langContainer, prefix, index, data);
+                                                    traverseDownTree(langContainer, prefix+'.'+subSectionHeader, index, data);
                                                 }
                                             });
                                         }
@@ -80,17 +84,25 @@ function parseData(item){
 
     resultEl.submit( function( e ) {
         e.preventDefault();
-       // var formData = $(this).serializeArray();
+
         var obj = $(this).serializeObject();
-        console.log(obj);
-        /*
+        var postData = {
+            "message": "CMS Update",
+            "commiter": {
+                "name": owner
+            },
+            "content": btoa(obj),
+            "sha": sha,
+            "branch":"gh-pages"
+        };
+
         $.ajax({
             url: "https://api.github.com/repos/"+owner+"/"+repo+"/contents/"+path,
             beforeSend: function(xhr) {
                 xhr.setRequestHeader("Authorization", "user" + btoa(owner+":"+passwrd));
             },
-            type: 'POST',
-            data: formData,
+            type: 'PUT',
+            data: postData,
             dataType: 'json',
             contentType: 'application/json',
             success: function (data) {
@@ -100,7 +112,7 @@ function parseData(item){
                 console.log("Cannot get data", error);
             }
         });
-        */
+
     });
 
 
@@ -125,12 +137,12 @@ function createFields(container, rootpath, index, item) {
     if(index === 'description' || index === 'text' || index === 'textarea') {
         container.append('<div class="form-group">\n' +
             '<label for="content'+index+uniqueID+'">'+index+'</label>\n' +
-            '<textarea name="'+rootpath+'.'+index+'" id="content'+index+uniqueID+'" class="form-control">'+item+'</textarea>\n' +
+            '<textarea name="'+rootpath+'.'+index+'" id="content'+index+uniqueID+'" class="form-control">'+$( $.parseHTML(item) ).text()+'</textarea>\n' +
             '</div>');
     } else {
         container.append('<div class="form-group">\n' +
             '<label for="content' + index + uniqueID + '">' + index + '</label>\n' +
-            '<input name="'+rootpath+'.'+index+'" value="' + item + '" id="content' + index + uniqueID + '" class="form-control" />\n' +
+            '<input name="'+rootpath+'.'+index+'" value="' + $( $.parseHTML(item) ).text() + '" id="content' + index + uniqueID + '" class="form-control" />\n' +
             '</div>');
     }
 }
@@ -138,7 +150,6 @@ function createFields(container, rootpath, index, item) {
 $.fn.serializeObject = function() {
     var o = {}; // final object
     var a = this.serializeArray(); // retrieves an array of all form values as
-                                   // objects { name: "", value: "" }
 
     $.each(a, function() {
         var ns = this.name.split("."); // split name to get namespace
@@ -148,3 +159,9 @@ $.fn.serializeObject = function() {
 
     return o;
 };
+
+function AddToTree(obj, keys, def) {
+    for (var i = 0, length = keys.length; i < length; ++i)
+        obj = obj[keys[i]] = i == length - 1 ? def : obj[keys[i]] || {};
+};
+
