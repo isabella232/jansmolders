@@ -3,8 +3,12 @@
     "pages": {
       "homepage": {
         "header": {
-          "title": {
-            "title": "Management in Authentic and Trending Exhibition Participations"
+          "content": {
+            "title": "Management in Authentic and Trending Exhibition Participations",
+            "backgroundImageSrc":"",
+            "backgroundVideoMp4Src":"",
+            "backgroundVideoWebMSrc":"",
+            "youtubeURL":""
           }
         },
         "content": {
