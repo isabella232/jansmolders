@@ -4,6 +4,7 @@ var passwrd =  $('#passwrd').val();
 var repo =  $('#repo').val();
 var path = $('#path').val();
 var alert = $('.alert');
+var buttonText = "Save";
 
 $(function(){
     $('#ghsubmitbtn').on('click', function(e){
@@ -72,7 +73,7 @@ function parseData(item){
                                     }
                                 });
                             }
-                            resultEl.append('<button class="btn btn-lg btn-primary" type="submit">Opslaan</button>');
+                            resultEl.append('<button class="btn btn-lg btn-primary" type="submit">'+buttonText+'</button>');
                         });
                     }
                 }
@@ -85,7 +86,7 @@ function parseData(item){
     resultEl.submit( function( e ) {
         e.preventDefault();
         var obj = $(this).serializeObject();
-        var api = new GithubAPI({token: '473ecd9560dd252f252c06e65dbc7628c0bffc7a'});
+        var api = new GithubAPI({token: token});
         var blob = JSON.stringify(obj, null, 2);
 
         api.setRepo(owner, repo);
