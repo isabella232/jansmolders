@@ -1,0 +1,41 @@
+#values
+  height: 100vh
+  background: #efefef
+  .left-container,
+  .content-container
+    float: left
+  .left-container
+    width: 35%
+    +respond-max-width(sm)
+      display: none
+    height: 100%
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: top center
+  .content-container
+    width: 65%
+    +respond-max-width(sm)
+      width: 100%
+    background: #efefef
+    position: relative
+    overflow: hidden
+    padding: 100px 0
+    @media screen and (max-width: 1600px)
+      padding: 70px 0
+    .container
+      width: 80%
+      margin: 10% auto 0
+      +respond-max-width(sm)
+        width: 100%
+    .row
+      > div
+        border-bottom: 1px solid #ccc
+        padding: 100px 0
+        @media screen and (max-width: 1600px)
+          padding: 80px 0
+        text-align: center
+        &:first-child
+          border-right: 1px solid #ccc
+      &:last-child
+        > div
+          border-bottom: 0

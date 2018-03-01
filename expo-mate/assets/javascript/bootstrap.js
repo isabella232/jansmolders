@@ -17,6 +17,8 @@ $(function () {
         , navIsOpen = false
         , viewPortOffset = $(window).scrollTop()
         , mobileNav = $('#nav ul')
+        , methodItem = $('.method-item')
+        , methodContent = $('.fadeIn')
         , isMobile = window.orientation > -1 && screen.width <= 640
         , hamburgerElem = $('.hamburger');
 
@@ -47,7 +49,6 @@ $(function () {
             var linkPos = $(link).offset().top;
             $("html, body").animate({ scrollTop: linkPos });
         } else {
-            console.log('isHomePage',isHomePage)
             window.location.href = link;
         }
 
@@ -80,7 +81,7 @@ $(function () {
             , aboutContainer = $('#about')
             , preAboutContainer = $('#preabout')
             , preAboutContainerOffset = preAboutContainer.offset().top
-            , aboutContainerOffset = aboutContainer.offset().top
+            , aboutContainerOffset = aboutContainer.offset().top;
 
         if (~~viewPortOffset >= ~~methodContainerOffset) {
             methodContainer.addClass('show');
@@ -108,9 +109,9 @@ $(function () {
 
 
         $('#diagram .method-item').on("mouseenter", function() {
-            $(this).addClass('focused').find('.fadeIn').addClass('show');
+            $(this).addClass('active').find('.fadeIn').addClass('show');
         }).on("mouseleave", function() {
-            $(this).removeClass('focused').find('.fadeIn').removeClass('show');
+            $(this).removeClass('active').find('.fadeIn').removeClass('show');
         });
 
         hamburgerElem.click(function(){
@@ -135,13 +136,13 @@ $(function () {
                 lastScrollTop = scroll;
 
                 fixNav(scroll);
-                if(scroll && hasScrolled && !isMobile && viewPortWidth > 400) {
+                if(scroll && hasScrolled && !isMobile && viewPortWidth > 1200) {
                     if(direction === 'down') {
                         //on
                         if (scroll >= methodContainerOffset) {
                             if (!hasSnapped) {
-                                $('.fadeIn').removeClass('show');
-                                $('.method-item').removeClass('show').removeClass('slideOut');
+                                methodContent.removeClass('show');
+                                methodItem.removeClass('active');
                                 methodScrollContainer.addClass('fixed');
                             }
                             hasSnapped = true;
@@ -149,8 +150,8 @@ $(function () {
 
                         if (isElementInViewport(CaseStudyContainer) || scroll >= methodContainerOffset + methodContainerHeight) {
                             $('#case-studies').addClass('show');
-                            $('.fadeIn').removeClass('show');
-                            $('.method-item').removeClass('show');
+                            methodContent.removeClass('show');
+                            methodItem.removeClass('active');
                             methodScrollContainer.removeClass('fixed');
                             hasSnapped = false;
                         }
@@ -164,19 +165,19 @@ $(function () {
                         //on
                         if (scroll < CaseStudyContainerOffset - animationIncrements) {
                             if (!hasSnapped) {
-                                $('.method-item').removeClass('show').removeClass('slideOut');
+                                methodItem.removeClass('active');
                                 methodScrollContainer.addClass('fixed');
                             }
                             hasSnapped = true;
                         }
 
                         if (scroll <= methodContainerOffset) {
-                            $('#case-studies').addClass('show');
+                           // $('#case-studies').addClass('active');
                         }
 
                         if (scroll <= methodContainerOffset ) {
-                            $('.fadeIn').removeClass('show');
-                            $('.method-item').removeClass('show').removeClass('slideOut');
+                            methodContent.removeClass('active');
+                            methodItem.removeClass('active');
                             methodScrollContainer.removeClass('fixed');
                             hasSnapped = false;
                         }
@@ -223,7 +224,7 @@ function getDirection (scroll, lastScrollTop, callback){
 
 
 function handleMethodScroll(step){
-    var toggleClassName = 'show'
+    var toggleClassName = 'active'
         , fadeInElemClass = '.fadeIn'
         , methodElem = '.method-item'
         , introElemClass = '.intro'
@@ -261,12 +262,6 @@ function handleMethodScroll(step){
         $(fadeInElemClass+evalElemClass).addClass(toggleClassName);
         $(methodElem+evalElemClass).addClass(toggleClassName);
     }
-
-    if(step >= 2){
-        $(introElemClass).addClass('slideOut');
-    } else {
-        $(introElemClass).removeClass('slideOut');
-    }
 }
 
 function fixNav(scroll){
@@ -280,7 +275,6 @@ function fixNav(scroll){
 
 
 function isElementInViewport (el) {
-
     //special bonus for those using jQuery
     if (typeof jQuery === "function" && el instanceof jQuery) {
         el = el[0];

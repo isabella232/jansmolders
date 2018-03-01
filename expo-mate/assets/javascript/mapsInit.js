@@ -29,7 +29,53 @@ function googleMapsInit() {
         content: $('.contact-details-map').html()
     });
 
+
+    map.panBy(200, -150);
+
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map,marker);
     });
+}
+
+
+$(function(){
+    if ($("#google-reviews").length == 0) {
+        return
+    }
+    $("#google-reviews").googlePlaces({
+        placeId: 'ChIJt6JxUkxFx0cRWTzXobLcYGw',
+        header: "<h3>Testimonials</h3>", // html/text over Reviews
+        footer: '', // html/text under Reviews block
+        max_rows: 2, // max rows of reviews to be displayed
+        min_rating: 4, // minimum rating of reviews to be displayed
+        months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+        text_break_length: "90", // length before a review box is set to max width
+        shorten_names: true, // example: "Max Mustermann" -> "Max M.""
+    });
+});
+
+
+
+function offsetCenter(latlng, offsetx, offsety) {
+
+    // latlng is the apparent centre-point
+    // offsetx is the distance you want that point to move to the right, in pixels
+    // offsety is the distance you want that point to move upwards, in pixels
+    // offset can be negative
+    // offsetx and offsety are both optional
+
+    var scale = Math.pow(2, map.getZoom());
+
+    var worldCoordinateCenter = map.getProjection().fromLatLngToPoint(myLatlng);
+    var pixelOffset = new google.maps.Point((200/scale) || 0,(200/scale) ||0);
+
+    var worldCoordinateNewCenter = new google.maps.Point(
+        worldCoordinateCenter.x - pixelOffset.x,
+        worldCoordinateCenter.y + pixelOffset.y
+    );
+
+    var newCenter = map.getProjection().fromPointToLatLng(worldCoordinateNewCenter);
+
+    map.setCenter(newCenter);
+
 }
