@@ -2023,8 +2023,8 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
 @media screen and (min-width: 2200px) {
   /* line 6, ../sass/_caseStudies.sass */
   #case-studies #comparison {
-    width: 1920px;
-    height: 1080px;
+    width: 1750px;
+    height: 984px;
   }
 }
 @media only screen and (max-width: 1199px) {
