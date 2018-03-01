@@ -20,7 +20,8 @@ $(function () {
         , methodItem = $('.method-item')
         , methodContent = $('.fadeIn')
         , isMobile = window.orientation > -1 && screen.width <= 640
-        , hamburgerElem = $('.hamburger');
+        , hamburgerElem = $('.hamburger')
+        , is_iPad = navigator.userAgent.match(/iPad/i) != null;
 
     fixNav(viewPortOffset);
 
@@ -136,7 +137,8 @@ $(function () {
                 lastScrollTop = scroll;
 
                 fixNav(scroll);
-                if(scroll && hasScrolled && !isMobile && viewPortWidth > 1200) {
+
+                if(scroll && hasScrolled && !isMobile && viewPortWidth > 1200 && !is_iPad) {
                     if(direction === 'down') {
                         //on
                         if (scroll >= methodContainerOffset) {

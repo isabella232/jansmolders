@@ -31,7 +31,7 @@
       text-transform: uppercase
       font-size: 3em
       +respond-max-width(sm)
-        font-size: 2em
+        font-size: 1.5em
       +respond-max-width(xs)
         margin-top: 0
         font-size: 1.5em
@@ -52,8 +52,11 @@
       cursor: pointer
       @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
         margin: 20px auto
+      +respond-max-width(sm)
+        font-size: 3em
       +respond-max-width(xs)
         margin: 10px auto
+        font-size: 3em
 .dark
   #header
     .background-type
@@ -115,7 +118,7 @@
   +respond-max-width(md)
     width: 150px
     height: 175px
-    margin: 40px auto 0
+    margin: 0 auto 0
     img
       padding-top: 10px!important
 

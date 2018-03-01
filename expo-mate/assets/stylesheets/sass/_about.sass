@@ -11,16 +11,20 @@
 
   .brandlist
     list-style: none
-    margin: 40px auto
+    margin: 50px auto
+    width: 100%
+    padding: 0
     text-align: center
     li
-      float: left
-      margin-right: 10px
-      max-width: 15%
-      +respond-max-width(sm)
-        max-width: 25%
+      display: inline-block
+      margin: 0 50px 30px 0
+      max-width: 12%
+      +respond-max-width(xs)
+        max-width: 20%
       +respond-max-width(md)
-        max-width: 30%
+        max-width: 15%
+      @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
+        max-width: 15%
       img
         width: 100%
         opacity: 1
@@ -91,6 +95,9 @@
       background-size: cover
       background-position: -240% center
       +respond-max-width(sm)
+        height: 100%
+      @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
+        background-position: 0 center
         height: 100%
     .content
       position: absolute

@@ -14,6 +14,9 @@ $mobileTextOffset: 150px
   +respond-max-width(md)
     height: $imageScrollHeight * 2
     background-size: cover
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
+    background-size: cover
+    height: $imageScrollHeight * 2
   &.show
     .method-scroll-wrapper
       #diagram,
@@ -22,39 +25,52 @@ $mobileTextOffset: 150px
       #diagram
         .intro
           &.show
-            +respond-min-width(md)
-              animation: showIntro cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-              animation: showIntro cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            opacity: 1
           &.slideOut
-            +respond-min-width(md)
-              animation: slideIntroLabel cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-              animation: mobileSlideIntroLabel cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            @media screen and (min-width: 1100px)
+              padding-left: $methodSize / 8
+            @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+              padding: 100px 83.33333px 0
         .design
           &.show
-            +respond-min-width(md)
-              animation: showDesign cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-              animation: mobileShowDesign cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            opacity: 1
+            @media screen and (min-width: 1100px)
+              top: 0
+              left: $methodSize / 2 + $methodSize / 6
+              padding-top: $methodSize / 6
+            @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+              left: 0
+              padding: 100px 83.33333px 0
         .tuning
           &.show
-            +respond-min-width(md)
-              animation: showTuning cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-              animation: mobileShowTuning cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            opacity: 1
+            @media screen and (min-width: 1100px)
+              left: $methodSize + $methodSize / 3.5
+              top: $methodSize / 2
+              padding-left: $methodSize / 2.5
+              padding-right: 0
+            @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+              left: 0
+              padding: 100px 83.33333px 0
         .construction
           &.show
-            +respond-min-width(md)
-              animation: showConstruction cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-              animation: mobileShowConstruction cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            opacity: 1
+            @media screen and (min-width: 1100px)
+              top: 150px
+              left: 165px
+            @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+              left: 0
+              padding: 100px 83.33333px 0
         .eval
           &.show
-            +respond-min-width(md)
-              animation: showEval cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-            @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-              animation: mobileShowEval cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
+            opacity: 1
+            @media screen and (min-width: 1100px)
+              transform: scale(1)
+              top: $methodSize + ($methodSize / 2)
+              left: $methodSize - $methodSize / 3
+            @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+              left: 0
+              padding: 100px 83.33333px 0
   .method-scroll-wrapper
     position: relative
     overflow: hidden
@@ -103,8 +119,35 @@ $mobileTextOffset: 150px
           width: 1px
           background: #ccc
       @media screen and (min-device-width: 768px) and (max-device-width: 1024px)
+        float: left
+        opacity: 1
         width: $mobileMethodSize
-        height: $mobileMethodSize
+        height: $mobileMethodSize * 5 + $mobileTextOffset * 15
+        overflow: hidden
+        &:after
+          content: ''
+          height: $mobileMethodSize * 5 + $mobileTextOffset * 15
+          left: 50%
+          transform: translateY(-50%)
+          position: absolute
+          bottom: 0
+          width: 1px
+          background: #ccc
+      @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
+        float: left
+        opacity: 1
+        width: $methodSize
+        height: $methodSize * 5 + $methodSize * 15
+        overflow: hidden
+        &:after
+          content: ''
+          height: $methodSize * 5 + $methodSize * 15
+          left: 50%
+          transform: translateY(-50%)
+          position: absolute
+          bottom: 0
+          width: 1px
+          background: #ccc
       +respond-max-width(md)
         margin-top: 20px
       .intro,
@@ -169,6 +212,9 @@ $mobileTextOffset: 150px
           top: $mobileMethodSize
         @media screen and (min-device-width: 768px) and (max-device-width: 1024px)
           top: $mobileMethodSize
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+          top: $mobileMethodSize!important
+          background: rgba(61,190,232,1) !important
         left: 0
         z-index: 5
         background: rgba(61,190,232,.4)
@@ -181,6 +227,9 @@ $mobileTextOffset: 150px
         background: rgba(54,68,173,.4)
         +respond-max-width(md)
           top: $mobileMethodSize * 2 + $mobileTextOffset!important
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+          top: $mobileMethodSize * 2 + $mobileTextOffset!important
+          background: rgba(54,68,173,1) !important
         &.active
           background: rgba(54,68,173,1)
         +respond-max-width(md)
@@ -190,6 +239,9 @@ $mobileTextOffset: 150px
         z-index: 3
         +respond-max-width(md)
           top: $mobileMethodSize * 3 + $mobileTextOffset * 2
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+          top: $mobileMethodSize * 3 + $mobileTextOffset * 2!important
+          background: rgba(141,199,1,1) !important
         &.active
           background: rgba(141,199,1,1)
         +respond-max-width(md)
@@ -198,6 +250,9 @@ $mobileTextOffset: 150px
         z-index: 6
         +respond-max-width(md)
           top: $mobileMethodSize * 4 + $mobileTextOffset * 3
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+          top: $mobileMethodSize * 4 + $mobileTextOffset * 3!important
+          background: #fff!important
         &.active
           background: #fff
         +respond-max-width(md)
@@ -207,6 +262,9 @@ $mobileTextOffset: 150px
         z-index: 5
         +respond-max-width(md)
           top: $mobileMethodSize * 5 + $mobileTextOffset * 4
+        @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+          top: $mobileMethodSize * 5 + $mobileTextOffset * 4!important
+          background: #fff!important
         &.active
           background: #fff
         +respond-max-width(md)
@@ -227,9 +285,18 @@ $mobileTextOffset: 150px
         +respond-min-width(md)
           filter: url('#goo2')
 
+
+
   .method-info-container
     position: relative
     z-index: 2
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
+      position: absolute
+      left: $mobileMethodSize / 3
+      width: 60%
+      top: 150px
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+      left: $methodSize
     .fadeIn
       opacity: 0
       position: absolute
@@ -253,148 +320,45 @@ $mobileTextOffset: 150px
           top: $mobileMethodSize * 4 + $mobileTextOffset * 3
         &.eval
           top: $mobileMethodSize * 5 + $mobileTextOffset * 4
+      @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
+        opacity: 1
+        left: auto
+        right: 0
+        width: 53%
+        &.intro
+          top: $mobileMethodSize
+        &.design
+          top: $mobileMethodSize * 2 + $mobileTextOffset
+        &.tuning
+          top: $mobileMethodSize * 3 + $mobileTextOffset * 2
+        &.construction
+          top: $mobileMethodSize * 4 + $mobileTextOffset * 3
+        &.eval
+          top: $mobileMethodSize * 5 + $mobileTextOffset * 4
+      @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
+        opacity: 1
+        left: auto
+        right: 0
+        width: 53%
+        &.intro
+          top: $mobileMethodSize
+        &.design
+          top: $mobileMethodSize * 2 + $mobileTextOffset
+        &.tuning
+          top: $mobileMethodSize * 3 + $mobileTextOffset * 2
+        &.construction
+          top: $mobileMethodSize * 4 + $mobileTextOffset * 3
+        &.eval
+          top: $mobileMethodSize * 5 + $mobileTextOffset * 4
       &.active
         animation: fadeIn cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
-        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
-          animation: fadeInMobile cubic-bezier(0.770, 0.000, 0.175, 1.000) .5s forwards
     @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)
       font-size: .875em
       .fadeIn
         width: 85%
 
 
-// Desktop animations
-
 @keyframes fadeIn
   100%
     left: 15px
     opacity: 1
-
-@keyframes slideIntroLabel
-  0%
-    opacity: 1
-  100%
-    opacity: 1
-    padding-left: $methodSize / 8
-
-@keyframes showIntro
-  0%
-    transform: scale(.2)
-    opacity: 0
-  100%
-    transform: scale(1)
-    opacity: 1
-
-@keyframes showDesign
-  0%
-    transform: scale(.2)
-    opacity: 0
-  100%
-    transform: scale(1)
-    top: 0
-    left: $methodSize / 2 + $methodSize / 6
-    opacity: 1
-    padding-top: $methodSize / 6
-
-@keyframes showTuning
-  0%
-    transform: scale(.2)
-    opacity: 0
-    top: 0
-    left: $methodSize / 2 + $methodSize / 6
-  100%
-    transform: scale(1)
-    left: $methodSize + $methodSize / 3.5
-    top: $methodSize / 2
-    opacity: 1
-    padding-left: $methodSize / 2.5
-    padding-right: 0
-
-@keyframes showConstruction
-  0%
-    transform: scale(.2)
-    opacity: 0
-    left: $methodSize + $methodSize / 2.5
-    top: $methodSize / 2
-  100%
-    transform: scale(1)
-    top: $methodSize / 2
-    left: $methodSize - $methodSize / 3
-    opacity: 1
-
-@keyframes showEval
-  0%
-    transform: scale(.2)
-    opacity: 0
-    top: $methodSize / 2
-    left: $methodSize - $methodSize / 3
-  100%
-    transform: scale(1)
-    top: $methodSize + ($methodSize / 2)
-    left: $methodSize - $methodSize / 3
-    opacity: 1
-
-
-// Mobile Animations
-
-@keyframes fadeInMobile
-  100%
-    opacity: 1
-    top: 0
-    z-index: 5
-
-
-// Mobile Animations
-
-@keyframes mobileSlideIntroLabel
-  100%
-    padding-left: 0
-
-@keyframes mobileShowDesign
-  0%
-    transform: scale(.2)
-    opacity: 0
-  100%
-    transform: scale(1)
-    top: 0
-    opacity: 1
-    left: $mobileMethodSize / 2 + $mobileMethodSize / 6
-    padding-top: $mobileMethodSize / 6
-
-@keyframes mobileShowTuning
-  0%
-    transform: scale(.2)
-    opacity: 0
-    top: 0
-    left: $mobileMethodSize / 2 + $mobileMethodSize / 6
-  100%
-    transform: scale(1)
-    opacity: 1
-    padding-right: 0
-    left: $mobileMethodSize + $mobileMethodSize / 3.5
-    top: $mobileMethodSize / 2
-    padding-left: $mobileMethodSize / 2.5
-
-@keyframes mobileShowConstruction
-  0%
-    transform: scale(.2)
-    opacity: 0
-    left: $mobileMethodSize + $mobileMethodSize / 2.5
-    top: $mobileMethodSize / 2
-  100%
-    transform: scale(1)
-    opacity: 1
-    top: $mobileMethodSize / 2
-    left: $mobileMethodSize - $mobileMethodSize / 3
-
-@keyframes mobileShowEval
-  0%
-    transform: scale(.2)
-    opacity: 0
-    top: $mobileMethodSize / 2
-    left: $mobileMethodSize - $mobileMethodSize / 3
-  100%
-    transform: scale(1)
-    opacity: 1
-    top: $mobileMethodSize + ($mobileMethodSize / 2)
-    left: $mobileMethodSize - $mobileMethodSize / 3

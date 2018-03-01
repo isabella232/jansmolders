@@ -1687,9 +1687,7 @@ section#image-scroll .image-scroll-wrapper.fixed .background-image {
   }
   100% {
     transform: scale(1);
-    top: 150px;
-    left: 200px;
-    opacity: 1;
+
   }
 }
 @keyframes showEval {

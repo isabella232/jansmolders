@@ -30,7 +30,9 @@ function googleMapsInit() {
     });
 
 
-    map.panBy(200, -150);
+    if($(window).width() > 450){
+        map.panBy(200, -150);
+    }
 
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.open(map,marker);

@@ -1,6 +1,14 @@
 #values
   height: 100vh
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
+    height: 75vh
   background: #efefef
+  h2
+    margin-top: 75px
+  p
+    text-align: center
+    width: 500px
+    margin: 0 auto
   .left-container,
   .content-container
     float: left
@@ -11,7 +19,7 @@
     height: 100%
     background-repeat: no-repeat
     background-size: cover
-    background-position: top center
+    background-position: center center
   .content-container
     width: 65%
     +respond-max-width(sm)
@@ -19,12 +27,11 @@
     background: #efefef
     position: relative
     overflow: hidden
-    padding: 100px 0
     @media screen and (max-width: 1600px)
       padding: 70px 0
     .container
       width: 80%
-      margin: 10% auto 0
+      margin: 6% auto 0
       +respond-max-width(sm)
         width: 100%
     .row
