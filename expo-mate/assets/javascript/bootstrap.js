@@ -26,7 +26,6 @@ $(function () {
     fixNav(viewPortOffset);
 
 
-
     //********* Event Handlers
 
     $('.close-btn').on('click', function(){
@@ -39,8 +38,6 @@ $(function () {
         var footerOffset = $('footer').offset().top;
         $("html, body").animate({ scrollTop: footerOffset });
     });
-
-
 
     $('#nav li a').on('click', function(e){
         e.preventDefault();
@@ -69,8 +66,6 @@ $(function () {
         viewPortWidth = $(this).width();
         animationIncrements = $(window).height() / 100 * 20;
     });
-
-
 
     if(isHomePage !== undefined && isHomePage.length > 0){
         var methodContainer = $('#method')
@@ -133,6 +128,7 @@ $(function () {
             if(viewPortHeight < 1100){
                 animationIncrements = 1050;
             }
+
             getDirection(scroll, lastScrollTop, function(direction, scroll){
                 lastScrollTop = scroll;
 
@@ -150,7 +146,7 @@ $(function () {
                             hasSnapped = true;
                         }
 
-                        if (isElementInViewport(CaseStudyContainer) || scroll >= methodContainerOffset + methodContainerHeight) {
+                        if (scroll >= methodContainerOffset + methodContainerHeight) {
                             $('#case-studies').addClass('show');
                             methodContent.removeClass('show');
                             methodItem.removeClass('active');
@@ -276,21 +272,6 @@ function fixNav(scroll){
 }
 
 
-function isElementInViewport (el) {
-    //special bonus for those using jQuery
-    if (typeof jQuery === "function" && el instanceof jQuery) {
-        el = el[0];
-    }
-
-    var rect = el.getBoundingClientRect();
-
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-    );
-}
 
 /*
 
