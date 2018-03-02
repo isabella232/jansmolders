@@ -1,6 +1,15 @@
 {
     "nl": {
         "pages": {
+            "nav": {
+              "labels":{
+                  "about": "Ons Verhaal",
+                  "method": "Onze Werkwijze",
+                  "values": "Onze Kernwaardes",
+                  "projects": "Projecten",
+                  "contact": "Contact"
+              }
+            },
             "homepage": {
                 "header": {
                     "content": {
@@ -14,49 +23,60 @@
                 "content": {
                     "intro": {
                         "title": "Ons Verhaal",
-                        "description": "We geloven in de kracht van diversiteit. Diversiteit en het samenbrengen van verschillende disciplines zorgt er namelijk voor dat we iedere dag het beste resultaat voor, maar vooral met, onze klanten kunnen realiseren.....",
+                        "description": "We geloven in de kracht van diversiteit. Diversiteit en het samenbrengen van verschillende disciplines zorgt er namelijk voor dat we iedere dag het beste resultaat voor, maar vooral met, onze klanten kunnen realiseren.",
                         "images": {
                             "image1": {
-                                "src": "assets/images/toshiba.png",
+                                "src": "assets/images/brands/toshiba.jpg",
                                 "alt": "Toshiba"
                             },
                             "image2": {
-                                "src": "assets/images/toshiba.png",
-                                "alt": "Toshiba"
+                                "src": "assets/images/brands/avz.jpg",
+                                "alt": "AVZ"
                             },
                             "image3": {
-                                "src": "assets/images/toshiba.png",
-                                "alt": "Toshiba"
+                                "src": "assets/images/brands/frankort.jpg",
+                                "alt": "Frankort en Koning"
                             },
                             "image4": {
                                 "src": "assets/images/toshiba.png",
                                 "alt": "Toshiba"
                             },
                             "image5": {
-                                "src": "assets/images/toshiba.png",
-                                "alt": "Toshiba"
+                                "src": "assets/images/brands/lamb.jpg",
+                                "alt": "LambWeston"
                             },
                             "image6": {
-                                "src": "assets/images/toshiba.png",
-                                "alt": "Toshiba"
-                            }
-                        },
-                        "buttons": {
-                            "button1": {
-                                "label": "Meer over ons"
-                            },
-                            "button2": {
-                                "label": "Sluiten"
+                                "src": "assets/images/brands/strong.jpg",
+                                "alt": "Strong"
                             }
                         }
                     },
                     "about": {
+                        "row1": {
+                            "image": {
+                                "src": "assets/images/1.jpg"
+                            },
+                            "title": "ONS FUNDAMENT",
+                            "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten bedenken die zorgen voor de hoogste return on investment."
+                        },
+                        "row2": {
+                            "image": {
+                                "src": "assets/images/2.jpg"
+                            },
+                            "title": "ONZE MISSIE & VISIE",
+                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
+                        }
+
+                    },
+                    "aboutUs": {
+                        "title": "WIE ZIJN WIJ?",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi. Nulla feugiat, lectus at finibus pellentesque, massa lorem tempus mi, id facilisis urna ante sodales libero.",
                         "employees": {
                             "niek": {
                                 "title": "Niek van Gent",
                                 "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. ",
                                 "image": {
-                                    "src": "https://images-na.ssl-images-amazon.com/images/I/81VStYnDGrL.jpg",
+                                    "src": "assets/images/niek.jpg",
                                     "alt": "Niek van Gent"
                                 }
                             },
@@ -64,36 +84,34 @@
                                 "title": "Jan Maas",
                                 "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. ",
                                 "image": {
-                                    "src": "https://images-na.ssl-images-amazon.com/images/I/81VStYnDGrL.jpg",
+                                    "src": "assets/images/niek.jpg",
                                     "alt": "Jan Maas"
                                 }
                             }
                         }
                     },
-                    "fundament": {
-                        "title": "ONS FUNDAMENT",
-                        "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten bedenken die zorgen voor de hoogste return on investment. Wie we zijn?",
-                        "image": {
-                            "src": "https://images-na.ssl-images-amazon.com/images/I/81VStYnDGrL.jpg",
-                            "alt": "Jan Maas"
-                        }
-                    },
-                    "visie": {
-                        "title": "ONZE VISIE",
-                        "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ«ren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs.",
-                        "image": {
-                            "src": "https://images-na.ssl-images-amazon.com/images/I/81VStYnDGrL.jpg",
-                            "alt": "Jan Maas"
-                        }
+                    "values": {
+                      "title": "ONZE KERNWAARDES",
+                      "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
+                      "image": {
+                          "src": "assets/images/wall.jpg"
+                      },
+                      "values": {
+                          "value1": "De Hoogste Kwaliteit",
+                          "value2": "Full Service",
+                          "value3": "Innovatief & Authentiek",
+                          "value4": "Onafhankelijkheid",
+                          "value5": "Duurzaam",
+                          "value6": "Operational Excellence"
+                      }
                     },
                     "werkwijze": {
                         "title": "ONZE WERKWIJZE",
                         "description": "Totale ontzorging. Minder vinden we niet goed genoeg voor onze relaties. Door onze verschillende achtergronden en ervaringen hebben we een werkwijze kunnen ontwikkelen die uniek is in de branche en welke ons in staat stelt de hoogst mogelijke return on investment voor onze relaties te behalen.",
-                        "button": "Bekijk alle projecten",
-                        "methode": {
+                        "method": {
                             "intro": {
                                 "title": "Introductie",
-                                "description": "Lorem Ipsum dolor set amet."
+                                "description": "In onze optiek de belangrijkste stap in het gehele proces. Door tijd te investeren en kennis te delen in het begin van het proces, hoeven er geen aannames te worden gedaan bij het ontwerp van het concept, maar gaat om datgene wat telt: Integreren van uw identiteit, wensen en behoeftes als beursdeelnemer."
                             },
                             "design": {
                                 "title": "Design",
@@ -113,6 +131,14 @@
                             }
                         },
                         "projecten": {
+                            "tile": "ONZE PROJECTEN",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
+                            "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
+                            "author": "John Doe",
+                            "comparison":{
+                                "before": "",
+                                "after": ""
+                            },
                             "project1": {
                                 "title": "Toshiba",
                                 "description": "Lorem Ipsum.",
@@ -122,8 +148,215 @@
                                 "title": "ONZE VISIE",
                                 "description": "Lorem Ipsum.",
                                 "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                            }
+                        }
+                    }
+                },
+                "footer": {
+                    "testimonials": {
+                        "title": "Testimonials"
+                    },
+                    "contacts": {
+                        "header": "Schrijf Ons",
+                        "jan": {
+                            "title": "Jan Maas",
+                            "links": {
+                                "email": {
+                                    "title": "j.maas@expo-mate.com",
+                                    "src": "mailto:j.maas@expo-mate.com",
+                                    "alt": "Email Jan"
+                                },
+                                "linkedin": {
+                                    "title": "Jan on",
+                                    "src": "http://google.com",
+                                    "alt": "Jan On LinkedIn"
+                                }
+                            }
+                        },
+                        "niek": {
+                            "title": "Niek van Gent",
+                            "links": {
+                                "email": {
+                                    "title": "n.van.gent@expo-mate.com",
+                                    "src": "mailto:n.van.gent@expo-mate.com",
+                                    "alt": "Email Niek"
+                                },
+                                "linkedin": {
+                                    "title": "Niek on",
+                                    "src": "http://google.com",
+                                    "alt": "Niek On LinkedIn"
+                                }
+                            }
+                        }
+                    },
+                    "call": {
+                        "header": "Bel Ons",
+                        "jan": {
+                            "title": "Jan Maas",
+                            "phone": "+31 6 50 28 18 91"
+                        },
+                        "niek": {
+                            "title": "Niek van Gent",
+                            "phone": "+31 6 41 78 15 81"
+                        }
+                    },
+                    "visit": {
+                        "header": "Bezoek Ons",
+                        "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
+                    },
+                    "copyright": {
+                        "copyright": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
+                    }
+                }
+            }
+        }
+    },
+    "de": {
+        "pages": {
+            "nav": {
+                "labels":{
+                    "about": "Ons Verhaal",
+                    "method": "Onze Werkwijze",
+                    "values": "Onze Kernwaardes",
+                    "projects": "Projecten",
+                    "contact": "Contact"
+                }
+            },
+            "homepage": {
+                "header": {
+                    "content": {
+                        "title": "Management in Authentic and Trending Exhibition Participations",
+                        "backgroundImageSrc": "http://www.hatchwayinteriors.com/wp-content/uploads/2017/08/33-1.jpg",
+                        "backgroundVideoMp4Src": "assets/video/Waiting-Wishing.mp4",
+                        "backgroundVideoWebMSrc": "assets/video/Waiting-Wishing.webm",
+                        "youtubeURL": "wGB1aLDR2Es"
+                    }
+                },
+                "content": {
+                    "intro": {
+                        "title": "unsere Geschichte",
+                        "description": "Wir glauben an die Kraft der Vielfalt. Vielfalt und die Kombination verschiedener Disziplinen sorgen dafür, dass wir täglich und vor allem mit unseren Kunden das beste Ergebnis erzielen können.",
+                        "images": {
+                            "image1": {
+                                "src": "assets/images/brands/toshiba.jpg",
+                                "alt": "Toshiba"
                             },
-                            "project3": {
+                            "image2": {
+                                "src": "assets/images/brands/avz.jpg",
+                                "alt": "AVZ"
+                            },
+                            "image3": {
+                                "src": "assets/images/brands/frankort.jpg",
+                                "alt": "Frankort en Koning"
+                            },
+                            "image4": {
+                                "src": "assets/images/toshiba.png",
+                                "alt": "Toshiba"
+                            },
+                            "image5": {
+                                "src": "assets/images/brands/lamb.jpg",
+                                "alt": "LambWeston"
+                            },
+                            "image6": {
+                                "src": "assets/images/brands/strong.jpg",
+                                "alt": "Strong"
+                            }
+                        }
+                    },
+                    "about": {
+                        "row1": {
+                            "image": {
+                                "src": "assets/images/1.jpg"
+                            },
+                            "title": "ONS FUNDAMENT",
+                            "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten bedenken die zorgen voor de hoogste return on investment."
+                        },
+                        "row2": {
+                            "image": {
+                                "src": "assets/images/2.jpg"
+                            },
+                            "title": "ONZE MISSIE & VISIE",
+                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
+                        }
+
+                    },
+                    "aboutUs": {
+                        "title": "WIE ZIJN WIJ?",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi. Nulla feugiat, lectus at finibus pellentesque, massa lorem tempus mi, id facilisis urna ante sodales libero.",
+                        "employees": {
+                            "niek": {
+                                "title": "Niek van Gent",
+                                "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. ",
+                                "image": {
+                                    "src": "assets/images/niek.jpg",
+                                    "alt": "Niek van Gent"
+                                }
+                            },
+                            "jan": {
+                                "title": "Jan Maas",
+                                "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. ",
+                                "image": {
+                                    "src": "assets/images/niek.jpg",
+                                    "alt": "Jan Maas"
+                                }
+                            }
+                        }
+                    },
+                    "values": {
+                        "title": "ONZE KERNWAARDES",
+                        "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
+                        "image": {
+                            "src": "assets/images/wall.jpg"
+                        },
+                        "values": {
+                            "value1": "De Hoogste Kwaliteit",
+                            "value2": "Full Service",
+                            "value3": "Innovatief & Authentiek",
+                            "value4": "Onafhankelijkheid",
+                            "value5": "Duurzaam",
+                            "value6": "Operational Excellence"
+                        }
+                    },
+                    "werkwijze": {
+                        "title": "ONZE WERKWIJZE",
+                        "description": "Totale ontzorging. Minder vinden we niet goed genoeg voor onze relaties. Door onze verschillende achtergronden en ervaringen hebben we een werkwijze kunnen ontwikkelen die uniek is in de branche en welke ons in staat stelt de hoogst mogelijke return on investment voor onze relaties te behalen.",
+                        "method": {
+                            "intro": {
+                                "title": "Introductie",
+                                "description": "In onze optiek de belangrijkste stap in het gehele proces. Door tijd te investeren en kennis te delen in het begin van het proces, hoeven er geen aannames te worden gedaan bij het ontwerp van het concept, maar gaat om datgene wat telt: Integreren van uw identiteit, wensen en behoeftes als beursdeelnemer."
+                            },
+                            "design": {
+                                "title": "Design",
+                                "description": "Lorem Ipsum"
+                            },
+                            "tuning": {
+                                "title": "Tuning",
+                                "description": "Lorem Ipsum"
+                            },
+                            "construction": {
+                                "title": "Construction",
+                                "description": "Lorem Ipsum"
+                            },
+                            "eval": {
+                                "title": "Evaluatie",
+                                "description": "Lorem Ipsum"
+                            }
+                        },
+                        "projecten": {
+                            "tile": "ONZE PROJECTEN",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
+                            "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
+                            "author": "John Doe",
+                            "comparison":{
+                                "before": "",
+                                "after": ""
+                            },
+                            "project1": {
+                                "title": "Toshiba",
+                                "description": "Lorem Ipsum.",
+                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                            },
+                            "project2": {
                                 "title": "ONZE VISIE",
                                 "description": "Lorem Ipsum.",
                                 "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
@@ -132,8 +365,220 @@
                     }
                 },
                 "footer": {
-                    "title": {
-                        "title": "De koffie staat altijd klaar"
+                    "testimonials": {
+                        "title": "Testimonials"
+                    },
+                    "contacts": {
+                        "header": "Schrijf Ons",
+                        "jan": {
+                            "title": "Jan Maas",
+                            "links": {
+                                "email": {
+                                    "title": "j.maas@expo-mate.com",
+                                    "src": "mailto:j.maas@expo-mate.com",
+                                    "alt": "Email Jan"
+                                },
+                                "linkedin": {
+                                    "title": "Jan on",
+                                    "src": "http://google.com",
+                                    "alt": "Jan On LinkedIn"
+                                }
+                            }
+                        },
+                        "niek": {
+                            "title": "Niek van Gent",
+                            "links": {
+                                "email": {
+                                    "title": "n.van.gent@expo-mate.com",
+                                    "src": "mailto:n.van.gent@expo-mate.com",
+                                    "alt": "Email Niek"
+                                },
+                                "linkedin": {
+                                    "title": "Niek on",
+                                    "src": "http://google.com",
+                                    "alt": "Niek On LinkedIn"
+                                }
+                            }
+                        }
+                    },
+                    "call": {
+                        "header": "Bel Ons",
+                        "jan": {
+                            "title": "Jan Maas",
+                            "phone": "+31 6 50 28 18 91"
+                        },
+                        "niek": {
+                            "title": "Niek van Gent",
+                            "phone": "+31 6 41 78 15 81"
+                        }
+                    },
+                    "visit": {
+                        "header": "Bezoek Ons",
+                        "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
+                    },
+                    "copyright": {
+                        "copyright": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
+                    }
+                }
+            }
+        }
+    },
+    "en": {
+        "pages": {
+            "nav": {
+                "labels":{
+                    "about": "Ons Verhaal",
+                    "method": "Onze Werkwijze",
+                    "values": "Onze Kernwaardes",
+                    "projects": "Projecten",
+                    "contact": "Contact"
+                }
+            },
+            "homepage": {
+                "header": {
+                    "content": {
+                        "title": "Management in Authentic and Trending Exhibition Participations",
+                        "backgroundImageSrc": "http://www.hatchwayinteriors.com/wp-content/uploads/2017/08/33-1.jpg",
+                        "backgroundVideoMp4Src": "assets/video/Waiting-Wishing.mp4",
+                        "backgroundVideoWebMSrc": "assets/video/Waiting-Wishing.webm",
+                        "youtubeURL": "wGB1aLDR2Es"
+                    }
+                },
+                "content": {
+                    "intro": {
+                        "title": "Our Story",
+                        "description": "We belive in the power of diversity.",
+                        "images": {
+                            "image1": {
+                                "src": "assets/images/brands/toshiba.jpg",
+                                "alt": "Toshiba"
+                            },
+                            "image2": {
+                                "src": "assets/images/brands/avz.jpg",
+                                "alt": "AVZ"
+                            },
+                            "image3": {
+                                "src": "assets/images/brands/frankort.jpg",
+                                "alt": "Frankort en Koning"
+                            },
+                            "image4": {
+                                "src": "assets/images/toshiba.png",
+                                "alt": "Toshiba"
+                            },
+                            "image5": {
+                                "src": "assets/images/brands/lamb.jpg",
+                                "alt": "LambWeston"
+                            },
+                            "image6": {
+                                "src": "assets/images/brands/strong.jpg",
+                                "alt": "Strong"
+                            }
+                        }
+                    },
+                    "about": {
+                        "row1": {
+                            "image": {
+                                "src": "assets/images/1.jpg"
+                            },
+                            "title": "ONS FUNDAMENT",
+                            "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten bedenken die zorgen voor de hoogste return on investment."
+                        },
+                        "row2": {
+                            "image": {
+                                "src": "assets/images/2.jpg"
+                            },
+                            "title": "ONZE MISSIE & VISIE",
+                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
+                        }
+
+                    },
+                    "aboutUs": {
+                        "title": "WIE ZIJN WIJ?",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi. Nulla feugiat, lectus at finibus pellentesque, massa lorem tempus mi, id facilisis urna ante sodales libero.",
+                        "employees": {
+                            "niek": {
+                                "title": "Niek van Gent",
+                                "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. ",
+                                "image": {
+                                    "src": "assets/images/niek.jpg",
+                                    "alt": "Niek van Gent"
+                                }
+                            },
+                            "jan": {
+                                "title": "Jan Maas",
+                                "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. ",
+                                "image": {
+                                    "src": "assets/images/niek.jpg",
+                                    "alt": "Jan Maas"
+                                }
+                            }
+                        }
+                    },
+                    "values": {
+                        "title": "ONZE KERNWAARDES",
+                        "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
+                        "image": {
+                            "src": "assets/images/wall.jpg"
+                        },
+                        "values": {
+                            "value1": "De Hoogste Kwaliteit",
+                            "value2": "Full Service",
+                            "value3": "Innovatief & Authentiek",
+                            "value4": "Onafhankelijkheid",
+                            "value5": "Duurzaam",
+                            "value6": "Operational Excellence"
+                        }
+                    },
+                    "werkwijze": {
+                        "title": "ONZE WERKWIJZE",
+                        "description": "Totale ontzorging. Minder vinden we niet goed genoeg voor onze relaties. Door onze verschillende achtergronden en ervaringen hebben we een werkwijze kunnen ontwikkelen die uniek is in de branche en welke ons in staat stelt de hoogst mogelijke return on investment voor onze relaties te behalen.",
+                        "method": {
+                            "intro": {
+                                "title": "Introductie",
+                                "description": "In onze optiek de belangrijkste stap in het gehele proces. Door tijd te investeren en kennis te delen in het begin van het proces, hoeven er geen aannames te worden gedaan bij het ontwerp van het concept, maar gaat om datgene wat telt: Integreren van uw identiteit, wensen en behoeftes als beursdeelnemer."
+                            },
+                            "design": {
+                                "title": "Design",
+                                "description": "Lorem Ipsum"
+                            },
+                            "tuning": {
+                                "title": "Tuning",
+                                "description": "Lorem Ipsum"
+                            },
+                            "construction": {
+                                "title": "Construction",
+                                "description": "Lorem Ipsum"
+                            },
+                            "eval": {
+                                "title": "Evaluatie",
+                                "description": "Lorem Ipsum"
+                            }
+                        },
+                        "projecten": {
+                            "tile": "ONZE PROJECTEN",
+                            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
+                            "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
+                            "author": "John Doe",
+                            "comparison":{
+                                "before": "",
+                                "after": ""
+                            },
+                            "project1": {
+                                "title": "Toshiba",
+                                "description": "Lorem Ipsum.",
+                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                            },
+                            "project2": {
+                                "title": "ONZE VISIE",
+                                "description": "Lorem Ipsum.",
+                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                            }
+                        }
+                    }
+                },
+                "footer": {
+                    "testimonials": {
+                        "title": "Testimonials"
                     },
                     "contacts": {
                         "header": "Schrijf Ons",
