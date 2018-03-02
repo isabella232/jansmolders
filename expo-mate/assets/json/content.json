@@ -38,14 +38,10 @@
                                 "alt": "Frankort en Koning"
                             },
                             "image4": {
-                                "src": "assets/images/toshiba.png",
-                                "alt": "Toshiba"
-                            },
-                            "image5": {
                                 "src": "assets/images/brands/lamb.jpg",
                                 "alt": "LambWeston"
                             },
-                            "image6": {
+                            "image5": {
                                 "src": "assets/images/brands/strong.jpg",
                                 "alt": "Strong"
                             }
@@ -139,6 +135,7 @@
                                 "before": "",
                                 "after": ""
                             },
+                            "button": "Onze Projecten",
                             "project1": {
                                 "title": "Toshiba",
                                 "description": "Lorem Ipsum.",
@@ -205,7 +202,7 @@
                         "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
                     },
                     "copyright": {
-                        "copyright": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
+                        "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
                     }
                 }
             }
@@ -351,6 +348,7 @@
                                 "before": "",
                                 "after": ""
                             },
+                            "button": "Onze Projecten",
                             "project1": {
                                 "title": "Toshiba",
                                 "description": "Lorem Ipsum.",
@@ -417,7 +415,7 @@
                         "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
                     },
                     "copyright": {
-                        "copyright": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
+                        "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
                     }
                 }
             }
@@ -560,9 +558,10 @@
                             "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
                             "author": "John Doe",
                             "comparison":{
-                                "before": "",
-                                "after": ""
+                                "before": "https://codyhouse.co/demo/image-comparison-slider/img/img-modified.jpg",
+                                "after": "https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg"
                             },
+                            "button": "Onze Projecten",
                             "project1": {
                                 "title": "Toshiba",
                                 "description": "Lorem Ipsum.",
@@ -629,7 +628,7 @@
                         "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
                     },
                     "copyright": {
-                        "copyright": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
+                        "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
                     }
                 }
             }
