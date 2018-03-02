@@ -1,15 +1,15 @@
 {
     "nl": {
+        "nav": {
+            "labels":{
+                "about": "Ons Verhaal",
+                "method": "Onze Werkwijze",
+                "values": "Onze Kernwaardes",
+                "projects": "Projecten",
+                "contact": "Contact"
+            }
+        },
         "pages": {
-            "nav": {
-              "labels":{
-                  "about": "Ons Verhaal",
-                  "method": "Onze Werkwijze",
-                  "values": "Onze Kernwaardes",
-                  "projects": "Projecten",
-                  "contact": "Contact"
-              }
-            },
             "homepage": {
                 "header": {
                     "content": {
@@ -212,16 +212,16 @@
         }
     },
     "de": {
+        "nav": {
+            "labels":{
+                "about": "Ons Verhaal",
+                "method": "Onze Werkwijze",
+                "values": "Onze Kernwaardes",
+                "projects": "Projecten",
+                "contact": "Contact"
+            }
+        },
         "pages": {
-            "nav": {
-                "labels":{
-                    "about": "Ons Verhaal",
-                    "method": "Onze Werkwijze",
-                    "values": "Onze Kernwaardes",
-                    "projects": "Projecten",
-                    "contact": "Contact"
-                }
-            },
             "homepage": {
                 "header": {
                     "content": {
@@ -424,16 +424,16 @@
         }
     },
     "en": {
+        "nav": {
+            "labels":{
+                "about": "Ons Verhaal",
+                "method": "Onze Werkwijze",
+                "values": "Onze Kernwaardes",
+                "projects": "Projecten",
+                "contact": "Contact"
+            }
+        },
         "pages": {
-            "nav": {
-                "labels":{
-                    "about": "Ons Verhaal",
-                    "method": "Onze Werkwijze",
-                    "values": "Onze Kernwaardes",
-                    "projects": "Projecten",
-                    "contact": "Contact"
-                }
-            },
             "homepage": {
                 "header": {
                     "content": {
