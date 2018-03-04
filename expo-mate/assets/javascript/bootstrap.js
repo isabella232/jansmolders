@@ -97,29 +97,10 @@ $(function () {
             headerElem.find('.video-container').addClass('play');
         });
 
-        $('.toggle-about').on('click', function(e){
-            e.preventDefault();
-            $("#our-people").toggleClass('open');
-            $(this).toggleClass('open');
-        });
-
-
-        $('#diagram .method-item').on("mouseenter", function() {
-            $(this).addClass('active').find('.fadeIn').addClass('show');
-        }).on("mouseleave", function() {
-            $(this).removeClass('active').find('.fadeIn').removeClass('show');
-        });
-
         hamburgerElem.click(function(){
             $(this).toggleClass("is-active");
             mobileNav.toggleClass("open");
             navIsOpen = true;
-        });
-
-        $(document.body).on('touchmove', function(){
-            scroll = ~~$(this).scrollTop();
-            $('#case-studies').addClass('show');
-            aboutContainer.addClass('show');
         });
 
         $(window).on('scroll', function(){
@@ -169,11 +150,7 @@ $(function () {
                             hasSnapped = true;
                         }
 
-                        if (scroll <= methodContainerOffset) {
-                           // $('#case-studies').addClass('active');
-                        }
-
-                        if (scroll <= methodContainerOffset ) {
+                        if (scroll <= methodContainerOffset - 100 ) {
                             methodContent.removeClass('active');
                             methodItem.removeClass('active');
                             methodScrollContainer.removeClass('fixed');
@@ -274,9 +251,7 @@ function fixNav(scroll){
 
 
 /*
-
 function handleImageScroll(scroll, direction){
-
     var imageScroll = $(".image-scroll-wrapper")
         , foregroundImageOffset = $('.foreground-image').offset().top
         , scrollContainerOffsetTop = imageScroll.offset().top
@@ -286,8 +261,6 @@ function handleImageScroll(scroll, direction){
         , aboutContainerOffset = aboutContainer.offset().top
         , mobileNav = $('#nav ul')
         , hamburgerElem = $('.hamburger');
-
-
 
     if(direction === 'down') {
         //on
@@ -318,5 +291,4 @@ function handleImageScroll(scroll, direction){
         aboutContainer.addClass('show');
     }
 }
-
 */
