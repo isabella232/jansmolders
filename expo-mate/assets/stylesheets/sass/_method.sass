@@ -30,7 +30,7 @@ $mobileTextOffset: 150px
             @media screen and (min-width: 1100px)
               padding-left: $methodSize / 8
             @media only screen and (min-device-width: 1200px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
-              padding: 100px 83.33333px 0
+              padding: 0
         .design
           &.show
             opacity: 1
@@ -40,7 +40,6 @@ $mobileTextOffset: 150px
               padding-top: $methodSize / 6
             @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
               left: 0
-              padding: 100px 83.33333px 0
         .tuning
           &.show
             opacity: 1
@@ -51,7 +50,6 @@ $mobileTextOffset: 150px
               padding-right: 0
             @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
               left: 0
-              padding: 100px 83.33333px 0
         .construction
           &.show
             opacity: 1
@@ -60,7 +58,6 @@ $mobileTextOffset: 150px
               left: 165px
             @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
               left: 0
-              padding: 100px 83.33333px 0
         .eval
           &.show
             opacity: 1
@@ -70,7 +67,6 @@ $mobileTextOffset: 150px
               left: $methodSize - $methodSize / 3
             @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5)
               left: 0
-              padding: 100px 83.33333px 0
   .method-scroll-wrapper
     position: relative
     overflow: hidden
@@ -136,7 +132,7 @@ $mobileTextOffset: 150px
       @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
         float: left
         opacity: 1
-        width: $methodSize
+        width: $methodSize / 2
         height: $methodSize * 5 + $methodSize * 15
         overflow: hidden
         &:after

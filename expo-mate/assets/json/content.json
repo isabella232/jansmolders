@@ -101,7 +101,7 @@
                           "value6": "Operational Excellence"
                       }
                     },
-                    "werkwijze": {
+                    "method": {
                         "title": "ONZE WERKWIJZE",
                         "description": "Totale ontzorging. Minder vinden we niet goed genoeg voor onze relaties. Door onze verschillende achtergronden en ervaringen hebben we een werkwijze kunnen ontwikkelen die uniek is in de branche en welke ons in staat stelt de hoogst mogelijke return on investment voor onze relaties te behalen.",
                         "method": {
@@ -126,25 +126,33 @@
                                 "description": "Lorem Ipsum"
                             }
                         },
-                        "projecten": {
+                        "projects": {
                             "tile": "ONZE PROJECTEN",
                             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
                             "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
                             "author": "John Doe",
                             "comparison":{
-                                "before": "",
-                                "after": ""
+                                "before": "https://codyhouse.co/demo/image-comparison-slider/img/img-modified.jpg",
+                                "after": "https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg"
                             },
-                            "button": "Onze Projecten",
+                            "button": {
+                                "label":"Onze Projecten"
+                            },
                             "project1": {
                                 "title": "Toshiba",
                                 "description": "Lorem Ipsum.",
-                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                                "image": {
+                                    "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                                    "alt": ""
+                                }
                             },
                             "project2": {
                                 "title": "ONZE VISIE",
                                 "description": "Lorem Ipsum.",
-                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                                "image": {
+                                    "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                                    "alt": ""
+                                }
                             }
                         }
                     }
@@ -168,38 +176,30 @@
                                     "src": "http://google.com",
                                     "alt": "Jan On LinkedIn"
                                 }
-                            }
+                            },
+                            "phone": "+31 6 50 28 18 91"
                         },
                         "niek": {
                             "title": "Niek van Gent",
                             "links": {
                                 "email": {
                                     "title": "n.van.gent@expo-mate.com",
-                                    "src": "mailto:n.van.gent@expo-mate.com",
-                                    "alt": "Email Niek"
+                                    "src": "mailto:n.van.gent@expo-mate.com"
                                 },
                                 "linkedin": {
                                     "title": "Niek on",
-                                    "src": "http://google.com",
-                                    "alt": "Niek On LinkedIn"
+                                    "src": "http://google.com"
                                 }
-                            }
+                            },
+                            "phone": "+31 6 50 28 18 91"
                         }
                     },
                     "call": {
-                        "header": "Bel Ons",
-                        "jan": {
-                            "title": "Jan Maas",
-                            "phone": "+31 6 50 28 18 91"
-                        },
-                        "niek": {
-                            "title": "Niek van Gent",
-                            "phone": "+31 6 41 78 15 81"
-                        }
+                        "header": "Bel Ons"
                     },
                     "visit": {
                         "header": "Bezoek Ons",
-                        "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
+                        "description": "Garnizoenweg 3 <br/>  Building A <br/> 5928 NA Venlo <br/> The Netherlands"
                     },
                     "copyright": {
                         "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
@@ -345,19 +345,27 @@
                             "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
                             "author": "John Doe",
                             "comparison":{
-                                "before": "",
-                                "after": ""
+                                "before": "https://codyhouse.co/demo/image-comparison-slider/img/img-modified.jpg",
+                                "after": "https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg"
                             },
-                            "button": "Onze Projecten",
+                            "button": {
+                                "label":"Onze Projecten"
+                            },
                             "project1": {
                                 "title": "Toshiba",
                                 "description": "Lorem Ipsum.",
-                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                                "image": {
+                                    "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                                    "alt": ""
+                                }
                             },
                             "project2": {
                                 "title": "ONZE VISIE",
                                 "description": "Lorem Ipsum.",
-                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                                "image": {
+                                    "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                                    "alt": ""
+                                }
                             }
                         }
                     }
@@ -381,38 +389,30 @@
                                     "src": "http://google.com",
                                     "alt": "Jan On LinkedIn"
                                 }
-                            }
+                            },
+                            "phone": "+31 6 50 28 18 91"
                         },
                         "niek": {
                             "title": "Niek van Gent",
                             "links": {
                                 "email": {
                                     "title": "n.van.gent@expo-mate.com",
-                                    "src": "mailto:n.van.gent@expo-mate.com",
-                                    "alt": "Email Niek"
+                                    "src": "mailto:n.van.gent@expo-mate.com"
                                 },
                                 "linkedin": {
                                     "title": "Niek on",
-                                    "src": "http://google.com",
-                                    "alt": "Niek On LinkedIn"
+                                    "src": "http://google.com"
                                 }
-                            }
+                            },
+                            "phone": "+31 6 50 28 18 91"
                         }
                     },
                     "call": {
-                        "header": "Bel Ons",
-                        "jan": {
-                            "title": "Jan Maas",
-                            "phone": "+31 6 50 28 18 91"
-                        },
-                        "niek": {
-                            "title": "Niek van Gent",
-                            "phone": "+31 6 41 78 15 81"
-                        }
+                        "header": "Bel Ons"
                     },
                     "visit": {
                         "header": "Bezoek Ons",
-                        "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
+                        "description": "Garnizoenweg 3 <br/>  Building A <br/> 5928 NA Venlo <br/> The Netherlands"
                     },
                     "copyright": {
                         "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
@@ -561,16 +561,24 @@
                                 "before": "https://codyhouse.co/demo/image-comparison-slider/img/img-modified.jpg",
                                 "after": "https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg"
                             },
-                            "button": "Onze Projecten",
+                            "button": {
+                                "label":"Onze Projecten"
+                            },
                             "project1": {
                                 "title": "Toshiba",
                                 "description": "Lorem Ipsum.",
-                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                                "image": {
+                                    "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                                    "alt": ""
+                                }
                             },
                             "project2": {
                                 "title": "ONZE VISIE",
                                 "description": "Lorem Ipsum.",
-                                "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg"
+                                "image": {
+                                    "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                                    "alt": ""
+                                }
                             }
                         }
                     }
@@ -594,38 +602,30 @@
                                     "src": "http://google.com",
                                     "alt": "Jan On LinkedIn"
                                 }
-                            }
+                            },
+                            "phone": "+31 6 50 28 18 91"
                         },
                         "niek": {
                             "title": "Niek van Gent",
                             "links": {
                                 "email": {
                                     "title": "n.van.gent@expo-mate.com",
-                                    "src": "mailto:n.van.gent@expo-mate.com",
-                                    "alt": "Email Niek"
+                                    "src": "mailto:n.van.gent@expo-mate.com"
                                 },
                                 "linkedin": {
                                     "title": "Niek on",
-                                    "src": "http://google.com",
-                                    "alt": "Niek On LinkedIn"
+                                    "src": "http://google.com"
                                 }
-                            }
+                            },
+                            "phone": "+31 6 50 28 18 91"
                         }
                     },
                     "call": {
-                        "header": "Bel Ons",
-                        "jan": {
-                            "title": "Jan Maas",
-                            "phone": "+31 6 50 28 18 91"
-                        },
-                        "niek": {
-                            "title": "Niek van Gent",
-                            "phone": "+31 6 41 78 15 81"
-                        }
+                        "header": "Bel Ons"
                     },
                     "visit": {
                         "header": "Bezoek Ons",
-                        "description": "Garnizoenweg 3 Building A 5928 NA Venlo The Netherlands"
+                        "description": "Garnizoenweg 3 <br/>  Building A <br/> 5928 NA Venlo <br/> The Netherlands"
                     },
                     "copyright": {
                         "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
