@@ -47,52 +47,52 @@ function parseData(item){
     var resultEl =  $('#results');
     var prefix;
     var languages = Object.keys(item);
+
     if(languages){
-        for (var i = 0; i < languages.length; i++) {
-            var langCount = i;
-            var landKey = languages[i];
 
-            $.each(item, function (index, locales) {
-                if (index === landKey) {
-                    resultEl.append('<div class="lang-container lang' + langCount + '"></div>');
-                    var langContainer = $(".lang" + langCount);
-                    langContainer.append('<div class="lang-content-wrapper"></div>');
-                    var contentWrapper = $('.lang-content-wrapper');
-                    contentWrapper.append('<h2>'+landKey.toUpperCase() + '</h2>');
-                    var pages = locales.pages;
-                    if (pages) {
-                        var page = Object.keys(pages);
-                        contentWrapper.append('<div class="page-wrapper"></div>');
-                        var pageWrapper = $('.page-wrapper');
-                        pageWrapper.append('<h3>' + page + '</h3>');
-                        $.each(pages, function (index, pageData) {
-                            var sections = Object.keys(pageData);
-                            for (var j = 0; j < sections.length; j++) {
-                                var section = sections[j];
-                                prefix = landKey + '.pages.' + page + '.' + section;
-                                $.each(pageData, function (index, sectionData) {
-                                    if (index === section) {
-                                        pageWrapper.append('<h4>' + section.toUpperCase() + '</h4>');
-                                        var sectionHeaders = Object.keys(sectionData);
-                                        for (var k = 0; k < sectionHeaders.length; k++) {
-                                            var subSectionHeader = sectionHeaders[k];
-                                            pageWrapper.append('<h4>' + sectionHeaders[k].toUpperCase() + '</h4>');
-                                            $.each(sectionData, function (index, data) {
-                                                if (index === sectionHeaders[k]) {
-                                                    traverseDownTree(pageWrapper, prefix+'.'+subSectionHeader, index, data);
-                                                }
-                                            });
-                                        }
-                                    }
-                                });
-                            }
-                            resultEl.append('<button class="btn btn-lg btn-primary submit-btn" type="submit">'+buttonText+'</button>');
-                        });
-                    }
-                }
-            });
-
+        for (i = 0; i < languages.length; i++) {
+            var lang = languages[i];
+            resultEl.append('<div class="lang-container lang '+lang+'"><h2>'+lang.toUpperCase() + '</h2></div>');
         }
+
+        $.each(item, function (index, locales) {
+            if ($.inArray(index, languages) > -1) {
+                var landKey = index;
+                var contentWrapper = resultEl.find("."+index);
+                var pages = locales.pages;
+
+                if (pages) {
+                    var page = Object.keys(pages);
+                    contentWrapper.append('<div class="page-wrapper"></div>');
+                    var pageWrapper = $('.page-wrapper');
+                    pageWrapper.append('<h3>' + page + '</h3>');
+                    $.each(pages, function (index, pageData) {
+                        var sections = Object.keys(pageData);
+                        for (var j = 0; j < sections.length; j++) {
+                            var section = sections[j];
+                            prefix = landKey + '.pages.' + page + '.' + section;
+                            $.each(pageData, function (index, sectionData) {
+                                if (index === section) {
+                                    pageWrapper.append('<h4>' + section.toUpperCase() + '</h4>');
+                                    var sectionHeaders = Object.keys(sectionData);
+                                    for (var k = 0; k < sectionHeaders.length; k++) {
+                                        var subSectionHeader = sectionHeaders[k];
+                                        pageWrapper.append('<h4>' + sectionHeaders[k].toUpperCase() + '</h4>');
+                                        $.each(sectionData, function (index, data) {
+                                            if (index === sectionHeaders[k]) {
+                                                traverseDownTree(pageWrapper, prefix+'.'+subSectionHeader, index, data);
+                                            }
+                                        });
+                                    }
+                                }
+                            });
+                        }
+                        resultEl.append('<button class="btn btn-lg btn-primary submit-btn" type="submit">'+buttonText+'</button>');
+                    });
+                }
+            }
+        });
+
     }
 
 

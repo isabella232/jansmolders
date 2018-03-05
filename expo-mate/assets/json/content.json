@@ -205,6 +205,35 @@
                         "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
                     }
                 }
+            },
+            "projects": {
+                "project1": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                },
+                "project2": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                },
+                "project3": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                }
             }
         }
     },
@@ -418,6 +447,35 @@
                         "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
                     }
                 }
+            },
+            "projects": {
+                "project1": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                },
+                "project2": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                },
+                "project3": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                }
             }
         }
     },
@@ -629,6 +687,35 @@
                     },
                     "copyright": {
                         "description": "Copyright 2018, Expo-Mate - None of the Images on the website are owned or affiliated with Expo-mate and are copyrighted by their respectful owners."
+                    }
+                }
+            },
+            "projects": {
+                "project1": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                },
+                "project2": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                },
+                "project3": {
+                    "title":"",
+                    "sub-title":"",
+                    "description":"",
+                    "image": {
+                        "src": "",
+                        "alt": ""
                     }
                 }
             }
