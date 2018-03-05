@@ -1,226 +1,159 @@
-
-#projects
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  --color-text: $header-text-color
-  --color-bg: $project-bg-color
-  --color-link: $cta-color
-  --color-link-hover: #000
-  --color-info: #333
-  --grid-columns: 2
-  --details-bg-up: #fff
-  --details-bg-down: #f5f5f5
-  --color-product-title: $header-text-color
-  --color-product-subtitle: #a09897
-  --color-details-title: $header-text-color
-  --color-details-subtitle: $header-text-color
-  --color-descr: #fff
-  --color-close: #000
-  --color-bg-magnifier: #000
-  --color-magnifier: #fff
-  --color-btn-hover: #000
-
-  .grid
-    margin: 10em auto 7em
+body.open
+  overflow: hidden
+  height: 100%
+  position: fixed
+  #nav
+    display: none
+.projects-wrapper
+  .project
+    height: 650px
+    +respond-max-width(md)
+      height: 250px
+    +respond-max-width(sm)
+      height: 100px
+    @media screen and (min-width: 1100px) and (max-width: 1600px)
+      height: 400px
+    @media screen and (min-width: 1600px) and (max-width: 2000px)
+      height: 625px
     position: relative
-    padding: 0 1em
-    width: 100%
-    max-width: 1400px
-    display: grid
-    grid-template-columns: repeat(var(--grid-columns), 1fr)
-
-    .grid__item
-      padding: 0 4vw
-      margin: 0 0 12vh
-      width: 100%
-
-  .product
-    height: 100%
-    padding-top: 10em
-    position: relative
-    cursor: pointer
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-
-    .product__bg
-      height: 20em
-      position: relative
-
-    .product__img
-      max-height: 25em
-      margin: 0 auto
-      display: block
-      position: absolute
-      top: 0
-      left: 50%
-      pointer-events: none
-      transform: translate3d(-50%, 0, 0)
-
-    .product__title
-      position: relative
-      margin: -20px 0.5em 0 0
-      font-size: 1.75em
-      color: var(--color-product-title)
-      font-family: $font
-      font-weight: 700
-
-    .product__subtitle
-      position: relative
-      margin: 20px 0 20px 0
-      text-transform: uppercase
-      color: var(--color-product-subtitle)
-      font-size: 0.85em
-      letter-spacing: 0.115em
-
-    &:hover .product__subtitle
-      color: var(--color-link)
-
-    .product__description
-      opacity: 1
-      text-align: center
-      position: absolute
-
-  .details
-    position: fixed
-    width: 100%
-    height: 100%
-    bottom: 0
-    left: 0
-    padding: 40vh 0 10vh 10vw
-    z-index: 1000
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    pointer-events: none
-    > *
-      position: relative
-      opacity: 0
-
-    &.details--open
-      pointer-events: auto
-
-    .details__bg
-      width: 100%
+    overflow: hidden
+    transition: all ease .5s
+    transform-origin: 20% 40%
+    &.open
       position: fixed
+      top: 0
       left: 0
-
-    .details__bg--up
-      top: 0
+      width: 100vw
       height: 100vh
-      background: var(--details-bg-up)
+      z-index: 9
+      background: #fff
+      .project-close
+        position: absolute
+        right: 50px
+        top: 50px
+        cursor: pointer
+        &:before
+          content: "\e904"
+          position: absolute
+          font-family: $font_0
+          font-size: 2em
+          color: #222
+          +respond-max-width(md)
+            color: #fff
+            text-shadow: 5px 5px 5px rgba(0,0,0,.7)
+          z-index: 999999
+      .project-images,
+      .project-desc-wrapper
+        width: 50%
+        float: left
+        +respond-max-width(md)
+          width: 100%
+          height: 60%
+          float: none
+        position: relative
+        overflow: hidden
+        height: 100%
+        h2
+          text-align: left
+          cursor: pointer
+          font-weight: 700
+        .project-desc-content
+          margin: auto
+          position: absolute
+          top: 0
+          left: 0
+          bottom: 0
+          right: 0
+          height: 400px
+          max-width: 800px
+          +respond-max-width(md)
+            max-width: 600px
+            height: 300px
+          +respond-max-width(sm)
+            max-width: 300px
+      .project-desc-wrapper
+        +respond-max-width(md)
+          height: 40%
+      &:nth-child(odd)
+        +respond-min-width(lg)
+          display: flex
+          .project-images
+            order: 2
+          .project-desc-wrapper
+            order: 1
+          .project-close
+            right: auto
+            left: 50px
 
-    .details__bg--down
-      top: 40vh
-      height: 60vh
-      background: var(--details-bg-down)
-
-    .details__img
-      position: absolute
-      bottom: 20vh
-      right: 10vw
-      max-height: 70vh
-      max-width: 55vw
-
-    .details__bg, .details__img
-      transform-origin: 0 0
-
-    .details__title
-      margin: -1.5em 0 0.1em
-      font-size: 4.5em
-      color: var(--color-details-title)
-      font-family: $font
-      font-weight: 700
-
-    .details__subtitle
-      text-transform: uppercase
-      margin: 0.75em 0 1em 0
-      letter-spacing: 0.115em
-      font-size: 1.75em
-      color: var(--color-details-subtitle)
-
-    .details__description
-      line-height: 2
-      font-weight: normal
-      max-width: 400px
-      margin: 2em 0 0 0
-      color: var(--color-details-desc)
-
-    .details__close
-      position: absolute
-      top: 0
-      right: 0
-      border: 0
-      background: none
-      margin: 2em
-      cursor: pointer
-      font-size: 0.85em
-      color: var(--color-close)
-      a:hover
-        text-decoration: none
-      i
-        font-size: 2.5em
-
-    .details__magnifier
-      border: 0
-      background: none
-      background: var(--color-bg-magnifier)
-      color: var(--color-magnifier)
-      padding: 1em
-      border-radius: 90%
-      position: absolute
-      z-index: 1000
-      right: calc(21.5vh + 10vw)
-      top: 75vh
-      cursor: pointer
-      width: 50px
-      height: 50px
-      display: none!important
-      a:hover
-        text-decoration: none
-      i
-        font-size: 1.5em
-        color: #fff
-      &:hover
-        background: var(--color-btn-hover)
+      .slider-nav
+        margin-top: 10px
+        img
+          width: 200px
+          margin: 0 5px
+          @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
+            width: 100px
+          +respond-max-width(sm)
+            width: 100px
+      .slider-for
+        +respond-max-width(md)
+          height: 500px
+          img
+            height: 500px
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
+          height: 350px
+          overflow: hidden
+          img
+            height: auto
+            width: 100%
+            margin-top: -50px
+        +respond-max-width(sm)
+          height: 250px
+          img
+            height: auto
+            width: 100%
 
 
-    .details__deco
-      width: 7em
-      height: 20px
-      background-position: 50% 97%
-      background-size: 150%
 
-  +respond-max-width(sm)
-    .grid
-      padding: 0 1vw
-      grid-template-columns: repeat(1, 1fr)
-    .grid__item
-      padding: 0 2vw
-    .product__bg
-      height: 10em
-    .product__img
-      max-height: 19em
-    .product__title
-      font-size: 1.25em
-    .product__subtitle
-      font-size: 0.75em
-    .details
-      padding: 30vh 0 5vh 10vw
-      .details__bg--down
-        top: 30vh
-        height: 70vh
-      .details__title
-        font-size: 2em
-      .details__subtitle
-        font-size: 1em
-      .details__description
-        max-width: 90%
-        font-size: 0.85em
-        margin: 1em 0 0 0
-      .details__deco
-        height: 7px
-        width: 4em
-      .details__img
-        max-width: 80vw
-        bottom: 20px
-      .details__magnifier
-        right: 7vh
+
+    &:not(.open)
+      .project-images,
+      .project-desc-wrapper
+        width: 50%
+        float: left
+        position: relative
+        overflow: hidden
+      .project-desc-wrapper
+        padding: 7% 100px
+        +respond-max-width(sm)
+          padding: 10px 20px
+        text-align: left
+        h2
+          text-align: left
+          cursor: pointer
+          font-weight: 700
+          +respond-max-width(md)
+            margin-bottom: 10px
+        .project-desc
+          max-width: 800px
+          font-size: 1em
+          +respond-max-width(md)
+            display: none
+          line-height: 1.85em
+      .project-sub-title
+        margin-bottom: 20px
+      .slider-for
+        img
+          display: none
+        img:first-child
+          display: block
+          width: 100%
+          cursor: pointer
+      .slider-nav
+        display: none
+      &:nth-child(odd)
+        display: flex
+        .project-images
+          order: 2
+        .project-desc-wrapper
+          order: 1
+

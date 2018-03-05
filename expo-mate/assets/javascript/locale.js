@@ -1,3 +1,4 @@
+var projectDetail;
 $(function(){
     var userLang = navigator.language || navigator.userLanguage;
     var activeCookie = getCookie('lang');
@@ -33,6 +34,7 @@ $(function(){
         var homepage = data[loc].pages.homepage;
         var header = homepage.header.content;
         var intro = homepage.content.intro;
+        var brands = intro.images;
         var about = homepage.content.about;
         var aboutUs = homepage.content.aboutUs;
         var values = homepage.content.values;
@@ -40,26 +42,27 @@ $(function(){
         var projects = homepage.content.projects;
         var footer = homepage.content.footer;
 
-        if(header){
+        if (header) {
             $('.background-video').css({'backgroundImage': header.backgroundImageSrc});
-            $('.youtube-video-embed iframe').attr('id', header.youtubeURL).attr('src','https://www.youtube.com/embed/'+ header.youtubeURL+'?autoplay=0&rel=0&fs=1&enablejsapi=1')
-            $('video source#mp4').attr('src',header.backgroundVideoMp4Src);
-            $('video source#webm').attr('src',header.backgroundVideoWebMSrc);
+            $('.youtube-video-embed iframe').attr('id', header.youtubeURL).attr('src', 'https://www.youtube.com/embed/' + header.youtubeURL + '?autoplay=0&rel=0&fs=1&enablejsapi=1')
+            $('video source#mp4').attr('src', header.backgroundVideoMp4Src);
+            $('video source#webm').attr('src', header.backgroundVideoWebMSrc);
             $body.find("[data-content='header-content-title']").html(header.title);
         }
 
-        if(intro){
+        if (intro) {
             $body.find("[data-content='content-intro-title']").html(intro.title);
             $body.find("[data-content='content-intro-desc']").html(intro.description);
 
-            $body.find("[data-content='content-intro-image1']").attr('src',intro.images.image1.src).attr('alt',intro.images.image1.alt);
-            $body.find("[data-content='content-intro-image2']").attr('src',intro.images.image2.src).attr('alt',intro.images.image2.alt);
-            $body.find("[data-content='content-intro-image3']").attr('src',intro.images.image3.src).attr('alt',intro.images.image3.alt);
-            $body.find("[data-content='content-intro-image4']").attr('src',intro.images.image4.src).attr('alt',intro.images.image4.alt);
-            $body.find("[data-content='content-intro-image5']").attr('src',intro.images.image5.src).attr('alt',intro.images.image5.alt);
+            if($('.brandlist').length > 0){
+                $.each(brands, function (index, brand) {
+                    $body.find('.brandlist').append('<li><img src="'+brand.image.src+'" alt="'+brand.image.alt+'" /></li>');
+                });
+            }
+
         }
 
-        if(about){
+        if (about) {
             $body.find("[data-content='content-about-row1-title']").html(about.row1.title);
             $body.find("[data-content='content-about-row1-image']").css({'backgroundImage': about.row1.image.src});
             $body.find("[data-content='content-about-row1-desc']").html(about.row1.description);
@@ -69,20 +72,20 @@ $(function(){
             $body.find("[data-content='content-about-row2-desc']").html(about.row2.description);
         }
 
-        if(aboutUs){
+        if (aboutUs) {
             $body.find("[data-content='content-aboutUs-title']").html(aboutUs.title);
             $body.find("[data-content='content-aboutUs-description']").html(aboutUs.description);
 
-            $body.find("[data-content='content-employee-niek-image']").attr('src',aboutUs.employees.niek.image.src).attr('alt',aboutUs.employees.niek.image.alt);
+            $body.find("[data-content='content-employee-niek-image']").attr('src', aboutUs.employees.niek.image.src).attr('alt', aboutUs.employees.niek.image.alt);
             $body.find("[data-content='content-employee-niek-title']").html(aboutUs.employees.niek.title);
             $body.find("[data-content='content-employee-niek-desc']").html(aboutUs.employees.niek.description);
 
-            $body.find("[data-content='content-employee-jan-image']").attr('src',aboutUs.employees.jan.image.src).attr('alt',aboutUs.employees.jan.image.alt);
+            $body.find("[data-content='content-employee-jan-image']").attr('src', aboutUs.employees.jan.image.src).attr('alt', aboutUs.employees.jan.image.alt);
             $body.find("[data-content='content-employee-jan-title']").html(aboutUs.employees.jan.title);
             $body.find("[data-content='content-employee-jan-desc']").html(aboutUs.employees.jan.description);
         }
 
-        if(values){
+        if (values) {
             $body.find("[data-content='content-values-image']").css({'backgroundImage': values.image.src});
             $body.find("[data-content='content-values-title']").html(values.title);
             $body.find("[data-content='content-values-desc']").html(values.description);
@@ -124,11 +127,11 @@ $(function(){
             $body.find("[data-content='content-comparison-before']").attr('src', projects.comparison.before);
             $body.find("[data-content='content-comparison-after']").css({'backgroundImage': projects.comparison.after});
 
-            $body.find("[data-content='content-project1-image']").attr('src',projects.project1.image.src).attr('alt',projects.project1image.alt);
+            $body.find("[data-content='content-project1-image']").attr('src', projects.project1.image.src).attr('alt', projects.project1image.alt);
             $body.find("[data-content='content-project1-title']").html(projects.project1.title);
             $body.find("[data-content='content-project1-desc']").html(projects.project1.description);
 
-            $body.find("[data-content='content-project2-image']").attr('src',projects.project2.image.src).attr('alt',projects.project2.image.alt);
+            $body.find("[data-content='content-project2-image']").attr('src', projects.project2.image.src).attr('alt', projects.project2.image.alt);
             $body.find("[data-content='content-project2-title']").html(projects.project2.title);
             $body.find("[data-content='content-project2-desc']").html(projects.project2.description);
         }
@@ -155,8 +158,6 @@ $(function(){
             $body.find("[data-content='footer-contacts-visit-desc]").attr('href', footer.contacts.visit.description);
             $body.find("[data-content='footer-copyright-desc]").attr('href', footer.copyright.description);
         }
-
-
 
     });
 

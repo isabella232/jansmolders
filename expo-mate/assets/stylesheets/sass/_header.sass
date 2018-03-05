@@ -132,8 +132,19 @@ body.isPlaying
     opacity: 0.2
 
 body.projects
+  #header
+    margin-bottom: 0
   #header .background-wrapper,
   #header .background-video
     max-height: 65vh!important
   #header .container h1
     font-size: 2em
+    opacity: 1!important
+    +respond-max-width(sm)
+      font-size: 1em
+  #header .logo
+    opacity: 1!important
+    +respond-max-width(md)
+      width: 125px
+      height: 150px
+      margin: 0 auto 0

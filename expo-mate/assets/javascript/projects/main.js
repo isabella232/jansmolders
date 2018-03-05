@@ -20,8 +20,6 @@
             <h2 class="details__title left-aligned"></h2>
             <h3 class="details__subtitle"></h3>
             <p class="details__description"></p>
-            <button class="details__close"><i class="icon-close"></i></button>
-            <button class="details__magnifier"><i class="icon-zoom-in"></i></a></button>
             `;
 
             this.DOM.details = document.createElement('div');
@@ -37,14 +35,6 @@
             this.DOM.title = this.DOM.details.querySelector('.details__title');
             this.DOM.subtitle = this.DOM.details.querySelector('.details__subtitle');
             this.DOM.description = this.DOM.details.querySelector('.details__description');
-            this.DOM.close = this.DOM.details.querySelector('.details__close');
-            this.DOM.magnifier = this.DOM.details.querySelector('.details__magnifier');
-
-            this.initEvents();
-        }
-        initEvents() {
-            this.DOM.close.addEventListener('click', () => this.isZoomed ? this.zoomOut() : this.close());
-            this.DOM.magnifier.addEventListener('click', () => this.zoomIn());
         }
         fill(info) {
             this.DOM.img.src = info.img;
@@ -122,26 +112,12 @@
                 translateY: ['100%',0],
                 opacity: 1
             });
-
-            anime({
-                targets: DOM.hamburger,
-                duration: 250,
-                easing: 'easeOutSine',
-                translateY: [0,'-100%']
-            });
         }
         close() {
             if ( this.isAnimating ) return false;
             this.isAnimating = true;
 
             this.DOM.details.classList.remove('details--open');
-
-            anime({
-                targets: DOM.hamburger,
-                duration: 250,
-                easing: 'easeOutSine',
-                translateY: 0
-            });
 
             anime({
                 targets: this.DOM.close,
@@ -159,7 +135,7 @@
             });
 
             anime({
-                targets: [this.DOM.title, this.DOM.subtitle, this.DOM.description, this.DOM.magnifier],
+                targets: [this.DOM.title, this.DOM.subtitle, this.DOM.description],
                 duration: 20,
                 easing: 'linear',
                 opacity: 0
@@ -193,86 +169,6 @@
                 }
             });
         }
-        zoomIn() {
-            this.isZoomed = true;
-
-            anime({
-                targets: [this.DOM.title, this.DOM.subtitle, this.DOM.description, this.DOM.magnifier],
-                duration: 100,
-                easing: 'easeOutSine',
-                translateY: (target, index, total) => {
-                    return index !== total - 1 ? [0, index === 0 || index === 1 ? -50 : 50] : 0;
-                },
-                scale:  (target, index, total) => {
-                    return index === total - 1 ? [1,0] : 1;
-                },
-                opacity: 0
-            });
-
-            const imgrect = this.DOM.img.getBoundingClientRect();
-            const win = {w: window.innerWidth, h: window.innerHeight};
-            
-            const imgAnimeOpts = {
-                targets: this.DOM.img,
-                duration: 250,
-                easing: 'easeOutCubic',
-                translateX: win.w/2 - (imgrect.left+imgrect.width/2),
-                translateY: win.h/2 - (imgrect.top+imgrect.height/2)
-            };
-
-            if ( win.w > 0.8*win.h ) {
-                this.DOM.img.style.transformOrigin = '50% 50%';
-                Object.assign(imgAnimeOpts, {
-                    scaleX: 0.95*win.w/parseInt(0.8*win.h),
-                    scaleY: 0.95*win.w/parseInt(0.8*win.h)
-                });
-            }
-            anime(imgAnimeOpts);
-
-            anime({
-                targets: this.DOM.close,
-                duration: 250,
-                easing: 'easeInOutCubic',
-                scale: 1.8
-            });
-        }
-        zoomOut() {
-            if ( this.isAnimating ) return false;
-            this.isAnimating = true;
-            this.isZoomed = false;
-
-            anime({
-                targets: [this.DOM.title, this.DOM.subtitle, this.DOM.description, this.DOM.magnifier],
-                duration: 250,
-                easing: 'easeOutCubic',
-                translateY: 0,
-                scale: 1,
-                opacity: 1
-            });
-
-            anime({
-                targets: this.DOM.img,
-                duration: 250,
-                easing: 'easeOutCubic',
-                translateX: 0,
-                translateY: 0,
-                scaleX: 1,
-                scaleY: 1,
-                rotate: 0,
-                complete: () => {
-                    this.DOM.img.style.transformOrigin = '0 0';
-                    this.isAnimating = false;
-                }
-            });
-
-            anime({
-                targets: this.DOM.close,
-                duration: 250,
-                easing: 'easeInOutCubic',
-                scale: 1,
-                rotate: 0
-            });
-        }
     };
 
     class Item {
@@ -293,7 +189,12 @@
 			this.initEvents();
 		}
         initEvents() {
-            this.DOM.product.addEventListener('click', () => this.open());
+            this.DOM.product.addEventListener('click', function(e) {
+                console.log('')
+                if (e.target && e.target.getAttribute('class') === 'product'){
+                    this.open()
+                 }
+            });
         }
         open() {
             DOM.details.fill(this.info);
@@ -307,12 +208,9 @@
     const DOM = {};
     DOM.grid = document.querySelector('.grid');
     DOM.content = DOM.grid.parentNode;
-    DOM.hamburger = document.querySelector('.dummy-menu');
     DOM.gridItems = Array.from(DOM.grid.querySelectorAll('.grid__item'));
     let items = [];
     DOM.gridItems.forEach(item => items.push(new Item(item)));
-
     DOM.details = new Details();
-
     imagesLoaded(document.body, () => document.body.classList.remove('loading'));
 };

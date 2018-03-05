@@ -19,4 +19,10 @@ $(function () {
             mobileNav.removeClass("open");
         }
     });
+
+    hamburgerElem.click(function(){
+        $(this).toggleClass("is-active");
+        mobileNav.toggleClass("open");
+        navIsOpen = true;
+    });
 });

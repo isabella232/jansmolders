@@ -24,28 +24,28 @@
                     "intro": {
                         "title": "Ons Verhaal",
                         "description": "We geloven in de kracht van diversiteit. Diversiteit en het samenbrengen van verschillende disciplines zorgt er namelijk voor dat we iedere dag het beste resultaat voor, maar vooral met, onze klanten kunnen realiseren.",
-                        "images": {
-                            "image1": {
+                        "images": [
+                            {
                                 "src": "assets/images/brands/toshiba.jpg",
                                 "alt": "Toshiba"
                             },
-                            "image2": {
+                            {
                                 "src": "assets/images/brands/avz.jpg",
                                 "alt": "AVZ"
                             },
-                            "image3": {
+                            {
                                 "src": "assets/images/brands/frankort.jpg",
                                 "alt": "Frankort en Koning"
                             },
-                            "image4": {
+                            {
                                 "src": "assets/images/brands/lamb.jpg",
                                 "alt": "LambWeston"
                             },
-                            "image5": {
+                            {
                                 "src": "assets/images/brands/strong.jpg",
                                 "alt": "Strong"
                             }
-                        }
+                        ]
                     },
                     "about": {
                         "row1": {
@@ -53,6 +53,7 @@
                                 "src": "assets/images/1.jpg"
                             },
                             "title": "ONS FUNDAMENT",
+                            "type": "textarea",
                             "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten bedenken die zorgen voor de hoogste return on investment."
                         },
                         "row2": {
@@ -60,6 +61,7 @@
                                 "src": "assets/images/2.jpg"
                             },
                             "title": "ONZE MISSIE & VISIE",
+                            "type": "textarea",
                             "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
                         }
 
@@ -206,35 +208,53 @@
                     }
                 }
             },
-            "projects": {
-                "project1": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+            "projects": [
+                {
+                    "title":"Toshiba",
+                    "subTitle":"CES 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 },
-                "project2": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+                {
+                    "title":"Nvidia",
+                    "subTitle":"GDC 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 },
-                "project3": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+                {
+                    "title":"Epic Games",
+                    "subTitle":"GDC 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 }
-            }
+            ]
         }
     },
     "de": {
@@ -260,34 +280,30 @@
                 },
                 "content": {
                     "intro": {
-                        "title": "unsere Geschichte",
-                        "description": "Wir glauben an die Kraft der Vielfalt. Vielfalt und die Kombination verschiedener Disziplinen sorgen dafür, dass wir täglich und vor allem mit unseren Kunden das beste Ergebnis erzielen können.",
-                        "images": {
-                            "image1": {
+                        "title": "Ons Verhaal",
+                        "description": "We geloven in de kracht van diversiteit. Diversiteit en het samenbrengen van verschillende disciplines zorgt er namelijk voor dat we iedere dag het beste resultaat voor, maar vooral met, onze klanten kunnen realiseren.",
+                        "images": [
+                            {
                                 "src": "assets/images/brands/toshiba.jpg",
                                 "alt": "Toshiba"
                             },
-                            "image2": {
+                            {
                                 "src": "assets/images/brands/avz.jpg",
                                 "alt": "AVZ"
                             },
-                            "image3": {
+                            {
                                 "src": "assets/images/brands/frankort.jpg",
                                 "alt": "Frankort en Koning"
                             },
-                            "image4": {
-                                "src": "assets/images/toshiba.png",
-                                "alt": "Toshiba"
-                            },
-                            "image5": {
+                            {
                                 "src": "assets/images/brands/lamb.jpg",
                                 "alt": "LambWeston"
                             },
-                            "image6": {
+                            {
                                 "src": "assets/images/brands/strong.jpg",
                                 "alt": "Strong"
                             }
-                        }
+                        ]
                     },
                     "about": {
                         "row1": {
@@ -295,6 +311,7 @@
                                 "src": "assets/images/1.jpg"
                             },
                             "title": "ONS FUNDAMENT",
+                            "type": "textarea",
                             "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten bedenken die zorgen voor de hoogste return on investment."
                         },
                         "row2": {
@@ -302,6 +319,7 @@
                                 "src": "assets/images/2.jpg"
                             },
                             "title": "ONZE MISSIE & VISIE",
+                            "type": "textarea",
                             "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
                         }
 
@@ -329,21 +347,21 @@
                         }
                     },
                     "values": {
-                        "title": "ONZE KERNWAARDES",
-                        "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
-                        "image": {
-                            "src": "assets/images/wall.jpg"
-                        },
-                        "values": {
-                            "value1": "De Hoogste Kwaliteit",
-                            "value2": "Full Service",
-                            "value3": "Innovatief & Authentiek",
-                            "value4": "Onafhankelijkheid",
-                            "value5": "Duurzaam",
-                            "value6": "Operational Excellence"
-                        }
+                      "title": "ONZE KERNWAARDES",
+                      "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
+                      "image": {
+                          "src": "assets/images/wall.jpg"
+                      },
+                      "values": {
+                          "value1": "De Hoogste Kwaliteit",
+                          "value2": "Full Service",
+                          "value3": "Innovatief & Authentiek",
+                          "value4": "Onafhankelijkheid",
+                          "value5": "Duurzaam",
+                          "value6": "Operational Excellence"
+                      }
                     },
-                    "werkwijze": {
+                    "method": {
                         "title": "ONZE WERKWIJZE",
                         "description": "Totale ontzorging. Minder vinden we niet goed genoeg voor onze relaties. Door onze verschillende achtergronden en ervaringen hebben we een werkwijze kunnen ontwikkelen die uniek is in de branche en welke ons in staat stelt de hoogst mogelijke return on investment voor onze relaties te behalen.",
                         "method": {
@@ -368,7 +386,7 @@
                                 "description": "Lorem Ipsum"
                             }
                         },
-                        "projecten": {
+                        "projects": {
                             "tile": "ONZE PROJECTEN",
                             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
                             "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
@@ -448,35 +466,53 @@
                     }
                 }
             },
-            "projects": {
-                "project1": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+            "projects": [
+                {
+                    "title":"Toshiba",
+                    "subTitle":"CES 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 },
-                "project2": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+                {
+                    "title":"Nvidia",
+                    "subTitle":"GDC 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 },
-                "project3": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+                {
+                    "title":"Epic Games",
+                    "subTitle":"GDC 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 }
-            }
+            ]
         }
     },
     "en": {
@@ -502,34 +538,30 @@
                 },
                 "content": {
                     "intro": {
-                        "title": "Our Story",
-                        "description": "We belive in the power of diversity.",
-                        "images": {
-                            "image1": {
+                        "title": "Ons Verhaal",
+                        "description": "We geloven in de kracht van diversiteit. Diversiteit en het samenbrengen van verschillende disciplines zorgt er namelijk voor dat we iedere dag het beste resultaat voor, maar vooral met, onze klanten kunnen realiseren.",
+                        "images": [
+                            {
                                 "src": "assets/images/brands/toshiba.jpg",
                                 "alt": "Toshiba"
                             },
-                            "image2": {
+                            {
                                 "src": "assets/images/brands/avz.jpg",
                                 "alt": "AVZ"
                             },
-                            "image3": {
+                            {
                                 "src": "assets/images/brands/frankort.jpg",
                                 "alt": "Frankort en Koning"
                             },
-                            "image4": {
-                                "src": "assets/images/toshiba.png",
-                                "alt": "Toshiba"
-                            },
-                            "image5": {
+                            {
                                 "src": "assets/images/brands/lamb.jpg",
                                 "alt": "LambWeston"
                             },
-                            "image6": {
+                            {
                                 "src": "assets/images/brands/strong.jpg",
                                 "alt": "Strong"
                             }
-                        }
+                        ]
                     },
                     "about": {
                         "row1": {
@@ -537,6 +569,7 @@
                                 "src": "assets/images/1.jpg"
                             },
                             "title": "ONS FUNDAMENT",
+                            "type": "textarea",
                             "description": "10 jaar kennis en ervaring in de beursindustrie gecombineerd met 10 jaar sales en marketing ervaring vormt onze basis. Hierdoor kunnen wij als geen ander unieke beursconcepten bedenken die zorgen voor de hoogste return on investment."
                         },
                         "row2": {
@@ -544,6 +577,7 @@
                                 "src": "assets/images/2.jpg"
                             },
                             "title": "ONZE MISSIE & VISIE",
+                            "type": "textarea",
                             "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
                         }
 
@@ -571,21 +605,21 @@
                         }
                     },
                     "values": {
-                        "title": "ONZE KERNWAARDES",
-                        "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
-                        "image": {
-                            "src": "assets/images/wall.jpg"
-                        },
-                        "values": {
-                            "value1": "De Hoogste Kwaliteit",
-                            "value2": "Full Service",
-                            "value3": "Innovatief & Authentiek",
-                            "value4": "Onafhankelijkheid",
-                            "value5": "Duurzaam",
-                            "value6": "Operational Excellence"
-                        }
+                      "title": "ONZE KERNWAARDES",
+                      "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
+                      "image": {
+                          "src": "assets/images/wall.jpg"
+                      },
+                      "values": {
+                          "value1": "De Hoogste Kwaliteit",
+                          "value2": "Full Service",
+                          "value3": "Innovatief & Authentiek",
+                          "value4": "Onafhankelijkheid",
+                          "value5": "Duurzaam",
+                          "value6": "Operational Excellence"
+                      }
                     },
-                    "werkwijze": {
+                    "method": {
                         "title": "ONZE WERKWIJZE",
                         "description": "Totale ontzorging. Minder vinden we niet goed genoeg voor onze relaties. Door onze verschillende achtergronden en ervaringen hebben we een werkwijze kunnen ontwikkelen die uniek is in de branche en welke ons in staat stelt de hoogst mogelijke return on investment voor onze relaties te behalen.",
                         "method": {
@@ -610,7 +644,7 @@
                                 "description": "Lorem Ipsum"
                             }
                         },
-                        "projecten": {
+                        "projects": {
                             "tile": "ONZE PROJECTEN",
                             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
                             "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
@@ -690,35 +724,53 @@
                     }
                 }
             },
-            "projects": {
-                "project1": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+            "projects": [
+                {
+                    "title":"Toshiba",
+                    "subTitle":"CES 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 },
-                "project2": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+                {
+                    "title":"Nvidia",
+                    "subTitle":"GDC 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 },
-                "project3": {
-                    "title":"",
-                    "sub-title":"",
-                    "description":"",
-                    "image": {
-                        "src": "",
-                        "alt": ""
-                    }
+                {
+                    "title":"Epic Games",
+                    "subTitle":"GDC 2018",
+                    "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
+                    "images": [
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        },
+                        {
+                            "src": "https://i.pinimg.com/originals/76/b8/a7/76b8a7f9c9048e23c3e19e288f15212f.jpg",
+                            "alt": "Toshiba"
+                        }
+                    ]
                 }
-            }
+            ]
         }
     }
 }
