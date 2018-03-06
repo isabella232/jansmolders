@@ -3,7 +3,6 @@
 var map;
 google.maps.event.addDomListener(window, 'load', googleMapsInit);
 
-
 function googleMapsInit() {
     var myLatlng = new google.maps.LatLng(51.372027, 6.160478);
     var mapOptions = {
@@ -39,7 +38,7 @@ function googleMapsInit() {
     });
 }
 
-
+// Google review
 $(function(){
     if ($("#google-reviews").length == 0) {
         return
@@ -52,6 +51,6 @@ $(function(){
         min_rating: 4, // minimum rating of reviews to be displayed
         months: ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
         text_break_length: "90", // length before a review box is set to max width
-        shorten_names: true, // example: "Max Mustermann" -> "Max M.""
+        shorten_names: true // example: "Max Mustermann" -> "Max M.""
     });
 });

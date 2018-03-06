@@ -1,4 +1,3 @@
-var projectDetail;
 $(function(){
     var userLang = navigator.language || navigator.userLanguage;
     var activeCookie = getCookie('lang');
@@ -27,13 +26,12 @@ $(function(){
         $('#nav .active-loc').html(activeCookie);
     }
 
-
-
     var url = './assets/json/content.json';
     var $body = $("body");
     $.getJSON(url, function(data) {
         var loc = getCookie('lang');
-        var homepage = data[loc].pages.homepage;
+        var locData = data[loc];
+        var homepage = locData.pages.homepage;
         var header = homepage.header.content;
         var intro = homepage.content.intro;
         var brands = intro.images;
@@ -62,7 +60,6 @@ $(function(){
                     $body.find('.brandlist').append('<li><img src="'+brand.image.src+'" alt="'+brand.image.alt+'" /></li>');
                 });
             }
-
         }
 
         if (about) {
