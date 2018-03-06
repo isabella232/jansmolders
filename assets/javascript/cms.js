@@ -1,18 +1,18 @@
-var sha;
-var owner = $('#owner').val();
-var token = $('#ghToken').val();
-var repo = $('#repo').val();
-var path = $('#path').val();
-var alert = $('.alert');
-var resultsContainer = $('#results')
-var submitButtonText = "Save Changes";
-var resetButtonText = "Reset Changes";
-var hasClicked = false;
-var didSubmit = false;
 
 $(function(){
     $('#ghsubmitbtn').on('click', function(e){
         e.preventDefault();
+        var sha;
+        var owner = $('#login #owner').val();
+        var token = $('#login #ghToken').val();
+        var repo = $('#login #repo').val();
+        var path = $('#login #path').val();
+        var alert = $('.alert');
+        var resultsContainer = $('#results');
+        var submitButtonText = "Save Changes";
+        var resetButtonText = "Reset Changes";
+        var hasClicked = false;
+        var didSubmit = false;
 
         if(!hasClicked){
             $.ajax({
@@ -28,7 +28,7 @@ $(function(){
                     sha = data.sha;
                     var decodedJson = atob(jsonFile);
                     var parsedDecodedJson = JSON.parse(decodedJson);
-
+                    hasClicked = true;
                     if(parsedDecodedJson){
                         $('#login').hide();
                         alert.addClass('hidden');
@@ -85,10 +85,9 @@ $(function(){
                 },
                 error: function(error){
                     alert.addClass('alert-danger').removeClass('hidden').html('Something went wrong:'+error.responseText);
+                    hasClicked = false;
                 }
             });
-            hasClicked = true;
-
 
         }
     });
