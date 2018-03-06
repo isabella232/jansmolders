@@ -9,6 +9,8 @@ $(function(){
             setCookie('lang','en',7);
         } else if (userLang.match(/nl/g)) {
             setCookie('lang','nl',7);
+        } else {
+            setCookie('lang','nl',7);
         }
     }
 
@@ -41,6 +43,7 @@ $(function(){
         var method = homepage.content.method;
         var projects = homepage.content.projects;
         var footer = homepage.content.footer;
+
 
         if (header) {
             $('.background-video').css({'backgroundImage': header.backgroundImageSrc});
