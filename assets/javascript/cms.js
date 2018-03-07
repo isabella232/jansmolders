@@ -3,10 +3,10 @@ $(function(){
     $('#ghsubmitbtn').on('click', function(e){
         e.preventDefault();
         var sha;
-        var owner = $('#login #owner').val();
-        var token = $('#login #ghToken').val();
-        var repo = $('#login #repo').val();
-        var path = $('#login #path').val();
+        var owner = $('#owner').val();
+        var token = $('#ghToken').val();
+        var repo = $('#repo').val();
+        var path = $('#path').val();
         var alert = $('.alert');
         var resultsContainer = $('#results');
         var submitButtonText = "Save Changes";
@@ -52,28 +52,33 @@ $(function(){
                         $('.submit-btn').on('click', function( e ) {
                             e.preventDefault();
                             if(!didSubmit){
-                                $(this).addClass('disabled');
+                                var owner = $('#owner').val();
                                 var token = $('#ghToken').val();
-                                var api = new GithubAPI({token: token});
-                                var JsonData = editor.getValue();
+                                var repo = $('#repo').val();
+                                var path = $('#path').val();
+                                var formData = editor.getValue();
+                                var JsonData = JSON.stringify(formData, null, 4);
 
+                                $(this).addClass('disabled');
+
+                                var api = new GithubAPI({ token: token});
                                 api.setRepo(owner, repo);
-                                api.setBranch('gh-pages');
-                                setTimeout(function () {
-                                    api.pushFiles(
+                                api.setBranch('gh-pages').then(function () {
+                                    return api.pushFiles(
                                         'CMS Update',
                                         [
-                                            {content: JsonData, path: path}
+                                            {
+                                                content: JsonData,
+                                                path: path
+                                            }
                                         ]
                                     );
-                                }, 2000);
-                                didSubmit = true;
-
+                                }).then(function () {
+                                    console.log('Files committed!');
+                                    $('.submit-btn').removeClass('disabled');
+                                    didSubmit = true;
+                                });
                             }
-
-                            setTimeout(function () {
-                                $('.submit-btn').removeClass('disabled');
-                            },3000);
                         });
 
                         $('.reset-btn').on('click', function(e) {
