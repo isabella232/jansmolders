@@ -7,6 +7,7 @@ $(function(){
         var token = $('#ghToken').val();
         var repo = $('#repo').val();
         var path = $('#path').val();
+        var branch = $('#branch').val();
         var alert = $('.alert');
         var resultsContainer = $('#results');
         var submitButtonText = "Save Changes";
@@ -56,6 +57,7 @@ $(function(){
                                 var token = $('#ghToken').val();
                                 var repo = $('#repo').val();
                                 var path = $('#path').val();
+                                var branch = $('#branch').val();
                                 var formData = editor.getValue();
                                 var JsonData = JSON.stringify(formData, null, 4);
 
@@ -63,7 +65,7 @@ $(function(){
 
                                 var api = new GithubAPI({ token: token});
                                 api.setRepo(owner, repo);
-                                api.setBranch('gh-pages').then(function () {
+                                api.setBranch(branch).then(function () {
                                     return api.pushFiles(
                                         'CMS Update',
                                         [
