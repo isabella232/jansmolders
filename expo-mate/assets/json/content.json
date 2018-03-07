@@ -1,7 +1,7 @@
 {
     "nl": {
         "nav": {
-            "labels":{
+            "labels": {
                 "about": "Ons Verhaal",
                 "method": "Onze Werkwijze",
                 "values": "Onze Kernwaardes",
@@ -62,9 +62,8 @@
                             },
                             "title": "ONZE MISSIE & VISIE",
                             "type": "textarea",
-                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
+                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creÃÂ«ren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
                         }
-
                     },
                     "aboutUs": {
                         "title": "WIE ZIJN WIJ?",
@@ -89,19 +88,19 @@
                         }
                     },
                     "values": {
-                      "title": "ONZE KERNWAARDES",
-                      "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
-                      "image": {
-                          "src": "assets/images/wall.jpg"
-                      },
-                      "values": {
-                          "value1": "De Hoogste Kwaliteit",
-                          "value2": "Full Service",
-                          "value3": "Innovatief & Authentiek",
-                          "value4": "Onafhankelijkheid",
-                          "value5": "Duurzaam",
-                          "value6": "Operational Excellence"
-                      }
+                        "title": "ONZE KERNWAARDES",
+                        "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
+                        "image": {
+                            "src": "assets/images/wall.jpg"
+                        },
+                        "values": {
+                            "value1": "De Hoogste Kwaliteit",
+                            "value2": "Full Service",
+                            "value3": "Innovatief & Authentiek",
+                            "value4": "Onafhankelijkheid",
+                            "value5": "Duurzaam",
+                            "value6": "Operational Excellence"
+                        }
                     },
                     "method": {
                         "title": "ONZE WERKWIJZE",
@@ -133,12 +132,12 @@
                             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
                             "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
                             "author": "John Doe",
-                            "comparison":{
+                            "comparison": {
                                 "before": "https://codyhouse.co/demo/image-comparison-slider/img/img-modified.jpg",
                                 "after": "https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg"
                             },
                             "button": {
-                                "label":"Onze Projecten"
+                                "label": "Onze Projecten"
                             },
                             "project1": {
                                 "title": "Toshiba",
@@ -210,8 +209,8 @@
             },
             "projects": [
                 {
-                    "title":"Toshiba",
-                    "subTitle":"CES 2018",
+                    "title": "Toshiba",
+                    "subTitle": "CES 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
@@ -225,8 +224,8 @@
                     ]
                 },
                 {
-                    "title":"Nvidia",
-                    "subTitle":"GDC 2018",
+                    "title": "Nvidia",
+                    "subTitle": "GDC 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
@@ -240,8 +239,8 @@
                     ]
                 },
                 {
-                    "title":"Epic Games",
-                    "subTitle":"GDC 2018",
+                    "title": "Epic Games",
+                    "subTitle": "GDC 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
@@ -259,7 +258,7 @@
     },
     "de": {
         "nav": {
-            "labels":{
+            "labels": {
                 "about": "Ons Verhaal",
                 "method": "Onze Werkwijze",
                 "values": "Onze Kernwaardes",
@@ -320,9 +319,8 @@
                             },
                             "title": "ONZE MISSIE & VISIE",
                             "type": "textarea",
-                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
+                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creÃÂ«ren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
                         }
-
                     },
                     "aboutUs": {
                         "title": "WIE ZIJN WIJ?",
@@ -347,19 +345,19 @@
                         }
                     },
                     "values": {
-                      "title": "ONZE KERNWAARDES",
-                      "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
-                      "image": {
-                          "src": "assets/images/wall.jpg"
-                      },
-                      "values": {
-                          "value1": "De Hoogste Kwaliteit",
-                          "value2": "Full Service",
-                          "value3": "Innovatief & Authentiek",
-                          "value4": "Onafhankelijkheid",
-                          "value5": "Duurzaam",
-                          "value6": "Operational Excellence"
-                      }
+                        "title": "ONZE KERNWAARDES",
+                        "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
+                        "image": {
+                            "src": "assets/images/wall.jpg"
+                        },
+                        "values": {
+                            "value1": "De Hoogste Kwaliteit",
+                            "value2": "Full Service",
+                            "value3": "Innovatief & Authentiek",
+                            "value4": "Onafhankelijkheid",
+                            "value5": "Duurzaam",
+                            "value6": "Operational Excellence"
+                        }
                     },
                     "method": {
                         "title": "ONZE WERKWIJZE",
@@ -391,12 +389,12 @@
                             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
                             "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
                             "author": "John Doe",
-                            "comparison":{
+                            "comparison": {
                                 "before": "https://codyhouse.co/demo/image-comparison-slider/img/img-modified.jpg",
                                 "after": "https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg"
                             },
                             "button": {
-                                "label":"Onze Projecten"
+                                "label": "Onze Projecten"
                             },
                             "project1": {
                                 "title": "Toshiba",
@@ -468,8 +466,8 @@
             },
             "projects": [
                 {
-                    "title":"Toshiba",
-                    "subTitle":"CES 2018",
+                    "title": "Toshiba",
+                    "subTitle": "CES 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
@@ -483,8 +481,8 @@
                     ]
                 },
                 {
-                    "title":"Nvidia",
-                    "subTitle":"GDC 2018",
+                    "title": "Nvidia",
+                    "subTitle": "GDC 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
@@ -498,8 +496,8 @@
                     ]
                 },
                 {
-                    "title":"Epic Games",
-                    "subTitle":"GDC 2018",
+                    "title": "Epic Games",
+                    "subTitle": "GDC 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
@@ -517,7 +515,7 @@
     },
     "en": {
         "nav": {
-            "labels":{
+            "labels": {
                 "about": "Ons Verhaal",
                 "method": "Onze Werkwijze",
                 "values": "Onze Kernwaardes",
@@ -578,9 +576,8 @@
                             },
                             "title": "ONZE MISSIE & VISIE",
                             "type": "textarea",
-                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creëren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
+                            "description": "EXPO-MATE wil het meest gewaardeerde full service project management bureau zijn binnen de branche en marktleider op het gebied van kwaliteit. Het creÃÂ«ren van authentieke, innovatieve en milieubewuste op maat gemaakte projecten zorgt ervoor dat onze klanten meer dan hun (beurs)doelstellingen bereiken. Door onze manier van werken zijn onze klanten niet alleen tevreden met het eindresultaat, maar ook met het totale proces dat daar naartoe leidt. Hierdoor zijn klanten niet langer klanten maar zijn het onze ambassadeurs."
                         }
-
                     },
                     "aboutUs": {
                         "title": "WIE ZIJN WIJ?",
@@ -605,19 +602,19 @@
                         }
                     },
                     "values": {
-                      "title": "ONZE KERNWAARDES",
-                      "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
-                      "image": {
-                          "src": "assets/images/wall.jpg"
-                      },
-                      "values": {
-                          "value1": "De Hoogste Kwaliteit",
-                          "value2": "Full Service",
-                          "value3": "Innovatief & Authentiek",
-                          "value4": "Onafhankelijkheid",
-                          "value5": "Duurzaam",
-                          "value6": "Operational Excellence"
-                      }
+                        "title": "ONZE KERNWAARDES",
+                        "description": "Of we een adviesgesprek voeren, een ontwerp presenteren, of de uiteindelijke stand aan u opleveren, alles wat we doen is gebaseerd op onze kernwaardes",
+                        "image": {
+                            "src": "assets/images/wall.jpg"
+                        },
+                        "values": {
+                            "value1": "De Hoogste Kwaliteit",
+                            "value2": "Full Service",
+                            "value3": "Innovatief & Authentiek",
+                            "value4": "Onafhankelijkheid",
+                            "value5": "Duurzaam",
+                            "value6": "Operational Excellence"
+                        }
                     },
                     "method": {
                         "title": "ONZE WERKWIJZE",
@@ -649,12 +646,12 @@
                             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed est velit. Donec quis arcu pellentesque, egestas lacus non, sollicitudin mi. Mauris et metus est. Curabitur ut velit semper, pulvinar ante sed, varius mi.",
                             "quote": "Dit is een Quote van een klant die benadrukt hoe geweldig het is om met jullie samen te werken.",
                             "author": "John Doe",
-                            "comparison":{
+                            "comparison": {
                                 "before": "https://codyhouse.co/demo/image-comparison-slider/img/img-modified.jpg",
                                 "after": "https://codyhouse.co/demo/image-comparison-slider/img/img-original.jpg"
                             },
                             "button": {
-                                "label":"Onze Projecten"
+                                "label": "Onze Projecten"
                             },
                             "project1": {
                                 "title": "Toshiba",
@@ -726,8 +723,8 @@
             },
             "projects": [
                 {
-                    "title":"Toshiba",
-                    "subTitle":"CES 2018",
+                    "title": "Toshiba",
+                    "subTitle": "CES 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
@@ -741,8 +738,8 @@
                     ]
                 },
                 {
-                    "title":"Nvidia",
-                    "subTitle":"GDC 2018",
+                    "title": "Nvidia",
+                    "subTitle": "GDC 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
@@ -756,8 +753,8 @@
                     ]
                 },
                 {
-                    "title":"Epic Games",
-                    "subTitle":"GDC 2018",
+                    "title": "Epic Games",
+                    "subTitle": "GDC 2018",
                     "description": "Hashtag cred air plant drinking vinegar. Leggings yuccie chambray pop-up tousled hell of. Portland wolf mumblecore, synth cold-pressed polaroid poke cardigan gochujang",
                     "images": [
                         {
