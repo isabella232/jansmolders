@@ -35,7 +35,7 @@ $(function(){
                         alert.addClass('hidden');
                         //parseData(parsedDecodedJson);
 
-                        JSONEditor.defaults.editors.object.options.collapsed = true;
+                        JSONEditor.defaults.editors.object.options.collapsed = false;
                         var editor = new JSONEditor(document.getElementById('results'),{
                             ajax: true,
                             disable_edit_json: true,
