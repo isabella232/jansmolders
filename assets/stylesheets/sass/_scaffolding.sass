@@ -68,6 +68,11 @@ body, html
     bottom: 20%
     left: 45%
     width: 550px
+    a
+      color: $epicColor
+      &:hover
+        text-decoration: none
+        color: darken($epicColor, 20%)
     +respond-max-width(sm)
       position: absolute
       bottom: auto
