@@ -62,7 +62,6 @@ $(function(){
                 var decodedSchemaJson = atob(schemaFile);
                 var parsedDecodedSchemaJson = JSON.parse(decodedSchemaJson);
 
-                console.log('',)
                 if(parsedDecodedJson){
                     $('#login').hide();
                     alert.addClass('hidden');
