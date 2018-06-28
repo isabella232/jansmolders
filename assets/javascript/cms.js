@@ -66,8 +66,6 @@ $(function(){
                     $('#login').hide();
                     alert.addClass('hidden');
 
-                    JSONEditor.plugins.sceditor.enable = true;
-                    JSONEditor.plugins.epiceditor.basePath = 'epiceditor';
                     var editor = new JSONEditor(document.getElementById('results'),{
                         ajax: true,
                         disable_edit_json: true,
