@@ -79,7 +79,8 @@ $(function(){
                             var path = $('#path').val();
                             var branch = $('#branch').val();
                             var formData = editor.getValue();
-                            var encodedJsonData = btoa(JSON.stringify(formData));
+                            var encodedJsonData = btoa(unescape(encodeURIComponent(JSON.stringify(formData))));
+
                             didSubmit = true;
                             $(this).addClass('disabled');
 
