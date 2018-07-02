@@ -7,7 +7,6 @@ $(function(){
         var token = $('#ghToken').val();
         var repo = $('#repo').val();
         var path = $('#path').val();
-        var branch = $('#branch').val();
         var schema = $('#schema').val();
         var alert = $('.alert');
         var resultsContainer = $('#results');
@@ -15,7 +14,6 @@ $(function(){
         var resetButtonText = "Reset Changes";
         var hasClicked = false;
         var didSubmit = false;
-
         var dataStore = {
             data: {},
             schema: {}
@@ -48,10 +46,11 @@ $(function(){
                 var projectData = dataStore.data;
                 var jsonFile = projectData.content;
 				var schemaData = dataStore.schema;
+                hasClicked = true;
                 var schemaFile = schemaData.content;
 				var decodedJson = atob(jsonFile);
 				var secondPassDecodedJson = atob(decodedJson);
-				var parsedDecodedJson = JSON.parse(secondPassDecodedJson)
+				var parsedDecodedJson = JSON.parse(secondPassDecodedJson);
 				var decodedSchemaJson = JSON.parse(atob(schemaFile));
 
 				hasClicked = true;
@@ -97,7 +96,7 @@ $(function(){
                                     ]
                                 );
                             }).then(function () {
-                                console.log('Files committed!');
+                                console.log('Files committed!', JsonData);
                                 $('.submit-btn').removeClass('disabled');
                                 didSubmit = false;
                             });
