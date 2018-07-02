@@ -48,8 +48,8 @@ $(function(){
 				var schemaData = dataStore.schema;
                 hasClicked = true;
                 var schemaFile = schemaData.content;
-				var decodedJson = atob(jsonFile);
-				var secondPassDecodedJson = atob(decodedJson);
+				var decodedJson = JSON.parse(decodeURIComponent(escape(window.atob(jsonFile))));
+				var secondPassDecodedJson = JSON.parse(decodeURIComponent(escape(window.atob(decodedJson))));
 				var parsedDecodedJson = JSON.parse(secondPassDecodedJson);
 				var decodedSchemaJson = JSON.parse(atob(schemaFile));
 
