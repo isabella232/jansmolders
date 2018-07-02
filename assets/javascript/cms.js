@@ -97,7 +97,7 @@ $(function(){
                                     ]
                                 );
                             }).then(function () {
-                                console.log('Files committed!', JsonData);
+                                console.log('Files committed!');
                                 $('.submit-btn').removeClass('disabled');
                                 didSubmit = false;
                             });
