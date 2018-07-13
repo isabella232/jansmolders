@@ -100,6 +100,8 @@ $(function(){
                                 console.log('Files committed!');
                                 $('.submit-btn').removeClass('disabled');
                                 didSubmit = false;
+                            }).catch(function(err){
+                                alert.removeClass('hidden').html('Soemthing went wrong:', err);
                             });
                         }
                     });
